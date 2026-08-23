@@ -37,11 +37,11 @@ export default function MobileMenu({
           >
             <div className="flex items-center justify-between border-b border-border px-5 py-4">
               <Image
-                src="/brand/investify-prism-logo.jpeg"
+                src="/brand/investify-prism-logo-v2.jpeg"
                 alt={`${SITE.name} Logo`}
-                width={160}
-                height={80}
-                className="h-9 w-auto object-contain"
+                width={305}
+                height={100}
+                className="h-12 w-auto object-contain"
               />
               <button
                 aria-label="Close Menu"

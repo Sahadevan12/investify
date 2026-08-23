@@ -84,12 +84,12 @@ export default function Header() {
         <Container className="flex h-[76px] items-center justify-between lg:h-[88px]">
           <Link href="/" className="flex shrink-0 items-center">
             <Image
-              src="/brand/investify-prism-logo.jpeg"
+              src="/brand/investify-prism-logo-v2.jpeg"
               alt={`${SITE.name} Logo`}
-              width={220}
-              height={110}
+              width={305}
+              height={100}
               priority
-              className="h-11 w-auto object-contain sm:h-14"
+              className="h-14 w-auto object-contain sm:h-[68px]"
             />
           </Link>
 

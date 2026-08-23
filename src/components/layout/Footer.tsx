@@ -31,11 +31,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="mb-4 inline-block rounded-lg bg-white p-2">
               <Image
-                src="/brand/investify-prism-logo.jpeg"
+                src="/brand/investify-prism-logo-v2.jpeg"
                 alt={`${SITE.name} Logo`}
-                width={220}
-                height={110}
-                className="h-10 w-auto object-contain"
+                width={305}
+                height={100}
+                className="h-14 w-auto object-contain"
               />
             </Link>
             <p className="mb-5 max-w-xs text-[15px] leading-relaxed text-white/70">
