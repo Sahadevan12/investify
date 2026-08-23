@@ -25,8 +25,8 @@ export default function Services() {
                 <Icon name={s.icon} className="size-6" strokeWidth={1.6} />
               </span>
               <h3 className="mb-3 text-[20px] font-semibold text-navy">{s.title}</h3>
-              <p className="mb-6 flex-1 text-[15px] leading-relaxed text-body">{s.summary}</p>
-              <span className="inline-flex items-center gap-2 text-[14.5px] font-semibold text-green-dark">
+              <p className="mb-6 flex-1 text-[16px] leading-relaxed text-body">{s.summary}</p>
+              <span className="inline-flex items-center gap-2 text-[15.5px] font-semibold text-green-dark">
                 Learn More
                 <Icon
                   name="ArrowRight"

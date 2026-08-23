@@ -20,7 +20,7 @@ export default function AppSection() {
             <h2 className="text-[28px] font-semibold leading-[1.25] text-navy sm:text-[34px] lg:text-[38px]">
               Prism Go — Smart Investing in Your Pocket
             </h2>
-            <p className="mt-4 text-[16px] leading-relaxed text-body sm:text-[17px]">
+            <p className="mt-4 text-[17px] leading-relaxed text-body sm:text-[18px]">
               Securely and efficiently manage all your investments using the Prism Go app, built for NRIs who want control without complexity.
             </p>
 
@@ -30,12 +30,12 @@ export default function AppSection() {
                   <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-green/15 text-green-dark">
                     <Icon name="Check" className="size-3" strokeWidth={3} />
                   </span>
-                  <span className="text-[14.5px] leading-relaxed text-body">{f}</span>
+                  <span className="text-[15.5px] leading-relaxed text-body">{f}</span>
                 </div>
               ))}
             </div>
 
-            <p className="mt-7 text-[15px] leading-relaxed text-body">
+            <p className="mt-7 text-[16px] leading-relaxed text-body">
               Prism Go makes it easy for NRIs to stay in charge of their investments in India — anytime, anywhere.
             </p>
 
@@ -47,7 +47,7 @@ export default function AppSection() {
                 <Icon name="Smartphone" className="size-6" />
                 <span className="text-left leading-tight">
                   <span className="block text-[10px] text-white/60">GET IT ON</span>
-                  <span className="block text-[14.5px] font-semibold">Google Play</span>
+                  <span className="block text-[15.5px] font-semibold">Google Play</span>
                 </span>
               </a>
               <a
@@ -57,7 +57,7 @@ export default function AppSection() {
                 <Icon name="Smartphone" className="size-6" />
                 <span className="text-left leading-tight">
                   <span className="block text-[10px] text-white/60">DOWNLOAD ON THE</span>
-                  <span className="block text-[14.5px] font-semibold">App Store</span>
+                  <span className="block text-[15.5px] font-semibold">App Store</span>
                 </span>
               </a>
             </div>

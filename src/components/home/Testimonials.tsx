@@ -42,18 +42,18 @@ export default function Testimonials() {
                   <Icon key={s} name="Star" className="size-3.5 fill-current" />
                 ))}
               </div>
-              <p className="mb-6 flex-1 text-[15px] leading-relaxed text-body">
+              <p className="mb-6 flex-1 text-[16px] leading-relaxed text-body">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <span
-                  className={`flex size-11 shrink-0 items-center justify-center rounded-full text-[14px] font-semibold ${AVATAR_COLORS[i % AVATAR_COLORS.length]}`}
+                  className={`flex size-11 shrink-0 items-center justify-center rounded-full text-[15px] font-semibold ${AVATAR_COLORS[i % AVATAR_COLORS.length]}`}
                 >
                   {initials(t.name)}
                 </span>
                 <div>
-                  <p className="text-[14.5px] font-semibold text-navy">{t.name}</p>
-                  <p className="text-[13px] text-body">{t.location}</p>
+                  <p className="text-[15.5px] font-semibold text-navy">{t.name}</p>
+                  <p className="text-[14px] text-body">{t.location}</p>
                 </div>
               </div>
             </div>

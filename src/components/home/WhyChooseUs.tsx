@@ -87,8 +87,8 @@ export default function WhyChooseUs() {
               <span className="mb-5 flex size-12 items-center justify-center rounded-xl bg-white/10 text-green">
                 <Icon name={d.icon} className="size-5" strokeWidth={1.6} />
               </span>
-              <h3 className="mb-2.5 text-[17px] font-semibold text-white">{d.title}</h3>
-              <p className="text-[14.5px] leading-relaxed text-white/70">{d.description}</p>
+              <h3 className="mb-2.5 text-[18px] font-semibold text-white">{d.title}</h3>
+              <p className="text-[15.5px] leading-relaxed text-white/70">{d.description}</p>
             </div>
           ))}
         </div>

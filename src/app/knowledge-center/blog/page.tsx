@@ -35,13 +35,13 @@ export default function BlogPage() {
                 <span className="mb-5 inline-flex w-fit items-center rounded-full bg-green/10 px-3 py-1 text-[12px] font-semibold text-green-dark">
                   {post.category}
                 </span>
-                <h2 className="mb-3 text-[18px] font-semibold leading-snug text-navy">
+                <h2 className="mb-3 text-[19px] font-semibold leading-snug text-navy">
                   {post.title}
                 </h2>
-                <p className="mb-6 flex-1 text-[14.5px] leading-relaxed text-body">
+                <p className="mb-6 flex-1 text-[15.5px] leading-relaxed text-body">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center justify-between text-[13px] text-body">
+                <div className="flex items-center justify-between text-[14px] text-body">
                   <span>
                     {post.date} &middot; {post.readTime}
                   </span>

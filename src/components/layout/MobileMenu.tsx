@@ -64,12 +64,12 @@ export default function MobileMenu({
                     className="flex w-full items-center justify-between px-2 py-3.5 text-left"
                   >
                     {item.children ? (
-                      <span className="text-[16px] font-medium text-navy">{item.label}</span>
+                      <span className="text-[17px] font-medium text-navy">{item.label}</span>
                     ) : (
                       <Link
                         href={item.href}
                         onClick={onClose}
-                        className="text-[16px] font-medium text-navy"
+                        className="text-[17px] font-medium text-navy"
                       >
                         {item.label}
                       </Link>
@@ -98,7 +98,7 @@ export default function MobileMenu({
                               key={child.href}
                               href={child.href}
                               onClick={onClose}
-                              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[14.5px] text-body hover:bg-surface hover:text-green"
+                              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[15.5px] text-body hover:bg-surface hover:text-green"
                             >
                               <span className="flex size-7 items-center justify-center rounded-md bg-surface text-green">
                                 <Icon name={child.icon} className="size-3.5" />
@@ -116,15 +116,12 @@ export default function MobileMenu({
 
             <div className="border-t border-border p-5">
               <a
-                href={SITE.loginUrl}
-                className="flex w-full items-center justify-center rounded-full bg-navy px-5 py-3 text-[15px] font-semibold text-white"
+                href={`tel:${SITE.phoneHref}`}
+                className="flex items-center justify-center gap-3 text-sm text-body"
               >
-                Login
-              </a>
-              <div className="mt-4 flex items-center justify-center gap-3 text-sm text-body">
                 <Icon name="Phone" className="size-4" />
                 {SITE.phone[0]}
-              </div>
+              </a>
             </div>
           </motion.div>
         </>

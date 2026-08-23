@@ -8,7 +8,7 @@ export default function PhoneMockup() {
           {/* status/header */}
           <div className="bg-navy px-5 pb-8 pt-8 text-white">
             <p className="text-[11px] text-white/60">Good morning</p>
-            <p className="text-[15px] font-semibold">Arvind Menon</p>
+            <p className="text-[16px] font-semibold">Arvind Menon</p>
             <p className="mt-4 text-[11px] text-white/60">Total Portfolio Value</p>
             <p className="text-[26px] font-bold">₹84,52,910</p>
             <p className="mt-1 flex items-center gap-1 text-[12px] font-medium text-green">

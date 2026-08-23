@@ -18,7 +18,7 @@ export default function PageHero({
       <div className="pointer-events-none absolute -right-24 -top-24 size-72 rounded-full bg-blue/20 blur-3xl" />
       <div className="pointer-events-none absolute -left-24 bottom-0 size-72 rounded-full bg-green/15 blur-3xl" />
       <Container className="relative">
-        <nav className="mb-5 flex flex-wrap items-center gap-2 text-[13.5px] text-white/60">
+        <nav className="mb-5 flex flex-wrap items-center gap-2 text-[14.5px] text-white/60">
           {crumbs.map((c, i) => (
             <span key={c.label} className="flex items-center gap-2">
               {i > 0 && <Icon name="ChevronRight" className="size-3.5" />}
@@ -42,7 +42,7 @@ export default function PageHero({
           {title}
         </h1>
         {description && (
-          <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-white/75">
+          <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-white/75">
             {description}
           </p>
         )}

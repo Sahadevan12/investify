@@ -42,11 +42,11 @@ export default function KycPage() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((s, i) => (
               <div key={s.title} className="rounded-[20px] border border-border p-6">
-                <span className="mb-4 flex size-11 items-center justify-center rounded-full bg-navy text-[14px] font-bold text-white">
+                <span className="mb-4 flex size-11 items-center justify-center rounded-full bg-navy text-[15px] font-bold text-white">
                   {i + 1}
                 </span>
-                <h3 className="mb-2 text-[16px] font-semibold text-navy">{s.title}</h3>
-                <p className="text-[14px] leading-relaxed text-body">{s.description}</p>
+                <h3 className="mb-2 text-[17px] font-semibold text-navy">{s.title}</h3>
+                <p className="text-[15px] leading-relaxed text-body">{s.description}</p>
               </div>
             ))}
           </div>
@@ -55,7 +55,7 @@ export default function KycPage() {
             <h2 className="mb-3 text-[22px] font-semibold text-navy">
               Documents You&rsquo;ll Need
             </h2>
-            <p className="mx-auto mb-6 max-w-xl text-[14.5px] leading-relaxed text-body">
+            <p className="mx-auto mb-6 max-w-xl text-[15.5px] leading-relaxed text-body">
               PAN card, valid passport, overseas address proof (utility bill or bank statement),
               a recent passport-size photograph, and your NRE/NRO bank account details.
             </p>

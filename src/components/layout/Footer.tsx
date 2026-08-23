@@ -38,7 +38,7 @@ export default function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </Link>
-            <p className="mb-5 max-w-xs text-[15px] leading-relaxed text-white/70">
+            <p className="mb-5 max-w-xs text-[16px] leading-relaxed text-white/70">
               Bringing India&rsquo;s investment opportunities closer to NRIs, wherever life has taken you.
             </p>
             <ul className="flex items-center gap-2.5">
@@ -59,13 +59,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-[17px] font-semibold text-white">Quick Links</h3>
+            <h3 className="mb-5 text-[18px] font-semibold text-white">Quick Links</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.quick.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-[15px] text-white/70 transition-colors hover:text-green"
+                    className="text-[16px] text-white/70 transition-colors hover:text-green"
                   >
                     {l.label}
                   </Link>
@@ -75,13 +75,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-[17px] font-semibold text-white">Policies</h3>
+            <h3 className="mb-5 text-[18px] font-semibold text-white">Policies</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.policies.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-[15px] text-white/70 transition-colors hover:text-green"
+                    className="text-[16px] text-white/70 transition-colors hover:text-green"
                   >
                     {l.label}
                   </Link>
@@ -91,8 +91,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-[17px] font-semibold text-white">Contact</h3>
-            <ul className="space-y-4 text-[15px]">
+            <h3 className="mb-5 text-[18px] font-semibold text-white">Contact</h3>
+            <ul className="space-y-4 text-[16px]">
               <li className="flex gap-3">
                 <Icon name="Phone" className="mt-0.5 size-4 shrink-0 text-green" />
                 <a href={`tel:${SITE.phoneHref}`} className="text-white/70 hover:text-green">
@@ -122,7 +122,7 @@ export default function Footer() {
       </Container>
 
       <div className="relative border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-center text-[13px] text-white/50 sm:flex-row sm:text-left">
+        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-center text-[14px] text-white/50 sm:flex-row sm:text-left">
           <p>
             Copyright &copy; {new Date().getFullYear()} {SITE.legalName}, All rights reserved.
           </p>

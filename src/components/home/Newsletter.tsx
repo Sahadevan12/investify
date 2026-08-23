@@ -40,8 +40,8 @@ export default function Newsletter() {
                 <span className="mb-4 flex size-14 items-center justify-center rounded-full bg-green/15 text-green-dark">
                   <Icon name="CheckCircle2" className="size-7" />
                 </span>
-                <h3 className="mb-2 text-[18px] font-semibold text-navy">You&rsquo;re subscribed!</h3>
-                <p className="text-[14.5px] text-body">
+                <h3 className="mb-2 text-[19px] font-semibold text-navy">You&rsquo;re subscribed!</h3>
+                <p className="text-[15.5px] text-body">
                   Watch your inbox for the next issue of our e-magazine.
                 </p>
               </div>
@@ -54,28 +54,28 @@ export default function Newsletter() {
                 className="flex flex-col gap-4"
               >
                 <div>
-                  <label className="mb-1.5 block text-[13.5px] font-medium text-navy">
+                  <label className="mb-1.5 block text-[14.5px] font-medium text-navy">
                     Full Name *
                   </label>
                   <input
                     required
                     type="text"
                     placeholder="Your full name"
-                    className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[14.5px] outline-none transition-colors focus:border-green"
+                    className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15.5px] outline-none transition-colors focus:border-green"
                   />
                 </div>
                 <div>
-                  <label className="mb-1.5 block text-[13.5px] font-medium text-navy">
+                  <label className="mb-1.5 block text-[14.5px] font-medium text-navy">
                     Email Address *
                   </label>
                   <input
                     required
                     type="email"
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[14.5px] outline-none transition-colors focus:border-green"
+                    className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15.5px] outline-none transition-colors focus:border-green"
                   />
                 </div>
-                <label className="flex items-start gap-2.5 text-[13px] text-body">
+                <label className="flex items-start gap-2.5 text-[14px] text-body">
                   <input required type="checkbox" className="mt-0.5 accent-green" />
                   I agree to the{" "}
                   <a href="/privacy-policy" className="text-green-dark underline">
@@ -88,12 +88,12 @@ export default function Newsletter() {
                 </label>
                 <button
                   type="submit"
-                  className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-green px-6 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-green-dark"
+                  className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-green px-6 py-3 text-[16px] font-semibold text-white transition-colors hover:bg-green-dark"
                 >
                   Subscribe Now
                   <Icon name="Send" className="size-4" />
                 </button>
-                <div className="mt-2 flex items-center gap-3 text-[13px] text-body">
+                <div className="mt-2 flex items-center gap-3 text-[14px] text-body">
                   Follow us:
                   <a
                     href="#"
@@ -108,14 +108,14 @@ export default function Newsletter() {
           </div>
 
           <div className="lg:col-span-3">
-            <h3 className="mb-5 text-[18px] font-semibold text-navy">Subscriber Benefits</h3>
+            <h3 className="mb-5 text-[19px] font-semibold text-navy">Subscriber Benefits</h3>
             <div className="mb-10 grid gap-4 sm:grid-cols-2">
               {BENEFITS.map((b) => (
                 <div key={b.title} className="flex gap-3 rounded-2xl border border-border p-5">
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-green/10 text-green-dark">
                     <Icon name="CheckCircle2" className="size-4" />
                   </span>
-                  <p className="text-[14px] leading-relaxed text-body">
+                  <p className="text-[15px] leading-relaxed text-body">
                     <span className="font-semibold text-navy">{b.title}:</span> {b.description}
                   </p>
                 </div>
@@ -123,8 +123,8 @@ export default function Newsletter() {
             </div>
 
             <div className="mb-5 flex items-center justify-between">
-              <h3 className="text-[18px] font-semibold text-navy">Recent Issues</h3>
-              <a href="#" className="text-[14px] font-semibold text-green-dark hover:underline">
+              <h3 className="text-[19px] font-semibold text-navy">Recent Issues</h3>
+              <a href="#" className="text-[15px] font-semibold text-green-dark hover:underline">
                 View All
               </a>
             </div>
@@ -142,9 +142,9 @@ export default function Newsletter() {
                   <span className="flex size-11 items-center justify-center rounded-xl bg-navy/10 text-navy">
                     <Icon name="Newspaper" className="size-5" />
                   </span>
-                  <p className="mt-4 text-[15.5px] font-semibold text-navy">{issue.title}</p>
-                  <p className="mb-4 text-[13px] text-body">{issue.date}</p>
-                  <div className="flex gap-4 text-[13px] font-semibold text-green-dark">
+                  <p className="mt-4 text-[16.5px] font-semibold text-navy">{issue.title}</p>
+                  <p className="mb-4 text-[14px] text-body">{issue.date}</p>
+                  <div className="flex gap-4 text-[14px] font-semibold text-green-dark">
                     <a href="#" className="hover:underline">
                       View
                     </a>

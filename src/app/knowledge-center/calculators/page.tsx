@@ -53,8 +53,8 @@ export default function CalculatorsPage() {
                 <span className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-navy/10 text-navy">
                   <Icon name={t.icon} className="size-6" strokeWidth={1.6} />
                 </span>
-                <h3 className="mb-2.5 text-[17px] font-semibold text-navy">{t.title}</h3>
-                <p className="text-[14.5px] leading-relaxed text-body">{t.description}</p>
+                <h3 className="mb-2.5 text-[18px] font-semibold text-navy">{t.title}</h3>
+                <p className="text-[15.5px] leading-relaxed text-body">{t.description}</p>
               </div>
             ))}
           </div>

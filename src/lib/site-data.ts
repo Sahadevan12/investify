@@ -38,6 +38,7 @@ export const NAV: NavItem[] = [
       { label: "Mutual Funds", href: "/products/mutual-funds", icon: "PieChart" },
       { label: "NPS", href: "/products/nps", icon: "ShieldCheck" },
       { label: "Life & Health Insurance", href: "/products/life-health-insurance", icon: "HeartPulse" },
+      { label: "Portfolio Management Services", href: "/products/portfolio-management-services", icon: "BarChart3" },
     ],
   },
   {
@@ -225,6 +226,46 @@ export const PRODUCTS: Product[] = [
       {
         q: "How are claims handled if I'm not in India?",
         a: "Our claims desk coordinates documentation and hospital liaison on your behalf, keeping you updated through email and WhatsApp.",
+      },
+    ],
+  },
+  {
+    slug: "portfolio-management-services",
+    title: "Portfolio Management Services (PMS)",
+    shortTitle: "Portfolio Management",
+    icon: "BarChart3",
+    summary:
+      "A professionally managed, directly-held equity portfolio built around your goals, with a dedicated relationship manager watching it daily.",
+    description:
+      "Portfolio Management Services are built for investors who want more than a fund fact sheet — they want a portfolio built around their own goals, risk appetite and tax situation, with stocks held directly in their own name rather than pooled units. As per SEBI regulation, PMS requires a minimum investment of ₹50 lakh, making it best suited to HNI and Ultra-HNI NRIs, senior professionals and those who have recently liquidated ESOPs, business proceeds or inherited wealth. Every PMS client at Investify Prism is paired with a dedicated relationship manager who tracks the portfolio daily, evaluates it against its benchmark, and keeps you updated wherever you are in the world.",
+    highlights: [
+      "Direct ownership of stocks in your own demat account, not pooled fund units",
+      "Personalised asset allocation built around your goals and risk appetite, not a one-size-fits-all model",
+      "Dedicated relationship manager tracking your portfolio and sharing regular performance updates",
+      "Transparent fee structure — choose a flat fee plan or a hybrid plan with a performance component",
+      "Minimum investment of ₹50 lakh as mandated by SEBI for all PMS providers",
+      "Full visibility into every transaction, holding and corporate action in your portfolio",
+    ],
+    faqs: [
+      {
+        q: "How is PMS different from a mutual fund?",
+        a: "In PMS, stocks are held directly in your own name and the strategy is built around your specific goals. In a mutual fund, you hold units of a pooled scheme that follows one strategy for every investor.",
+      },
+      {
+        q: "Who should consider PMS over mutual funds?",
+        a: "PMS suits HNI and Ultra-HNI investors, busy professionals who want a more personalised strategy, business owners, and anyone who has recently come into a large lump sum through ESOPs, a business sale or inheritance.",
+      },
+      {
+        q: "What is the minimum investment for PMS in India?",
+        a: "SEBI mandates a minimum investment of ₹50 lakh for Portfolio Management Services, regardless of which PMS provider you choose.",
+      },
+      {
+        q: "Can NRIs invest in PMS?",
+        a: "Yes. NRIs with completed KYC and an NRE or NRO-linked demat account can invest in PMS in India, and we handle the account linkage and compliance for you.",
+      },
+      {
+        q: "How is the fee structured?",
+        a: "We offer a flat annual fee plan or a hybrid plan with a lower fixed fee plus a performance share only above a return hurdle, so incentives stay aligned with your outcomes.",
       },
     ],
   },

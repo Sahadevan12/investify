@@ -56,9 +56,9 @@ export default function ContactUsPage() {
                 <span className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-green/10 text-green-dark">
                   <Icon name={c.icon} className="size-6" strokeWidth={1.6} />
                 </span>
-                <h3 className="mb-2 text-[17px] font-semibold text-navy">{c.title}</h3>
+                <h3 className="mb-2 text-[18px] font-semibold text-navy">{c.title}</h3>
                 {c.lines.map((l) => (
-                  <p key={l} className="text-[14.5px] leading-relaxed text-body">
+                  <p key={l} className="text-[15.5px] leading-relaxed text-body">
                     {l}
                   </p>
                 ))}
@@ -84,8 +84,8 @@ export default function ContactUsPage() {
                 />
               </div>
               <div className="mt-6 rounded-[20px] bg-surface p-6">
-                <h3 className="mb-3 text-[15.5px] font-semibold text-navy">Support Hours</h3>
-                <ul className="space-y-2 text-[14px] text-body">
+                <h3 className="mb-3 text-[16.5px] font-semibold text-navy">Support Hours</h3>
+                <ul className="space-y-2 text-[15px] text-body">
                   <li className="flex justify-between">
                     <span>Monday &ndash; Friday</span>
                     <span>7:00 AM &ndash; 11:00 PM IST</span>
@@ -99,7 +99,7 @@ export default function ContactUsPage() {
                     <span>Email support only</span>
                   </li>
                 </ul>
-                <p className="mt-4 text-[13px] text-body">
+                <p className="mt-4 text-[14px] text-body">
                   Extended hours are structured to overlap with major NRI time zones across the
                   Gulf, Europe, North America and APAC.
                 </p>

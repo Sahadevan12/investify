@@ -23,7 +23,7 @@ export default function Accordion({
               onClick={() => setOpen(isOpen ? null : i)}
               className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
             >
-              <span className="text-[15px] font-semibold text-navy">{f.q}</span>
+              <span className="text-[16px] font-semibold text-navy">{f.q}</span>
               <span
                 className={`flex size-8 shrink-0 items-center justify-center rounded-full bg-surface text-navy transition-transform duration-300 ${isOpen ? "rotate-45 bg-green text-white" : ""}`}
               >
@@ -39,7 +39,7 @@ export default function Accordion({
                   transition={{ duration: 0.25 }}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 pb-5 text-[14.5px] leading-relaxed text-body">{f.a}</p>
+                  <p className="px-6 pb-5 text-[15.5px] leading-relaxed text-body">{f.a}</p>
                 </motion.div>
               )}
             </AnimatePresence>

@@ -32,7 +32,7 @@ export default function Header() {
     <header className="sticky top-0 z-50">
       {/* Topbar */}
       <div className="hidden bg-surface lg:block">
-        <Container className="flex h-[45px] items-center justify-between text-[13px] text-body">
+        <Container className="flex h-[45px] items-center justify-between text-[14px] text-body">
           <div className="flex items-center gap-6">
             <a
               href={`tel:${SITE.phoneHref}`}
@@ -103,7 +103,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 px-4 py-2 text-[15px] font-medium text-navy transition-colors hover:text-green"
+                  className="flex items-center gap-1 px-4 py-2 text-[16px] font-medium text-navy transition-colors hover:text-green"
                 >
                   {item.label}
                   {item.children && (
@@ -131,7 +131,7 @@ export default function Header() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14.5px] text-navy transition-colors hover:bg-surface hover:text-green"
+                            className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[15.5px] text-navy transition-colors hover:bg-surface hover:text-green"
                           >
                             <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-surface text-green">
                               <Icon name={child.icon} className="size-4" />
@@ -148,12 +148,6 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href={SITE.loginUrl}
-              className="hidden items-center gap-2 rounded-full border border-navy/15 px-5 py-2.5 text-[14.5px] font-semibold text-navy transition-colors hover:border-navy hover:bg-navy hover:text-white lg:inline-flex"
-            >
-              Login
-            </a>
             <button
               aria-label="Toggle Menu"
               onClick={() => setMobileOpen(true)}

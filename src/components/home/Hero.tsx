@@ -75,7 +75,7 @@ export default function Hero() {
           <h1 className="text-[34px] font-bold leading-[1.15] tracking-tight text-white sm:text-[42px] lg:text-[52px] lg:leading-[1.1]">
             The Trusted NRI Partner, Always There for You
           </h1>
-          <p className="mt-5 max-w-[480px] text-[16px] leading-relaxed text-white/75 sm:text-[17px]">
+          <p className="mt-5 max-w-[480px] text-[17px] leading-relaxed text-white/75 sm:text-[18px]">
             From demat accounts to inheritance planning, Investify Prism brings every NRI wealth solution together in one place, wherever you call home.
           </p>
 
@@ -85,7 +85,7 @@ export default function Hero() {
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">
                   <Icon name={f.icon} className="size-4 text-green" />
                 </span>
-                <span className="text-[13.5px] font-medium text-white/90 sm:text-[14.5px]">
+                <span className="text-[14.5px] font-medium text-white/90 sm:text-[15.5px]">
                   {f.label}
                 </span>
               </div>

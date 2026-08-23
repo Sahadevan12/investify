@@ -66,7 +66,7 @@ export default function AboutUsPage() {
               </div>
               <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-white p-5 shadow-hover sm:block">
                 <p className="text-[28px] font-bold text-navy">15+</p>
-                <p className="text-[13px] text-body">Years of NRI-focused advisory</p>
+                <p className="text-[14px] text-body">Years of NRI-focused advisory</p>
               </div>
             </div>
 
@@ -77,13 +77,13 @@ export default function AboutUsPage() {
               <h2 className="text-[28px] font-semibold leading-[1.25] text-navy sm:text-[34px]">
                 Started by advisors who understood the NRI gap first-hand
               </h2>
-              <p className="mt-5 text-[16px] leading-relaxed text-body">
+              <p className="mt-5 text-[17px] leading-relaxed text-body">
                 Many of our founding advisors began their careers serving resident Indian
                 investors, only to watch NRI clients struggle with paperwork, time-zone
                 mismatches and confusing FEMA rules that resident-focused firms weren&rsquo;t built
                 to handle.
               </p>
-              <p className="mt-4 text-[16px] leading-relaxed text-body">
+              <p className="mt-4 text-[17px] leading-relaxed text-body">
                 {SITE.name} was built specifically around that gap &mdash; a single relationship
                 that covers demat accounts, equity, mutual funds, insurance, taxation and
                 inheritance planning, with support structured around your time zone, not ours.
@@ -93,7 +93,7 @@ export default function AboutUsPage() {
                 {STATS.map((s) => (
                   <div key={s.label}>
                     <p className="text-[26px] font-bold text-navy sm:text-[30px]">{s.value}</p>
-                    <p className="mt-1 text-[13.5px] text-body">{s.label}</p>
+                    <p className="mt-1 text-[14.5px] text-body">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -114,8 +114,8 @@ export default function AboutUsPage() {
                 <span className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-navy text-white">
                   <Icon name={v.icon} className="size-6" strokeWidth={1.6} />
                 </span>
-                <h3 className="mb-2.5 text-[18px] font-semibold text-navy">{v.title}</h3>
-                <p className="text-[14.5px] leading-relaxed text-body">{v.description}</p>
+                <h3 className="mb-2.5 text-[19px] font-semibold text-navy">{v.title}</h3>
+                <p className="text-[15.5px] leading-relaxed text-body">{v.description}</p>
               </div>
             ))}
           </div>

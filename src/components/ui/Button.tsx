@@ -24,7 +24,7 @@ export default function Button({
   const base =
     "group inline-flex items-center gap-4 rounded-full font-semibold transition-all duration-300 whitespace-nowrap";
   const sizes = {
-    md: "pl-6 pr-2 py-2 text-[15px]",
+    md: "pl-6 pr-2 py-2 text-[16px]",
     lg: "pl-7 pr-2.5 py-2.5 text-base",
   };
   const variants = {

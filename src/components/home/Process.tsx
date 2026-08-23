@@ -27,7 +27,7 @@ export default function Process() {
             const badge = (
               <span
                 className={clsx(
-                  "inline-flex items-center rounded-xl bg-navy px-5 py-2.5 text-[13px] font-bold tracking-wide text-white",
+                  "inline-flex items-center rounded-xl bg-navy px-5 py-2.5 text-[14px] font-bold tracking-wide text-white",
                   imageFirst ? "-mt-6" : ""
                 )}
               >
@@ -36,10 +36,10 @@ export default function Process() {
             );
             const text = (
               <div>
-                <h3 className="mb-2.5 mt-4 text-[18px] font-semibold leading-snug text-navy">
+                <h3 className="mb-2.5 mt-4 text-[19px] font-semibold leading-snug text-navy">
                   {s.title}
                 </h3>
-                <p className="text-[14.5px] leading-relaxed text-body">{s.description}</p>
+                <p className="text-[15.5px] leading-relaxed text-body">{s.description}</p>
               </div>
             );
             const image = (
