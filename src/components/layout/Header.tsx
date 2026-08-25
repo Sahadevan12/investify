@@ -131,9 +131,9 @@ export default function Header() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[15.5px] text-navy transition-colors hover:bg-surface hover:text-green"
+                            className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[15px] text-navy transition-colors hover:bg-surface hover:text-green"
                           >
-                            <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-surface text-green">
+                            <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-surface text-green">
                               <Icon name={child.icon} className="size-4" />
                             </span>
                             {child.label}

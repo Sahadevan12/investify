@@ -62,19 +62,19 @@ export default async function ServicePage({
                     <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-green/15 text-green-dark">
                       <Icon name="Check" className="size-3.5" strokeWidth={3} />
                     </span>
-                    <span className="text-[15.5px] leading-relaxed text-body">{h}</span>
+                    <span className="text-[15px] leading-relaxed text-body">{h}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <aside className="lg:col-span-1">
-              <div className="sticky top-28 rounded-[24px] border border-border bg-surface p-7">
+              <div className="sticky top-28 rounded-3xl border border-border bg-surface p-7">
                 <span className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-navy text-white">
                   <Icon name={service.icon} className="size-6" strokeWidth={1.6} />
                 </span>
                 <h3 className="mb-2 text-[19px] font-semibold text-navy">Talk it through</h3>
-                <p className="mb-6 text-[15px] leading-relaxed text-body">
+                <p className="mb-6 text-[14px] leading-relaxed text-body">
                   This is often a sensitive topic. Book a private, no-pressure conversation with
                   our team.
                 </p>
@@ -91,7 +91,7 @@ export default async function ServicePage({
                       <li key={s.slug}>
                         <Link
                           href={`/services/${s.slug}`}
-                          className="flex items-center gap-2.5 rounded-lg px-2 py-2 text-[15px] text-navy transition-colors hover:bg-white hover:text-green-dark"
+                          className="flex items-center gap-2.5 rounded-xl px-2 py-2 text-[14px] text-navy transition-colors hover:bg-white hover:text-green-dark"
                         >
                           <Icon name={s.icon} className="size-4" />
                           {s.title}

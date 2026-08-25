@@ -2,7 +2,6 @@ import Image from "next/image";
 import { PROCESS_STEPS } from "@/lib/site-data";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
-import { clsx } from "clsx";
 
 const STEP_IMAGES = [
   "/images/step1.png",
@@ -21,29 +20,10 @@ export default function Process() {
           description="Our approach focuses on building wealth that supports your present and protects your future, while ensuring every decision is part of the best investment plan for your needs."
         />
 
-        <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          {PROCESS_STEPS.map((s, i) => {
-            const imageFirst = i % 2 === 1;
-            const badge = (
-              <span
-                className={clsx(
-                  "inline-flex items-center rounded-xl bg-navy px-5 py-2.5 text-[14px] font-bold tracking-wide text-white",
-                  imageFirst ? "-mt-6" : ""
-                )}
-              >
-                STEP {s.step}
-              </span>
-            );
-            const text = (
-              <div>
-                <h3 className="mb-2.5 mt-4 text-[19px] font-semibold leading-snug text-navy">
-                  {s.title}
-                </h3>
-                <p className="text-[15.5px] leading-relaxed text-body">{s.description}</p>
-              </div>
-            );
-            const image = (
-              <div className="overflow-hidden rounded-2xl">
+        <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          {PROCESS_STEPS.map((s, i) => (
+            <div key={s.step} className="flex flex-col">
+              <div className="relative mb-7 overflow-hidden rounded-3xl">
                 <Image
                   src={STEP_IMAGES[i]}
                   alt={s.title}
@@ -51,27 +31,16 @@ export default function Process() {
                   height={480}
                   className="h-44 w-full object-cover sm:h-48"
                 />
+                <span className="absolute -bottom-5 left-5 flex size-14 items-center justify-center rounded-2xl bg-navy text-[19px] font-bold text-white shadow-hover">
+                  {s.step}
+                </span>
               </div>
-            );
-
-            return (
-              <div key={s.step} className="flex flex-col items-center text-center">
-                {imageFirst ? (
-                  <>
-                    {image}
-                    {badge}
-                    {text}
-                  </>
-                ) : (
-                  <>
-                    {badge}
-                    {text}
-                    <div className="mt-5 w-full">{image}</div>
-                  </>
-                )}
-              </div>
-            );
-          })}
+              <h3 className="mb-2.5 text-[19px] font-semibold leading-snug text-navy">
+                {s.title}
+              </h3>
+              <p className="text-[15px] leading-relaxed text-body">{s.description}</p>
+            </div>
+          ))}
         </div>
       </Container>
     </section>

@@ -12,7 +12,7 @@ export default function FloatingAsk() {
       <span className="flex size-8 items-center justify-center rounded-full bg-green">
         <Icon name="MessageCircle" className="size-4" />
       </span>
-      <span className="text-[15px] font-semibold">Ask Prism</span>
+      <span className="text-[14px] font-semibold">Ask Prism</span>
     </Link>
   );
 }

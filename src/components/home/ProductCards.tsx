@@ -28,20 +28,20 @@ export default function ProductCards() {
             <Link
               key={p.slug}
               href={`/products/${p.slug}`}
-              className="group relative flex flex-col rounded-[20px] border border-black/5 bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-hover"
+              className="group relative flex flex-col rounded-3xl border border-black/5 bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-hover"
             >
               <span
                 className={`mb-6 flex size-14 items-center justify-center rounded-2xl ${CHIP_COLORS[i % CHIP_COLORS.length]}`}
               >
                 <Icon name={p.icon} className="size-6" strokeWidth={1.6} />
               </span>
-              <h3 className="mb-3 text-[20px] font-semibold text-navy">
+              <h3 className="mb-3 text-[22px] font-semibold text-navy">
                 {p.shortTitle}
               </h3>
               <p className="mb-6 flex-1 text-[16px] leading-relaxed text-body">
                 {p.summary}
               </p>
-              <span className="inline-flex items-center gap-2 text-[15.5px] font-semibold text-green-dark">
+              <span className="inline-flex items-center gap-2 text-[15px] font-semibold text-green-dark">
                 Read More
                 <Icon
                   name="ArrowRight"

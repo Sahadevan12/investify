@@ -30,11 +30,11 @@ export default function SipCalculator() {
   const gainPct = Math.min(100, Math.round((gains / corpus) * 10000) / 100);
 
   return (
-    <div className="grid grid-cols-1 gap-10 rounded-[24px] border border-border bg-white p-7 sm:p-9 lg:grid-cols-5 lg:gap-14">
+    <div className="grid grid-cols-1 gap-10 rounded-3xl border border-border bg-white p-7 sm:p-9 lg:grid-cols-5 lg:gap-14">
       <div className="lg:col-span-3">
         <div className="mb-7">
           <div className="mb-2 flex items-center justify-between">
-            <label className="text-[15px] font-medium text-navy">Monthly Investment</label>
+            <label className="text-[14px] font-medium text-navy">Monthly Investment</label>
             <span className="text-[16px] font-semibold text-green-dark">
               {formatINR(monthly)}
             </span>
@@ -52,7 +52,7 @@ export default function SipCalculator() {
 
         <div className="mb-7">
           <div className="mb-2 flex items-center justify-between">
-            <label className="text-[15px] font-medium text-navy">Investment Period</label>
+            <label className="text-[14px] font-medium text-navy">Investment Period</label>
             <span className="text-[16px] font-semibold text-green-dark">{years} years</span>
           </div>
           <input
@@ -68,7 +68,7 @@ export default function SipCalculator() {
 
         <div>
           <div className="mb-2 flex items-center justify-between">
-            <label className="text-[15px] font-medium text-navy">Expected Annual Return</label>
+            <label className="text-[14px] font-medium text-navy">Expected Annual Return</label>
             <span className="text-[16px] font-semibold text-green-dark">{rate}%</span>
           </div>
           <input
@@ -83,7 +83,7 @@ export default function SipCalculator() {
         </div>
       </div>
 
-      <div className="rounded-[20px] bg-surface p-7 lg:col-span-2">
+      <div className="rounded-3xl bg-surface p-7 lg:col-span-2">
         <p className="mb-1 text-[14px] font-medium uppercase tracking-wide text-body">
           Estimated Future Value
         </p>
@@ -93,7 +93,7 @@ export default function SipCalculator() {
           <div className="h-full bg-green" style={{ width: `${gainPct}%` }} />
         </div>
 
-        <div className="space-y-3 text-[15.5px]">
+        <div className="space-y-3 text-[15px]">
           <div className="flex items-center justify-between">
             <span className="flex items-center gap-2 text-body">
               <span className="size-2.5 rounded-full bg-navy/20" /> Invested Amount

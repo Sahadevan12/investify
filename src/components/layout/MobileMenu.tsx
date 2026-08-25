@@ -46,7 +46,7 @@ export default function MobileMenu({
               <button
                 aria-label="Close Menu"
                 onClick={onClose}
-                className="flex size-10 items-center justify-center rounded-full bg-surface text-navy"
+                className="flex size-10 items-center justify-center rounded-full border border-navy/15 text-navy"
               >
                 <Icon name="X" className="size-5" />
               </button>
@@ -98,9 +98,9 @@ export default function MobileMenu({
                               key={child.href}
                               href={child.href}
                               onClick={onClose}
-                              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[15.5px] text-body hover:bg-surface hover:text-green"
+                              className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[15px] text-body hover:bg-surface hover:text-green"
                             >
-                              <span className="flex size-7 items-center justify-center rounded-md bg-surface text-green">
+                              <span className="flex size-7 items-center justify-center rounded-xl bg-surface text-green">
                                 <Icon name={child.icon} className="size-3.5" />
                               </span>
                               {child.label}

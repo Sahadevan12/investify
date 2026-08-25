@@ -70,12 +70,12 @@ export default function Hero() {
         <div className="max-w-[600px]">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide backdrop-blur">
             <span className="size-1.5 rounded-full bg-green" />
-            NRI Wealth Management
+            Built for NRIs
           </span>
-          <h1 className="text-[34px] font-bold leading-[1.15] tracking-tight text-white sm:text-[42px] lg:text-[52px] lg:leading-[1.1]">
+          <h1 className="text-[34px] font-bold leading-[1.15] tracking-tight text-white sm:text-[44px] lg:text-[52px] lg:leading-[1.1]">
             The Trusted NRI Partner, Always There for You
           </h1>
-          <p className="mt-5 max-w-[480px] text-[17px] leading-relaxed text-white/75 sm:text-[18px]">
+          <p className="mt-5 max-w-[480px] text-[17px] leading-relaxed text-white/70 sm:text-[19px]">
             From demat accounts to inheritance planning, Investify Prism brings every NRI wealth solution together in one place, wherever you call home.
           </p>
 
@@ -85,7 +85,7 @@ export default function Hero() {
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">
                   <Icon name={f.icon} className="size-4 text-green" />
                 </span>
-                <span className="text-[14.5px] font-medium text-white/90 sm:text-[15.5px]">
+                <span className="text-[14px] font-medium text-white sm:text-[15px]">
                   {f.label}
                 </span>
               </div>
@@ -114,7 +114,7 @@ export default function Hero() {
         <button
           aria-label={paused ? "Resume animation" : "Pause animation"}
           onClick={() => setPaused((p) => !p)}
-          className="ml-2 flex size-7 items-center justify-center rounded-full bg-white/10 text-white"
+          className="ml-2 flex size-7 items-center justify-center rounded-full border border-white/20 text-white"
         >
           <Icon name={paused ? "Play" : "Pause"} className="size-3.5" />
         </button>

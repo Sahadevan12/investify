@@ -55,7 +55,7 @@ export default function AboutUsPage() {
         <Container>
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="relative">
-              <div className="overflow-hidden rounded-[28px] shadow-card">
+              <div className="overflow-hidden rounded-3xl shadow-card">
                 <Image
                   src="/images/about/about-team-diverse-office.jpg"
                   alt="Investify Prism advisory team"
@@ -92,8 +92,8 @@ export default function AboutUsPage() {
               <div className="mt-8 grid grid-cols-2 gap-6">
                 {STATS.map((s) => (
                   <div key={s.label}>
-                    <p className="text-[26px] font-bold text-navy sm:text-[30px]">{s.value}</p>
-                    <p className="mt-1 text-[14.5px] text-body">{s.label}</p>
+                    <p className="text-[28px] font-bold text-navy sm:text-[30px]">{s.value}</p>
+                    <p className="mt-1 text-[14px] text-body">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -110,12 +110,12 @@ export default function AboutUsPage() {
           />
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {VALUES.map((v) => (
-              <div key={v.title} className="rounded-[20px] bg-white p-7 shadow-card">
+              <div key={v.title} className="rounded-3xl bg-white p-7 shadow-card">
                 <span className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-navy text-white">
                   <Icon name={v.icon} className="size-6" strokeWidth={1.6} />
                 </span>
                 <h3 className="mb-2.5 text-[19px] font-semibold text-navy">{v.title}</h3>
-                <p className="text-[15.5px] leading-relaxed text-body">{v.description}</p>
+                <p className="text-[15px] leading-relaxed text-body">{v.description}</p>
               </div>
             ))}
           </div>

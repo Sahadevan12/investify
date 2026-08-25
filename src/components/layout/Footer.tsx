@@ -15,7 +15,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-navy text-white/80">
+    <footer className="relative overflow-hidden bg-navy text-white/70">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
         style={{
@@ -29,7 +29,7 @@ export default function Footer() {
       <Container className="relative py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div>
-            <Link href="/" className="mb-4 inline-block rounded-lg bg-white p-2">
+            <Link href="/" className="mb-4 inline-block rounded-xl bg-white p-2">
               <Image
                 src="/brand/investify-prism-logo-v2.jpeg"
                 alt={`${SITE.name} Logo`}
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-[18px] font-semibold text-white">Quick Links</h3>
+            <h3 className="mb-5 text-[19px] font-semibold text-white">Quick Links</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.quick.map((l) => (
                 <li key={l.href}>
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-[18px] font-semibold text-white">Policies</h3>
+            <h3 className="mb-5 text-[19px] font-semibold text-white">Policies</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.policies.map((l) => (
                 <li key={l.href}>
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-[18px] font-semibold text-white">Contact</h3>
+            <h3 className="mb-5 text-[19px] font-semibold text-white">Contact</h3>
             <ul className="space-y-4 text-[16px]">
               <li className="flex gap-3">
                 <Icon name="Phone" className="mt-0.5 size-4 shrink-0 text-green" />

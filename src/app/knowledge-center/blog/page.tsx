@@ -30,7 +30,7 @@ export default function BlogPage() {
             {BLOG_POSTS.map((post) => (
               <article
                 key={post.slug}
-                className="group flex flex-col rounded-[20px] border border-border p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-hover"
+                className="group flex flex-col rounded-3xl border border-border p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-hover"
               >
                 <span className="mb-5 inline-flex w-fit items-center rounded-full bg-green/10 px-3 py-1 text-[12px] font-semibold text-green-dark">
                   {post.category}
@@ -38,7 +38,7 @@ export default function BlogPage() {
                 <h2 className="mb-3 text-[19px] font-semibold leading-snug text-navy">
                   {post.title}
                 </h2>
-                <p className="mb-6 flex-1 text-[15.5px] leading-relaxed text-body">
+                <p className="mb-6 flex-1 text-[15px] leading-relaxed text-body">
                   {post.excerpt}
                 </p>
                 <div className="flex items-center justify-between text-[14px] text-body">

@@ -3,26 +3,21 @@ import { clsx } from "clsx";
 import { Icon } from "./Icon";
 
 type ButtonProps = {
-  href: string;
   children: React.ReactNode;
   variant?: "primary" | "outline" | "ghost";
   size?: "md" | "lg";
   className?: string;
-  external?: boolean;
   icon?: string;
-};
+} & (
+  | { href: string; external?: boolean; type?: never; disabled?: never }
+  | { href?: never; external?: never; type: "submit" | "button"; disabled?: boolean }
+);
 
-export default function Button({
-  href,
-  children,
-  variant = "primary",
-  size = "md",
-  className,
-  external,
-  icon = "ArrowRight",
-}: ButtonProps) {
+export default function Button(props: ButtonProps) {
+  const { children, variant = "primary", size = "md", className, icon = "ArrowRight" } = props;
+
   const base =
-    "group inline-flex items-center gap-4 rounded-full font-semibold transition-all duration-300 whitespace-nowrap";
+    "group inline-flex items-center gap-4 rounded-full font-semibold transition-all duration-300 whitespace-nowrap disabled:opacity-60 disabled:pointer-events-none";
   const sizes = {
     md: "pl-6 pr-2 py-2 text-[16px]",
     lg: "pl-7 pr-2.5 py-2.5 text-base",
@@ -57,16 +52,24 @@ export default function Button({
 
   const cls = clsx(base, sizes[size], variants[variant], className);
 
-  if (external) {
+  if (props.type) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+      <button type={props.type} disabled={props.disabled} className={cls}>
+        {content}
+      </button>
+    );
+  }
+
+  if (props.external) {
+    return (
+      <a href={props.href} target="_blank" rel="noopener noreferrer" className={cls}>
         {content}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={cls}>
+    <Link href={props.href} className={cls}>
       {content}
     </Link>
   );

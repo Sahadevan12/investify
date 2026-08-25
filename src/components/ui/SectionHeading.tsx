@@ -47,8 +47,8 @@ export default function SectionHeading({
       {description && (
         <p
           className={clsx(
-            "mt-4 text-[17px] leading-[1.7] sm:text-[18px]",
-            light ? "text-white/75" : "text-body"
+            "mt-4 text-[17px] leading-[1.7] sm:text-[19px]",
+            light ? "text-white/70" : "text-body"
           )}
         >
           {description}

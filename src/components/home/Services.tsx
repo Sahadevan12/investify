@@ -19,14 +19,14 @@ export default function Services() {
             <Link
               key={s.slug}
               href={`/services/${s.slug}`}
-              className="group flex flex-col rounded-[20px] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-hover"
+              className="group flex flex-col rounded-3xl bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-hover"
             >
               <span className="mb-6 flex size-14 items-center justify-center rounded-2xl bg-navy text-white">
                 <Icon name={s.icon} className="size-6" strokeWidth={1.6} />
               </span>
-              <h3 className="mb-3 text-[20px] font-semibold text-navy">{s.title}</h3>
+              <h3 className="mb-3 text-[22px] font-semibold text-navy">{s.title}</h3>
               <p className="mb-6 flex-1 text-[16px] leading-relaxed text-body">{s.summary}</p>
-              <span className="inline-flex items-center gap-2 text-[15.5px] font-semibold text-green-dark">
+              <span className="inline-flex items-center gap-2 text-[15px] font-semibold text-green-dark">
                 Learn More
                 <Icon
                   name="ArrowRight"

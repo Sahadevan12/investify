@@ -34,7 +34,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t, i) => (
             <div
               key={t.name}
-              className="flex flex-col rounded-[20px] bg-white p-7 shadow-card"
+              className="flex flex-col rounded-3xl bg-white p-7 shadow-card"
             >
               <Icon name="Quote" className="mb-4 size-7 text-green/40" />
               <div className="mb-5 flex gap-1 text-gold">
@@ -47,12 +47,12 @@ export default function Testimonials() {
               </p>
               <div className="flex items-center gap-3">
                 <span
-                  className={`flex size-11 shrink-0 items-center justify-center rounded-full text-[15px] font-semibold ${AVATAR_COLORS[i % AVATAR_COLORS.length]}`}
+                  className={`flex size-11 shrink-0 items-center justify-center rounded-full text-[14px] font-semibold ${AVATAR_COLORS[i % AVATAR_COLORS.length]}`}
                 >
                   {initials(t.name)}
                 </span>
                 <div>
-                  <p className="text-[15.5px] font-semibold text-navy">{t.name}</p>
+                  <p className="text-[15px] font-semibold text-navy">{t.name}</p>
                   <p className="text-[14px] text-body">{t.location}</p>
                 </div>
               </div>

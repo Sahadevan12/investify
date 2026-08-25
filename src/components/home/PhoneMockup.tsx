@@ -4,13 +4,13 @@ export default function PhoneMockup() {
       <div className="pointer-events-none absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-br from-green/15 via-blue/10 to-transparent blur-2xl" />
       <div className="animate-float relative w-[260px] rounded-[2.5rem] border-[10px] border-navy-dark bg-navy-dark shadow-2xl sm:w-[300px]">
         <div className="absolute left-1/2 top-0 h-6 w-28 -translate-x-1/2 rounded-b-2xl bg-navy-dark" />
-        <div className="overflow-hidden rounded-[1.8rem] bg-surface">
+        <div className="overflow-hidden rounded-3xl bg-surface">
           {/* status/header */}
           <div className="bg-navy px-5 pb-8 pt-8 text-white">
-            <p className="text-[11px] text-white/60">Good morning</p>
+            <p className="text-[12px] text-white/70">Good morning</p>
             <p className="text-[16px] font-semibold">Arvind Menon</p>
-            <p className="mt-4 text-[11px] text-white/60">Total Portfolio Value</p>
-            <p className="text-[26px] font-bold">₹84,52,910</p>
+            <p className="mt-4 text-[12px] text-white/70">Total Portfolio Value</p>
+            <p className="text-[28px] font-bold">₹84,52,910</p>
             <p className="mt-1 flex items-center gap-1 text-[12px] font-medium text-green">
               ▲ 12.4% this year
             </p>
@@ -42,9 +42,9 @@ export default function PhoneMockup() {
               >
                 <div className="flex items-center gap-2.5">
                   <span className={`size-2.5 rounded-full ${row.color}`} />
-                  <span className="text-[12.5px] font-medium text-navy">{row.name}</span>
+                  <span className="text-[12px] font-medium text-navy">{row.name}</span>
                 </div>
-                <span className="text-[12.5px] font-semibold text-navy">{row.value}</span>
+                <span className="text-[12px] font-semibold text-navy">{row.value}</span>
               </div>
             ))}
           </div>
@@ -54,7 +54,7 @@ export default function PhoneMockup() {
             {["Home", "Invest", "Reports", "Profile"].map((t, i) => (
               <span
                 key={t}
-                className={`text-[10px] font-medium ${i === 0 ? "text-green-dark" : "text-body/50"}`}
+                className={`text-[12px] font-medium ${i === 0 ? "text-green-dark" : "text-body/50"}`}
               >
                 {t}
               </span>

@@ -44,32 +44,14 @@ export default function WhyChooseUs() {
       <div className="pointer-events-none absolute -right-32 bottom-0 size-96 rounded-full bg-green/15 blur-3xl" />
 
       <Container className="relative">
-        <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end">
-          <SectionHeading
-            align="left"
-            light
-            eyebrow="Why Choose Us"
-            title="What Makes Us Different from Others"
-            description="A NRI wealth management experience built around trust, clarity, and real support."
-            className="mx-0"
-          />
-          <div className="flex shrink-0 gap-3">
-            <button
-              aria-label="Previous"
-              onClick={() => scrollBy(-1)}
-              className="flex size-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10"
-            >
-              <Icon name="ChevronRight" className="size-4 rotate-180" />
-            </button>
-            <button
-              aria-label="Next"
-              onClick={() => scrollBy(1)}
-              className="flex size-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10"
-            >
-              <Icon name="ChevronRight" className="size-4" />
-            </button>
-          </div>
-        </div>
+        <SectionHeading
+          align="left"
+          light
+          eyebrow="Why Choose Us"
+          title="What Makes Us Different from Others"
+          description="A NRI wealth management experience built around trust, clarity, and real support."
+          className="mx-0"
+        />
 
         <div
           ref={scrollerRef}
@@ -82,15 +64,32 @@ export default function WhyChooseUs() {
           {CARDS.map((d, i) => (
             <div
               key={d.title + i}
-              className="w-[280px] shrink-0 rounded-[20px] border border-white/10 bg-white/[0.06] p-6 backdrop-blur sm:w-[320px]"
+              className="w-[280px] shrink-0 rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur sm:w-[320px]"
             >
               <span className="mb-5 flex size-12 items-center justify-center rounded-xl bg-white/10 text-green">
                 <Icon name={d.icon} className="size-5" strokeWidth={1.6} />
               </span>
-              <h3 className="mb-2.5 text-[18px] font-semibold text-white">{d.title}</h3>
-              <p className="text-[15.5px] leading-relaxed text-white/70">{d.description}</p>
+              <h3 className="mb-2.5 text-[19px] font-semibold text-white">{d.title}</h3>
+              <p className="text-[15px] leading-relaxed text-white/70">{d.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-6 flex justify-center gap-3">
+          <button
+            aria-label="Previous"
+            onClick={() => scrollBy(-1)}
+            className="flex size-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10"
+          >
+            <Icon name="ChevronRight" className="size-4 rotate-180" />
+          </button>
+          <button
+            aria-label="Next"
+            onClick={() => scrollBy(1)}
+            className="flex size-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10"
+          >
+            <Icon name="ChevronRight" className="size-4" />
+          </button>
         </div>
       </Container>
     </section>

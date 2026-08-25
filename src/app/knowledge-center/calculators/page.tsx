@@ -49,12 +49,12 @@ export default function CalculatorsPage() {
           <SectionHeading eyebrow="Coming Soon" title="More Planning Tools" />
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {MORE_TOOLS.map((t) => (
-              <div key={t.title} className="rounded-[20px] bg-white p-7 shadow-card">
+              <div key={t.title} className="rounded-3xl bg-white p-7 shadow-card">
                 <span className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-navy/10 text-navy">
                   <Icon name={t.icon} className="size-6" strokeWidth={1.6} />
                 </span>
-                <h3 className="mb-2.5 text-[18px] font-semibold text-navy">{t.title}</h3>
-                <p className="text-[15.5px] leading-relaxed text-body">{t.description}</p>
+                <h3 className="mb-2.5 text-[19px] font-semibold text-navy">{t.title}</h3>
+                <p className="text-[15px] leading-relaxed text-body">{t.description}</p>
               </div>
             ))}
           </div>
