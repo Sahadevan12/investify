@@ -100,16 +100,20 @@ export default function Hero() {
         </div>
       </Container>
 
-      <div className="absolute bottom-6 right-6 z-10 flex items-center gap-2 sm:bottom-8 sm:right-8">
+      <div className="absolute bottom-6 right-6 z-10 flex items-center sm:bottom-8 sm:right-8">
         {SLIDES.map((_, i) => (
           <button
             key={i}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
-            className={`h-1.5 rounded-full transition-all ${
-              i === index ? "w-6 bg-green" : "w-1.5 bg-white/40"
-            }`}
-          />
+            className="flex size-11 items-center justify-center"
+          >
+            <span
+              className={`h-2.5 rounded-full transition-all ${
+                i === index ? "w-7 bg-green" : "w-2.5 bg-white/50"
+              }`}
+            />
+          </button>
         ))}
         <button
           aria-label={paused ? "Resume animation" : "Pause animation"}

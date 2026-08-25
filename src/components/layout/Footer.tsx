@@ -11,6 +11,7 @@ const socials = [
   ["Instagram", SITE.social.instagram],
   ["Linkedin", SITE.social.linkedin],
   ["Youtube", SITE.social.youtube],
+  ["Whatsapp", SITE.social.whatsapp],
 ] as const;
 
 export default function Footer() {
@@ -48,7 +49,7 @@ export default function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Follow us on ${name}`}
+                    aria-label={`Follow us on ${name === "Whatsapp" ? "WhatsApp" : name}`}
                     className="flex size-9 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-green"
                   >
                     <SocialIcon name={name} className="size-4" />

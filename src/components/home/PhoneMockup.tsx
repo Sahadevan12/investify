@@ -1,7 +1,7 @@
 export default function PhoneMockup() {
   return (
     <div className="relative">
-      <div className="pointer-events-none absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-br from-green/15 via-blue/10 to-transparent blur-2xl" />
+      <div className="pointer-events-none absolute -inset-10 -z-10 rounded-full bg-gradient-to-br from-green/15 via-blue/10 to-transparent blur-2xl" />
       <div className="animate-float relative w-[260px] rounded-[2.5rem] border-[10px] border-navy-dark bg-navy-dark shadow-2xl sm:w-[300px]">
         <div className="absolute left-1/2 top-0 h-6 w-28 -translate-x-1/2 rounded-b-2xl bg-navy-dark" />
         <div className="overflow-hidden rounded-3xl bg-surface">

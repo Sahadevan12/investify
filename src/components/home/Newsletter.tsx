@@ -90,16 +90,6 @@ export default function Newsletter() {
                 <Button type="submit" icon="Send" className="mt-1">
                   Subscribe Now
                 </Button>
-                <div className="mt-2 flex items-center gap-3 text-[14px] text-body">
-                  Follow us:
-                  <a
-                    href="#"
-                    className="flex size-8 items-center justify-center rounded-full bg-white text-green-dark shadow-soft"
-                    aria-label="Follow us on WhatsApp"
-                  >
-                    <Icon name="MessageCircle" className="size-4" />
-                  </a>
-                </div>
               </form>
             )}
           </div>

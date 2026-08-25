@@ -74,7 +74,7 @@ export default function LeadForm() {
                 e.preventDefault();
                 setSubmitted(true);
               }}
-              className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+              className="grid grid-cols-1 gap-x-5 gap-y-5 sm:grid-cols-2"
             >
               <div className="sm:col-span-2">
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
@@ -84,7 +84,7 @@ export default function LeadForm() {
                   required
                   type="text"
                   placeholder="Name"
-                  className="w-full rounded-xl border border-border px-4 py-3 text-[15px] outline-none focus:border-green"
+                  className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
               </div>
               <div className="sm:col-span-2">
@@ -95,15 +95,15 @@ export default function LeadForm() {
                   required
                   type="email"
                   placeholder="Email"
-                  className="w-full rounded-xl border border-border px-4 py-3 text-[15px] outline-none focus:border-green"
+                  className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
               </div>
               <div>
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
                   Mobile Number
                 </label>
-                <div className="flex overflow-hidden rounded-xl border border-border focus-within:border-green">
-                  <select className="border-r border-border bg-surface px-2 text-[14px] outline-none">
+                <div className="flex h-[50px] overflow-hidden rounded-xl border border-border focus-within:border-green">
+                  <select className="h-full border-r border-border bg-surface px-2 text-[14px] outline-none">
                     {COUNTRY_CODES.map((c) => (
                       <option key={c.code + c.label} value={c.code}>
                         {c.code}
@@ -114,7 +114,7 @@ export default function LeadForm() {
                     required
                     type="tel"
                     placeholder="Mobile Number"
-                    className="w-full px-3 py-3 text-[15px] outline-none"
+                    className="h-full w-full px-3 text-[15px] outline-none"
                   />
                 </div>
               </div>
@@ -125,7 +125,7 @@ export default function LeadForm() {
                 <input
                   type="text"
                   placeholder="City"
-                  className="w-full rounded-xl border border-border px-4 py-3 text-[15px] outline-none focus:border-green"
+                  className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
               </div>
               <div className="sm:col-span-2">
@@ -135,7 +135,7 @@ export default function LeadForm() {
                 <input
                   type="text"
                   placeholder="Country of Residence"
-                  className="w-full rounded-xl border border-border px-4 py-3 text-[15px] outline-none focus:border-green"
+                  className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
               </div>
               <div className="mt-1 sm:col-span-2">

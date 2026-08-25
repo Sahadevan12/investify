@@ -53,40 +53,40 @@ export default function WhyChooseUs() {
           className="mx-0"
         />
 
-        <div
-          ref={scrollerRef}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-          onTouchStart={() => setPaused(true)}
-          onTouchEnd={() => setPaused(false)}
-          className="mt-12 flex gap-5 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {CARDS.map((d, i) => (
-            <div
-              key={d.title + i}
-              className="w-[280px] shrink-0 rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur sm:w-[320px]"
-            >
-              <span className="mb-5 flex size-12 items-center justify-center rounded-xl bg-white/10 text-green">
-                <Icon name={d.icon} className="size-5" strokeWidth={1.6} />
-              </span>
-              <h3 className="mb-2.5 text-[19px] font-semibold text-white">{d.title}</h3>
-              <p className="text-[15px] leading-relaxed text-white/70">{d.description}</p>
-            </div>
-          ))}
-        </div>
+        <div className="relative mt-12">
+          <div
+            ref={scrollerRef}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onTouchStart={() => setPaused(true)}
+            onTouchEnd={() => setPaused(false)}
+            className="flex gap-5 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {CARDS.map((d, i) => (
+              <div
+                key={d.title + i}
+                className="w-[280px] shrink-0 rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur sm:w-[320px]"
+              >
+                <span className="mb-5 flex size-12 items-center justify-center rounded-xl bg-white/10 text-green">
+                  <Icon name={d.icon} className="size-5" strokeWidth={1.6} />
+                </span>
+                <h3 className="mb-2.5 text-[19px] font-semibold text-white">{d.title}</h3>
+                <p className="text-[15px] leading-relaxed text-white/70">{d.description}</p>
+              </div>
+            ))}
+          </div>
 
-        <div className="mt-6 flex justify-center gap-3">
           <button
             aria-label="Previous"
             onClick={() => scrollBy(-1)}
-            className="flex size-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10"
+            className="absolute left-0 top-1/2 hidden size-12 -translate-x-4 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-navy shadow-hover transition-colors hover:bg-white/10 sm:flex"
           >
             <Icon name="ChevronRight" className="size-4 rotate-180" />
           </button>
           <button
             aria-label="Next"
             onClick={() => scrollBy(1)}
-            className="flex size-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10"
+            className="absolute right-0 top-1/2 hidden size-12 -translate-y-1/2 translate-x-4 items-center justify-center rounded-full border border-white/20 bg-navy shadow-hover transition-colors hover:bg-white/10 sm:flex"
           >
             <Icon name="ChevronRight" className="size-4" />
           </button>

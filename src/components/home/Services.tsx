@@ -9,7 +9,7 @@ export default function Services() {
     <section id="services" className="section-pad scroll-mt-24 bg-surface">
       <Container>
         <SectionHeading
-          eyebrow="Beyond Investing"
+          eyebrow="Life Planning"
           title="Additional Services Which We Offer"
           description="When it comes to family, health, and planning for the future, it is common to feel uncertain about what to do next. We are here to provide you with proper guidance that feels personal, practical, and from a good heart."
         />
