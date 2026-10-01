@@ -87,39 +87,21 @@ export default function Hero() {
       </div>
 
       <Container className="relative z-10 py-14 sm:py-16 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-14">
-          <div className="max-w-[560px]">
-            <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide backdrop-blur">
-              <span className="size-1.5 rounded-full bg-green" />
-              Wealth &bull; Investments &bull; Portfolio Solutions
-            </span>
-            <h1 className="text-[34px] font-bold leading-[1.15] tracking-tight text-white sm:text-[44px] lg:text-[48px] lg:leading-[1.1]">
-              Build Wealth With Clarity.
-              <br />
-              Invest With Purpose.
-            </h1>
-            <p className="mt-5 text-[17px] leading-relaxed text-white/80 sm:text-[19px]">
-              Personalised investment and wealth solutions for HNI, NRI, business owners and growth-focused investors.
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-white/60 sm:text-[16px]">
-              Investify Prism helps you build, manage and grow your wealth through a structured approach to equities, mutual funds, PMS, AIF, bonds, NCDs and other investment opportunities. Our focus is on understanding your goals, portfolio and risk preferences before helping you explore suitable investment solutions.
-            </p>
+        <div className="max-w-[640px]">
+          <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide backdrop-blur">
+            <span className="size-1.5 rounded-full bg-green" />
+            Wealth &bull; Investments &bull; Portfolio Solutions
+          </span>
+          <h1 className="text-[34px] font-bold leading-[1.15] tracking-tight text-white sm:text-[44px] lg:text-[48px] lg:leading-[1.1]">
+            Build Wealth With Clarity.
+            <br />
+            Invest With Purpose.
+          </h1>
+          <p className="mt-5 text-[17px] leading-relaxed text-white/80 sm:text-[19px]">
+            Personalised investment and wealth solutions for HNI, NRI, business owners and growth-focused investors.
+          </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button href="/products" size="lg">
-                Explore Wealth Solutions
-              </Button>
-              <Button href={`tel:${SITE.phoneHref}`} external variant="outlineLight" size="lg">
-                Talk to Kishore
-              </Button>
-            </div>
-
-            <p className="mt-5 max-w-[480px] text-[12px] leading-relaxed text-white/50 sm:text-[13px]">
-              Investify Prism is led by Kishore Devaraj, Authorised Person associated with IIFL Capital Services Limited.
-            </p>
-          </div>
-
-          <div className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm sm:grid-cols-2 sm:gap-5 lg:grid-cols-1">
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6">
             {FEATURES.map((f) => (
               <div key={f.label} className="flex items-start gap-3">
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">
@@ -136,6 +118,19 @@ export default function Hero() {
               </div>
             ))}
           </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Button href="/products" size="lg">
+              Explore Wealth Solutions
+            </Button>
+            <Button href={`tel:${SITE.phoneHref}`} external variant="outlineLight" size="lg">
+              Talk to Kishore
+            </Button>
+          </div>
+
+          <p className="mt-5 max-w-[480px] text-[12px] leading-relaxed text-white/50 sm:text-[13px]">
+            Investify Prism is led by Kishore Devaraj, Authorised Person associated with IIFL Capital Services Limited.
+          </p>
         </div>
       </Container>
 
