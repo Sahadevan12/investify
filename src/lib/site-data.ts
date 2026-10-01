@@ -593,15 +593,37 @@ export const FAQS = [
   },
 ];
 
-export const APP_FEATURES_1 = [
-  "Invest in mutual funds, stocks and IPOs",
-  "Monitor portfolio performance in real time",
-  "Access research-backed insights",
-];
-
-export const APP_FEATURES_2 = [
-  "Stay compliant regardless of your location",
-  "Reach a support team you can rely on",
+export const DIGITAL_FEATURES = [
+  {
+    icon: "PieChart",
+    title: "Invest Across Multiple Categories",
+    description:
+      "Access available investment products including equities, mutual funds, IPOs and other market-linked solutions.",
+  },
+  {
+    icon: "BarChart3",
+    title: "Track Your Portfolio",
+    description:
+      "View your investments, holdings and relevant portfolio information through the applicable digital platform.",
+  },
+  {
+    icon: "Newspaper",
+    title: "Market & Investment Insights",
+    description:
+      "Stay informed with market information, research and investment-related resources available through the platform.",
+  },
+  {
+    icon: "Smartphone",
+    title: "Convenient Digital Access",
+    description:
+      "Manage your investment journey digitally while staying connected with your Investify Prism relationship team.",
+  },
+  {
+    icon: "ShieldCheck",
+    title: "Secure Account Access",
+    description:
+      "Use the applicable IIFL Capital digital channels for account and investment access, subject to their terms and security processes.",
+  },
 ];
 
 export const FOOTER_LINKS = {
