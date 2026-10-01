@@ -50,7 +50,7 @@ export default function AppSection() {
                 Open Your Investment Account
               </Button>
               <Button href={`tel:${SITE.phoneHref}`} external variant="outline" size="lg">
-                Talk to Kishore
+                Talk to Our Team
               </Button>
             </div>
           </div>

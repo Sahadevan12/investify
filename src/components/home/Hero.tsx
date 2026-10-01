@@ -120,11 +120,11 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Button href="/products" size="lg">
+            <Button href={SITE.loginUrl} external size="lg">
               Explore Wealth Solutions
             </Button>
             <Button href={`tel:${SITE.phoneHref}`} external variant="outlineLight" size="lg">
-              Talk to Kishore
+              Talk to Our Team
             </Button>
           </div>
 

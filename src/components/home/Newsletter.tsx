@@ -8,18 +8,25 @@ import Container from "@/components/ui/Container";
 
 const BENEFITS = [
   {
-    title: "Exclusive Market Insights",
-    description: "Stay ahead with expert stock picks and trends.",
+    title: "Market & Investment Insights",
+    description:
+      "Understand important market developments, investment themes and financial-market trends.",
   },
   {
-    title: "Taxation & Mutual Funds",
-    description: "In-depth strategies for NRI wealth management.",
+    title: "Wealth & Portfolio Perspectives",
+    description:
+      "Explore ideas around diversification, portfolio construction, long-term wealth creation and investment planning.",
   },
-];
-
-const ISSUES = [
-  { tag: "Latest", title: "2nd Issue", date: "August 16-31, 2026" },
-  { title: "1st Issue", date: "August 1-15, 2026" },
+  {
+    title: "Mutual Fund & Equity Education",
+    description:
+      "Learn how different investment products work, including equities, mutual funds, SIPs and other market-linked solutions.",
+  },
+  {
+    title: "HNI & NRI Wealth Insights",
+    description:
+      "Explore topics relevant to affluent investors, business owners, HNIs and NRIs building and managing long-term wealth.",
+  },
 ];
 
 export default function Newsletter() {
@@ -29,9 +36,9 @@ export default function Newsletter() {
     <section className="section-pad bg-white">
       <Container>
         <SectionHeading
-          eyebrow="Investment Update"
-          title="Subscribe Our E-Magazine"
-          description="Stay updated on exclusive investment opportunities and market insights delivered to your inbox."
+          eyebrow="Investment Insights"
+          title="Stay Informed. Invest With Greater Clarity."
+          description="Explore market insights, investment education and wealth-planning perspectives designed to help investors understand opportunities, risks and important developments across financial markets."
         />
 
         <div className="mt-14 grid grid-cols-1 items-stretch gap-8 lg:grid-cols-5 lg:gap-10">
@@ -54,6 +61,12 @@ export default function Newsletter() {
                 }}
                 className="flex flex-col gap-4"
               >
+                <h3 className="text-[19px] font-semibold text-navy">
+                  Get Investify Prism Insights
+                </h3>
+                <p className="-mt-2 text-[14px] leading-relaxed text-body">
+                  Stay connected with useful investment insights, market updates and wealth-planning perspectives delivered to your inbox.
+                </p>
                 <div>
                   <label className="mb-1.5 block text-[14px] font-medium text-navy">
                     Full Name *
@@ -61,7 +74,7 @@ export default function Newsletter() {
                   <input
                     required
                     type="text"
-                    placeholder="Your full name"
+                    placeholder="Enter your full name"
                     className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-green"
                   />
                 </div>
@@ -72,7 +85,7 @@ export default function Newsletter() {
                   <input
                     required
                     type="email"
-                    placeholder="you@example.com"
+                    placeholder="Enter your email address"
                     className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-green"
                   />
                 </div>
@@ -88,69 +101,28 @@ export default function Newsletter() {
                   </a>
                 </label>
                 <Button type="submit" icon="Send" className="mt-1">
-                  Subscribe Now
+                  Subscribe to Investment Insights
                 </Button>
               </form>
             )}
           </div>
 
-          <div className="flex flex-col justify-between rounded-3xl border border-border p-7 sm:p-9 lg:col-span-3">
-            <div>
-              <h3 className="mb-5 text-[19px] font-semibold text-navy">Subscriber Benefits</h3>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {BENEFITS.map((b) => (
-                  <div key={b.title} className="flex gap-3 rounded-2xl border border-border p-5">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-green/10 text-green-dark">
-                      <Icon name="CheckCircle2" className="size-4" />
-                    </span>
-                    <p className="text-[14px] leading-relaxed text-body">
-                      <span className="font-semibold text-navy">{b.title}:</span> {b.description}
+          <div className="rounded-3xl border border-border p-7 sm:p-9 lg:col-span-3">
+            <h3 className="mb-5 text-[19px] font-semibold text-navy">What You&rsquo;ll Receive</h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {BENEFITS.map((b) => (
+                <div key={b.title} className="flex gap-3 rounded-2xl border border-border p-5">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-green/10 text-green-dark">
+                    <Icon name="CheckCircle2" className="size-4" />
+                  </span>
+                  <div>
+                    <p className="text-[14px] font-semibold text-navy">{b.title}</p>
+                    <p className="mt-1 text-[13px] leading-relaxed text-body">
+                      {b.description}
                     </p>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <div className="mb-5 flex items-center justify-between">
-                <h3 className="text-[19px] font-semibold text-navy">Recent Issues</h3>
-                <a
-                  href="#"
-                  className="flex items-center gap-1.5 text-[14px] font-semibold text-green-dark hover:underline"
-                >
-                  View All
-                  <Icon name="ArrowRight" className="size-3.5" />
-                </a>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {ISSUES.map((issue) => (
-                  <div
-                    key={issue.title}
-                    className="relative overflow-hidden rounded-2xl border border-border bg-surface p-5"
-                  >
-                    {issue.tag && (
-                      <span className="absolute right-4 top-4 rounded-full bg-green px-2.5 py-1 text-[12px] font-semibold text-white">
-                        {issue.tag}
-                      </span>
-                    )}
-                    <span className="flex size-11 items-center justify-center rounded-xl bg-navy/10 text-navy">
-                      <Icon name="Newspaper" className="size-5" />
-                    </span>
-                    <p className="mt-4 text-[16px] font-semibold text-navy">{issue.title}</p>
-                    <p className="mb-4 text-[14px] text-body">{issue.date}</p>
-                    <div className="flex gap-4 text-[14px] font-semibold text-green-dark">
-                      <a href="#" className="flex items-center gap-1 hover:underline">
-                        <Icon name="ArrowUpRight" className="size-3.5" />
-                        View
-                      </a>
-                      <a href="#" className="flex items-center gap-1 hover:underline">
-                        <Icon name="Newspaper" className="size-3.5" />
-                        PDF
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

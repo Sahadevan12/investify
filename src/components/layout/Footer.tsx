@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FOOTER_LINKS, SITE } from "@/lib/site-data";
+import { FOOTER_LINKS, OFFICES, SITE } from "@/lib/site-data";
 import { Icon } from "@/components/ui/Icon";
 import SocialIcon from "@/components/ui/SocialIcon";
 import Container from "@/components/ui/Container";
@@ -39,8 +39,12 @@ export default function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </Link>
-            <p className="mb-5 max-w-xs text-[16px] leading-relaxed text-white/70">
-              Bringing India&rsquo;s investment opportunities closer to NRIs, wherever life has taken you.
+            <p className="max-w-xs text-[16px] font-medium leading-relaxed text-white">
+              Building a clearer path towards long-term wealth creation.
+            </p>
+            <p className="mb-5 mt-2 max-w-xs text-[15px] leading-relaxed text-white/70">
+              Investment solutions and relationship-led support for HNIs, affluent investors,
+              business owners, NRIs and individuals seeking structured investment opportunities.
             </p>
             <ul className="flex items-center gap-2.5">
               {socials.map(([name, href]) => (
@@ -76,7 +80,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-[19px] font-semibold text-white">Policies</h3>
+            <h3 className="mb-5 text-[19px] font-semibold text-white">Policies &amp; Information</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.policies.map((l) => (
                 <li key={l.href}>
@@ -93,6 +97,12 @@ export default function Footer() {
 
           <div>
             <h3 className="mb-5 text-[19px] font-semibold text-white">Contact</h3>
+            <div className="mb-4">
+              <p className="text-[16px] font-semibold text-white">Kishore Devaraj</p>
+              <p className="text-[14px] text-white/60">
+                Authorised Person (AP) &ndash; IIFL Capital Services Limited
+              </p>
+            </div>
             <ul className="space-y-4 text-[16px]">
               <li className="flex gap-3">
                 <Icon name="Phone" className="mt-0.5 size-4 shrink-0 text-green" />
@@ -106,28 +116,37 @@ export default function Footer() {
                   {SITE.email}
                 </a>
               </li>
-              <li className="flex gap-3">
-                <Icon name="MapPin" className="mt-0.5 size-4 shrink-0 text-green" />
-                <a
-                  href={SITE.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/70 hover:text-green"
-                >
-                  {SITE.address}
-                </a>
-              </li>
+              {OFFICES.map((o) => (
+                <li key={o.city} className="flex gap-3">
+                  <Icon name="MapPin" className="mt-0.5 size-4 shrink-0 text-green" />
+                  <div>
+                    <p className="font-semibold text-white">{o.city}</p>
+                    <a
+                      href={o.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-green"
+                    >
+                      {o.address}
+                    </a>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </Container>
 
       <div className="relative border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-center text-[14px] text-white/50 sm:flex-row sm:text-left">
-          <p>
-            Copyright &copy; {new Date().getFullYear()} {SITE.legalName}, All rights reserved.
+        <Container className="py-6 text-[13px] leading-relaxed text-white/50">
+          <p className="mb-3 max-w-4xl">
+            Investments are subject to market risks and applicable eligibility, regulatory
+            requirements and terms. Please read all relevant documents and disclosures carefully
+            before investing.
           </p>
-          <p>Reproduction of any material is prohibited without prior written consent.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {SITE.name}. All Rights Reserved.
+          </p>
         </Container>
       </div>
     </footer>

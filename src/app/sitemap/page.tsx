@@ -36,7 +36,9 @@ const GROUPS = [
       { label: "KYC", href: "/kyc" },
       { label: "Disclaimer", href: "/disclaimer" },
       { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms & Conditions", href: "/terms-conditions" },
       { label: "Regulators", href: "/regulators" },
+      { label: "Investor Awareness", href: "/investor-awareness" },
     ],
   },
 ];

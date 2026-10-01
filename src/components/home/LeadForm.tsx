@@ -6,20 +6,40 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import { SITE } from "@/lib/site-data";
 
-const COUNTRY_CODES = [
-  { code: "+91", label: "India" },
-  { code: "+971", label: "UAE" },
-  { code: "+1", label: "USA / Canada" },
-  { code: "+44", label: "UK" },
-  { code: "+65", label: "Singapore" },
-  { code: "+61", label: "Australia" },
-  { code: "+966", label: "Saudi Arabia" },
-  { code: "+974", label: "Qatar" },
-  { code: "+968", label: "Oman" },
-  { code: "+973", label: "Bahrain" },
-  { code: "+60", label: "Malaysia" },
-  { code: "+49", label: "Germany" },
+const INVESTOR_PROFILES = [
+  "HNI / Affluent Investor",
+  "Business Owner / Entrepreneur",
+  "NRI Investor",
+  "Salaried Professional",
+  "Retail Investor",
+  "First-Time Investor",
+  "Other",
 ];
+
+const INVESTMENT_INTERESTS = [
+  "Wealth Management",
+  "Equity & Stock Market",
+  "Mutual Funds & SIP",
+  "PMS",
+  "AIF",
+  "Bonds / NCD / Fixed Income",
+  "IPO",
+  "NRI Investment Solutions",
+  "Portfolio Review",
+  "Other",
+];
+
+const INVESTMENT_RANGES = [
+  "₹5 Lakh – ₹10 Lakh",
+  "₹10 Lakh – ₹25 Lakh",
+  "₹25 Lakh – ₹50 Lakh",
+  "₹50 Lakh – ₹1 Crore",
+  "₹1 Crore+",
+  "Prefer to discuss",
+];
+
+const SELECT_CLS =
+  "h-[50px] w-full rounded-xl border border-border bg-white px-4 text-[15px] text-navy outline-none focus:border-green";
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -33,13 +53,16 @@ export default function LeadForm() {
         <div>
           <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide">
             <span className="size-1.5 rounded-full bg-green" />
-            Get Started
+            Start Your Wealth Journey
           </span>
           <h2 className="text-[28px] font-semibold leading-[1.25] text-white sm:text-[34px] lg:text-[38px]">
-            Ready to Grow Your Wealth?
+            Let&rsquo;s Talk About Your Wealth Goals
           </h2>
           <p className="mt-4 max-w-md text-[17px] leading-relaxed text-white/70">
-            Your investment journey deserves clarity, support and the right guidance. Whether you are starting fresh, already investing or simply looking to optimise your portfolio, we are here to make every step smooth and comfortable.
+            Whether you are building your first investment portfolio, managing substantial wealth or looking to diversify an existing portfolio, Investify Prism can help you explore investment solutions aligned with your financial objectives, investment horizon and risk preferences.
+          </p>
+          <p className="mt-4 max-w-md text-[17px] leading-relaxed text-white/70">
+            Speak with Kishore Devaraj to discuss your goals and explore the available investment options.
           </p>
 
           <div className="mt-8 flex flex-col gap-4">
@@ -78,68 +101,95 @@ export default function LeadForm() {
             >
               <div className="sm:col-span-2">
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
-                  Your Name
+                  Your Name *
                 </label>
                 <input
                   required
                   type="text"
-                  placeholder="Name"
+                  placeholder="Enter your full name"
                   className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
               </div>
               <div className="sm:col-span-2">
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
-                  Email Address
+                  Email Address *
                 </label>
                 <input
                   required
                   type="email"
-                  placeholder="Email"
+                  placeholder="Enter your email address"
                   className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
               </div>
               <div>
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
-                  Mobile Number
-                </label>
-                <div className="flex h-[50px] overflow-hidden rounded-xl border border-border focus-within:border-green">
-                  <select className="h-full border-r border-border bg-surface px-2 text-[14px] outline-none">
-                    {COUNTRY_CODES.map((c) => (
-                      <option key={c.code + c.label} value={c.code}>
-                        {c.code}
-                      </option>
-                    ))}
-                  </select>
-                  <input
-                    required
-                    type="tel"
-                    placeholder="Mobile Number"
-                    className="h-full w-full px-3 text-[15px] outline-none"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="mb-1.5 block text-[14px] font-medium text-navy">
-                  Home City in India
+                  Mobile Number *
                 </label>
                 <input
-                  type="text"
-                  placeholder="City"
+                  required
+                  type="tel"
+                  placeholder="Enter your mobile number"
                   className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
+              </div>
+              <div>
+                <label className="mb-1.5 block text-[14px] font-medium text-navy">
+                  City *
+                </label>
+                <input
+                  required
+                  type="text"
+                  placeholder="Enter your city"
+                  className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
+                />
+              </div>
+              <div>
+                <label className="mb-1.5 block text-[14px] font-medium text-navy">
+                  Investor Profile *
+                </label>
+                <select required defaultValue="" className={SELECT_CLS}>
+                  <option value="" disabled>
+                    Select your profile
+                  </option>
+                  {INVESTOR_PROFILES.map((p) => (
+                    <option key={p} value={p}>
+                      {p}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="mb-1.5 block text-[14px] font-medium text-navy">
+                  Investment Interest *
+                </label>
+                <select required defaultValue="" className={SELECT_CLS}>
+                  <option value="" disabled>
+                    Select your interest
+                  </option>
+                  {INVESTMENT_INTERESTS.map((p) => (
+                    <option key={p} value={p}>
+                      {p}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div className="sm:col-span-2">
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
-                  Country of Residence
+                  Approximate Investment Requirement
                 </label>
-                <input
-                  type="text"
-                  placeholder="Country of Residence"
-                  className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
-                />
+                <select defaultValue="" className={SELECT_CLS}>
+                  <option value="" disabled>
+                    Select a range
+                  </option>
+                  {INVESTMENT_RANGES.map((p) => (
+                    <option key={p} value={p}>
+                      {p}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div className="mt-1 sm:col-span-2">
-                <Button type="submit">Submit Details</Button>
+                <Button type="submit">Discuss Your Investment Goals</Button>
               </div>
             </form>
           )}

@@ -7,10 +7,7 @@ export const SITE = {
   phone: ["+91 93611 53599"],
   phoneHref: "+919361153599",
   email: "contact@mail.investifyprism.com",
-  address:
-    "12th Floor, Prism Towers, Anna Salai, Chennai - 600002, Tamil Nadu, India",
-  mapsUrl: "https://maps.google.com/?q=Anna+Salai+Chennai",
-  loginUrl: "#",
+  loginUrl: "https://iiflcs.in/IILLTD/b9H1w",
   appPlayStoreUrl: "#",
   appAppStoreUrl: "#",
   social: {
@@ -22,6 +19,24 @@ export const SITE = {
     whatsapp: "#",
   },
 };
+
+export type Office = { city: string; address: string; mapsUrl: string };
+
+export const OFFICES: Office[] = [
+  {
+    city: "Bengaluru",
+    address:
+      "No 80, Hulkul Ascent, 2nd Cross, Lavelle Road, Ashok Nagar, Shanthala Nagar, South, Bengaluru, Karnataka 560001",
+    mapsUrl: "https://maps.google.com/?q=Hulkul+Ascent+Lavelle+Road+Bengaluru",
+  },
+  {
+    city: "Chennai",
+    address:
+      "DN 610 & 611, 6th Floor, Kannammai Building, A Wing, Sundaram Avenue, Anna Salai, South, Chennai, Tamil Nadu 600006",
+    mapsUrl:
+      "https://maps.google.com/?q=Kannammai+Building+Sundaram+Avenue+Anna+Salai+Chennai",
+  },
+];
 
 export type NavChild = { label: string; href: string; icon: string };
 export type NavItem = { label: string; href: string; children?: NavChild[] };
@@ -533,63 +548,97 @@ export const PROCESS_STEPS = [
 
 export const TESTIMONIALS = [
   {
-    name: "Arvind Menon",
-    location: "Dubai, UAE",
+    name: "Aravind Kumar",
+    role: "Business Owner",
+    location: "Chennai, Tamil Nadu",
     quote:
-      "Time zones never seem to matter with Investify Prism — whenever I reach out, someone responds quickly and knows exactly where my portfolio stands.",
+      "I wanted a more structured approach to managing my investments. Kishore took the time to understand my existing portfolio and explained the available options clearly without making the conversation complicated.",
   },
   {
-    name: "Priya Raghavan",
-    location: "London, UK",
+    name: "Priya Lakshmi",
+    role: "IT Professional",
+    location: "Coimbatore, Tamil Nadu",
     quote:
-      "I moved my entire mutual fund portfolio to them two years ago. The onboarding was completely paperless and the annual review calls are genuinely useful.",
+      "What I appreciated most was the way everything was explained before I made an investment decision. The discussions around diversification and long-term goals gave me a clearer view of my portfolio.",
   },
   {
     name: "Suresh Nair",
-    location: "Singapore",
+    role: "Entrepreneur",
+    location: "Kochi, Kerala",
     quote:
-      "What stood out was the honesty. They've talked me out of products that didn't fit my goals more than once, which is rare to find.",
+      "I was looking for someone who could help me look at my investments beyond individual stocks. The portfolio discussions helped me think more about diversification, risk and long-term wealth creation.",
   },
   {
-    name: "Kavitha Subramaniam",
-    location: "Toronto, Canada",
+    name: "Karthik Reddy",
+    role: "Entrepreneur",
+    location: "Hyderabad, Telangana",
     quote:
-      "Between my demat account, NPS and my parents' health insurance, they've simplified everything into one relationship I can actually keep track of.",
+      "As a business owner, I don't always have time to follow every market development. Having a dedicated point of contact to discuss investment opportunities and portfolio-related questions has been valuable.",
   },
   {
-    name: "Rohan Iyer",
-    location: "Sydney, Australia",
+    name: "Naveen Kumar",
+    role: "Professional",
+    location: "Bengaluru, Karnataka",
     quote:
-      "The Prism Go app makes checking my India investments as easy as checking my Australian bank account. Support has always been prompt when I've needed it.",
+      "The investment process was explained step by step, which made it easier for me to understand what I was investing in and why it was being considered for my financial goals.",
   },
   {
-    name: "Meera Pillai",
-    location: "New Jersey, USA",
+    name: "Meenakshi Srinivasan",
+    role: "Business Professional",
+    location: "Madurai, Tamil Nadu",
     quote:
-      "Inheritance planning felt daunting until we sat down with their team. They made a sensitive topic simple and were patient with every question we had.",
+      "I was particularly interested in building a diversified portfolio rather than focusing only on one investment category. The conversations around mutual funds, equities and other solutions helped me look at my investments more holistically.",
   },
 ];
 
 export const FAQS = [
   {
-    q: "Who is considered an NRI?",
-    a: "An NRI (Non-Resident Indian) is an Indian citizen or Person of Indian Origin (PIO) residing outside India, as defined under the Income Tax Act and FEMA guidelines.",
+    q: "What investment solutions does Investify Prism offer?",
+    a: "Investify Prism provides access to a range of investment solutions through the applicable IIFL Capital ecosystem, including equities, mutual funds and SIPs, IPOs, bonds and NCDs, PMS, AIF, SIF and other investment opportunities, subject to applicable eligibility and regulations.",
   },
   {
-    q: "Can NRIs invest in the Indian stock markets?",
-    a: "Yes. NRIs can invest in Indian equities, derivatives, mutual funds, IPOs and more through a properly linked NRE/NRO demat and trading account.",
+    q: "Who can work with Investify Prism?",
+    a: "We work with a broad range of investors, with a particular focus on HNI, affluent, business-owner and NRI investors seeking structured approaches to building and managing wealth. Investment solutions are considered based on the investor's objectives, risk profile, eligibility and investment horizon.",
   },
   {
-    q: "What investment options are available for NRIs?",
-    a: "NRIs can access demat and trading accounts, equity and derivatives, IPOs, mutual funds, the National Pension Scheme, and life and health insurance, along with supporting services like taxation and inheritance planning.",
+    q: "What is HNI wealth management?",
+    a: "HNI wealth management involves taking a structured view of an investor's wealth, including portfolio allocation, diversification, investment objectives, liquidity requirements and long-term financial goals. The specific solutions available depend on the investor's circumstances and eligibility.",
   },
   {
-    q: "Is there customer support available across time zones?",
-    a: "Yes. Our support desk is structured to respond to NRI clients regardless of their local time zone, through phone, email and WhatsApp.",
+    q: "Can I invest in mutual funds and start an SIP?",
+    a: "Yes. Mutual funds and SIPs can be considered as part of a long-term investment strategy. The appropriate investment approach depends on factors such as your financial goals, time horizon, risk profile and existing investments.",
   },
   {
-    q: "Why should NRIs consider professional wealth management services?",
-    a: "Professional guidance helps NRIs navigate FEMA and RBI regulations, tax implications across two countries, and product selection, while saving the time and complexity of managing it alone from abroad.",
+    q: "What is PMS and who can consider it?",
+    a: "Portfolio Management Services (PMS) provide professionally managed portfolio solutions for eligible investors. PMS generally involves portfolio management based on an agreed investment strategy and applicable regulatory requirements. Suitability, minimum investment requirements and other conditions should be reviewed before investing.",
+  },
+  {
+    q: "What are AIFs?",
+    a: "Alternative Investment Funds (AIFs) are privately pooled investment vehicles that invest according to defined strategies and regulatory frameworks. Different AIF categories have different structures, strategies, risks and eligibility requirements.",
+  },
+  {
+    q: "Can NRIs invest through Investify Prism?",
+    a: "NRIs may have access to certain investment opportunities in India, subject to applicable FEMA, tax, regulatory, account and product-specific requirements. The available investment options can vary based on the investor's residential status and the type of investment.",
+  },
+  {
+    q: "Can you review my existing investment portfolio?",
+    a: "Yes. A portfolio review can help you understand your existing asset allocation, diversification, concentration, investment objectives and areas that may require further discussion. Any investment decision should be made after considering your individual circumstances and applicable risks.",
+  },
+  {
+    q: "Do I need a large investment amount to start?",
+    a: "Not necessarily. Investment solutions have different minimum investment requirements. Mutual funds and SIPs, for example, can accommodate investors starting with relatively smaller amounts, while certain HNI-oriented products such as PMS and AIF have specific eligibility and minimum investment requirements.",
+  },
+  {
+    q: "Is investing in the stock market risky?",
+    a: "Yes. Market-linked investments can fluctuate in value and may involve the risk of loss of capital. The level and type of risk varies across investment products. Investors should consider their objectives, risk tolerance and investment horizon before making investment decisions.",
+  },
+  {
+    q: "How does Investify Prism support investors?",
+    a: "Investify Prism follows a relationship-led approach, helping investors understand available investment solutions, complete relevant processes and review their investment objectives and portfolios. The nature of support depends on the product, service and applicable regulatory framework.",
+  },
+  {
+    q: "How can I speak with Investify Prism?",
+    a: "You can contact Kishore Devaraj through the contact form, phone or WhatsApp available on the website to discuss your investment objectives and understand the available solutions.",
   },
 ];
 
@@ -628,16 +677,20 @@ export const DIGITAL_FEATURES = [
 
 export const FOOTER_LINKS = {
   quick: [
-    { label: "About us", href: "/about-us" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Investment Solutions", href: "/#products" },
     { label: "Demat Account", href: "/products/demat-account" },
+    { label: "Mutual Funds & SIP", href: "/products/mutual-funds" },
+    { label: "Portfolio Solutions", href: "/products/portfolio-management-services" },
+    { label: "Investment Insights", href: "/knowledge-center/blog" },
     { label: "Contact Us", href: "/contact-us" },
-    { label: "Blog", href: "/knowledge-center/blog" },
-    { label: "KYC", href: "/kyc" },
   ],
   policies: [
     { label: "Disclaimer", href: "/disclaimer" },
     { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Regulators", href: "/regulators" },
+    { label: "Terms & Conditions", href: "/terms-conditions" },
+    { label: "Regulatory Information", href: "/regulators" },
+    { label: "Investor Awareness", href: "/investor-awareness" },
     { label: "Sitemap", href: "/sitemap" },
   ],
 };
