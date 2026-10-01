@@ -457,67 +457,77 @@ export const SERVICES: Service[] = [
 
 export const DIFFERENTIATORS = [
   {
-    icon: "Target",
-    title: "Goal-Focused Investment Strategy",
-    description:
-      "We focus on what matters most to you — wealth growth, income generation and asset protection — and move together toward those specific goals.",
-  },
-  {
     icon: "UserCheck",
-    title: "Personalised Guidance for Every Investor",
+    title: "Personalised Investment Approach",
     description:
-      "Your investment journey is shaped around your personal goals and priorities, not generic templates, so guidance fits your life stage and risk comfort.",
+      "We begin by understanding your financial goals, existing investments, risk preferences and long-term objectives before discussing suitable investment solutions.",
   },
   {
     icon: "Route",
-    title: "End-to-End Help at Every Stage",
+    title: "One Relationship Across Your Investment Journey",
     description:
-      "We stay with you through onboarding, product selection, compliance, tracking and repatriation, so you always know your next step.",
+      "From account opening and investment selection to portfolio reviews and ongoing support, we aim to make your investment journey more organised and transparent.",
   },
   {
-    icon: "Heart",
-    title: "Life-Centric Investment Planning",
+    icon: "Target",
+    title: "Built for Long-Term Wealth Creation",
     description:
-      "Returns matter, but so does the life you're building. Every strategy supports milestones like education, retirement and family security.",
+      "We focus on disciplined investing, diversification and long-term financial objectives rather than making short-term market movements the centre of your wealth strategy.",
+  },
+  {
+    icon: "PieChart",
+    title: "Multiple Investment Solutions",
+    description:
+      "Explore equities, mutual funds, PMS, AIF, bonds, NCDs, IPOs, global investment opportunities and other solutions through the broader investment ecosystem available to eligible investors.",
+  },
+  {
+    icon: "BarChart3",
+    title: "Research & Portfolio Perspective",
+    description:
+      "Understand your investment choices through market insights, portfolio analysis and structured discussions around risk, diversification and long-term objectives.",
+  },
+  {
+    icon: "HeartHandshake",
+    title: "Relationship-Led Support",
+    description:
+      "Get dedicated support throughout your investment journey, with regular communication and assistance when you need to review your financial priorities or portfolio.",
   },
   {
     icon: "Globe2",
-    title: "Support That Never Depends on Location",
+    title: "HNI & NRI Wealth Solutions",
     description:
-      "Distance is never a barrier. Wherever you live, you receive the same attention, communication and trustworthy support.",
-  },
-  {
-    icon: "ShieldCheck",
-    title: "Transparency You Can Trust",
-    description:
-      "You always know where your money is invested, how it's performing and what charges apply — explained in plain, straightforward language.",
+      "Specialised attention for HNI, affluent and NRI investors seeking to build, diversify and manage wealth across Indian and global investment opportunities, subject to applicable eligibility and regulations.",
   },
 ];
 
 export const PROCESS_STEPS = [
   {
     step: "01",
-    title: "We understand your goals first",
+    title: "Understand Your Goals",
+    subtitle: "We start with your financial picture",
     description:
-      "Before suggesting anything, we get clarity on your priorities, family responsibilities, risk comfort and long-term expectations.",
+      "Before discussing investment options, we understand your goals, existing portfolio, time horizon, liquidity needs, risk preferences and long-term wealth objectives.",
   },
   {
     step: "02",
-    title: "We design the right investment mix",
+    title: "Build Your Investment Strategy",
+    subtitle: "Create a diversified investment approach",
     description:
-      "Your portfolio is built thoughtfully across suitable products so it matches your timeline, lifestyle and growth expectations.",
+      "We explore suitable investment solutions across equities, mutual funds, PMS, AIF, fixed income and other available opportunities based on your objectives and investment profile.",
   },
   {
     step: "03",
-    title: "We execute everything smoothly",
+    title: "Execute With Clarity",
+    subtitle: "Make the investment process simple",
     description:
-      "Onboarding, documentation and investment placements are handled with complete support, so the process feels quick and simple.",
+      "From account opening and documentation to investment execution, we provide relationship-led support throughout the process and help you understand the relevant investment options.",
   },
   {
     step: "04",
-    title: "We track and refine continuously",
+    title: "Review & Evolve",
+    subtitle: "Keep your portfolio aligned with your goals",
     description:
-      "Your portfolio is actively monitored and reviewed so it stays aligned with market conditions and life changes.",
+      "Markets, financial priorities and personal circumstances can change. We encourage periodic portfolio reviews to assess allocation, diversification and alignment with your evolving objectives.",
   },
 ];
 

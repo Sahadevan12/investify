@@ -15,9 +15,9 @@ export default function Process() {
     <section className="section-pad bg-surface">
       <Container>
         <SectionHeading
-          eyebrow="Our Process"
-          title="How We Help You Grow"
-          description="Our approach focuses on building wealth that supports your present and protects your future, while ensuring every decision is part of the best investment plan for your needs."
+          eyebrow="Our Wealth Approach"
+          title="A Structured Approach to Building Wealth"
+          description="Every investor has different goals, responsibilities, risk preferences and time horizons. Our approach begins with understanding your financial objectives and then exploring investment solutions that align with your overall wealth strategy."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
@@ -35,9 +35,12 @@ export default function Process() {
                   {s.step}
                 </span>
               </div>
-              <h3 className="mb-2.5 text-[19px] font-semibold leading-snug text-navy">
+              <h3 className="text-[19px] font-semibold leading-snug text-navy">
                 {s.title}
               </h3>
+              <p className="mb-2.5 mt-1 text-[15px] font-medium text-green-dark">
+                {s.subtitle}
+              </p>
               <p className="text-[15px] leading-relaxed text-body">{s.description}</p>
             </div>
           ))}

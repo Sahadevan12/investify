@@ -47,9 +47,9 @@ export default function WhyChooseUs() {
         <SectionHeading
           align="left"
           light
-          eyebrow="Why Choose Us"
-          title="What Makes Us Different from Others"
-          description="A NRI wealth management experience built around trust, clarity, and real support."
+          eyebrow="Why Investify Prism"
+          title="A Wealth Approach Built Around You"
+          description="Your financial goals, risk preferences, investment horizon and existing portfolio are unique. Investify Prism takes a personalised, relationship-led approach to help you explore and manage investment solutions with greater clarity."
           className="mx-0"
         />
 
