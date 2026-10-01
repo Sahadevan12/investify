@@ -4,7 +4,7 @@ import { Icon } from "./Icon";
 
 type ButtonProps = {
   children: React.ReactNode;
-  variant?: "primary" | "outline" | "ghost";
+  variant?: "primary" | "outline" | "outlineLight" | "ghost";
   size?: "md" | "lg";
   className?: string;
   icon?: string;
@@ -27,6 +27,8 @@ export default function Button(props: ButtonProps) {
       "bg-green text-white shadow-soft hover:bg-green-dark hover:shadow-hover",
     outline:
       "bg-transparent text-navy border border-navy/20 pl-6 pr-6 hover:border-navy hover:bg-navy hover:text-white",
+    outlineLight:
+      "bg-transparent text-white border border-white/30 pl-6 pr-6 hover:border-white hover:bg-white hover:text-navy",
     ghost: "bg-transparent text-navy pl-0 pr-0 gap-2 hover:text-green",
   };
 
@@ -36,7 +38,8 @@ export default function Button(props: ButtonProps) {
         className={clsx(
           "flex items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:translate-x-0.5",
           size === "lg" ? "size-9" : "size-8",
-          variant === "outline" && "bg-navy/10 group-hover:bg-white/20"
+          variant === "outline" && "bg-navy/10 group-hover:bg-white/20",
+          variant === "outlineLight" && "bg-white/10 group-hover:bg-navy/10"
         )}
       >
         <Icon name={icon} className="size-4" strokeWidth={2} />

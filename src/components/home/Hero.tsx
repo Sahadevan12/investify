@@ -24,10 +24,30 @@ const SLIDES = [
 ];
 
 const FEATURES = [
-  { icon: "Wallet", label: "Account Opening" },
-  { icon: "Clock", label: "Real Support in Your Time Zone" },
-  { icon: "ShieldCheck", label: "Secure & Transparent" },
-  { icon: "BarChart3", label: "Expert Wealth Management" },
+  {
+    icon: "Wallet",
+    label: "HNI Wealth Solutions",
+    description:
+      "Personalised investment solutions for substantial portfolios and long-term wealth objectives.",
+  },
+  {
+    icon: "PieChart",
+    label: "Diversified Investments",
+    description:
+      "Access a broad range of equity, mutual fund, PMS, AIF and fixed-income opportunities.",
+  },
+  {
+    icon: "BarChart3",
+    label: "Research-Led Approach",
+    description:
+      "Make informed investment decisions with market insights, portfolio analysis and structured planning.",
+  },
+  {
+    icon: "HeartHandshake",
+    label: "Dedicated Relationship Support",
+    description:
+      "A relationship-led approach to help you review, manage and evolve your investment strategy.",
+  },
 ];
 
 export default function Hero() {
@@ -41,7 +61,7 @@ export default function Hero() {
   }, [paused]);
 
   return (
-    <section className="relative isolate flex min-h-[560px] items-center overflow-hidden bg-navy-dark text-white sm:min-h-[620px] lg:min-h-[700px]">
+    <section className="relative isolate flex min-h-[520px] items-center overflow-hidden bg-navy-dark text-white sm:min-h-[560px] lg:min-h-[620px]">
       <div className="absolute inset-0">
         <AnimatePresence initial={false}>
           <motion.div
@@ -66,36 +86,55 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-transparent to-transparent" />
       </div>
 
-      <Container className="relative z-10 py-20 sm:py-24">
-        <div className="max-w-[600px]">
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide backdrop-blur">
-            <span className="size-1.5 rounded-full bg-green" />
-            Built for NRIs
-          </span>
-          <h1 className="text-[34px] font-bold leading-[1.15] tracking-tight text-white sm:text-[44px] lg:text-[52px] lg:leading-[1.1]">
-            The Trusted NRI Partner, Always There for You
-          </h1>
-          <p className="mt-5 max-w-[480px] text-[17px] leading-relaxed text-white/70 sm:text-[19px]">
-            From demat accounts to inheritance planning, Investify Prism brings every NRI wealth solution together in one place, wherever you call home.
-          </p>
+      <Container className="relative z-10 py-14 sm:py-16 lg:py-20">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-14">
+          <div className="max-w-[560px]">
+            <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide backdrop-blur">
+              <span className="size-1.5 rounded-full bg-green" />
+              Wealth &bull; Investments &bull; Portfolio Solutions
+            </span>
+            <h1 className="text-[34px] font-bold leading-[1.15] tracking-tight text-white sm:text-[44px] lg:text-[48px] lg:leading-[1.1]">
+              Build Wealth With Clarity.
+              <br />
+              Invest With Purpose.
+            </h1>
+            <p className="mt-5 text-[17px] leading-relaxed text-white/80 sm:text-[19px]">
+              Personalised investment and wealth solutions for HNI, NRI, business owners and growth-focused investors.
+            </p>
+            <p className="mt-4 text-[15px] leading-relaxed text-white/60 sm:text-[16px]">
+              Investify Prism helps you build, manage and grow your wealth through a structured approach to equities, mutual funds, PMS, AIF, bonds, NCDs and other investment opportunities. Our focus is on understanding your goals, portfolio and risk preferences before helping you explore suitable investment solutions.
+            </p>
 
-          <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:gap-x-8">
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Button href="/products" size="lg">
+                Explore Wealth Solutions
+              </Button>
+              <Button href={`tel:${SITE.phoneHref}`} external variant="outlineLight" size="lg">
+                Talk to Kishore
+              </Button>
+            </div>
+
+            <p className="mt-5 max-w-[480px] text-[12px] leading-relaxed text-white/50 sm:text-[13px]">
+              Investify Prism is led by Kishore Devaraj, Authorised Person associated with IIFL Capital Services Limited.
+            </p>
+          </div>
+
+          <div className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm sm:grid-cols-2 sm:gap-5 lg:grid-cols-1">
             {FEATURES.map((f) => (
-              <div key={f.label} className="flex items-center gap-3">
+              <div key={f.label} className="flex items-start gap-3">
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">
                   <Icon name={f.icon} className="size-4 text-green" />
                 </span>
-                <span className="text-[14px] font-medium text-white sm:text-[15px]">
-                  {f.label}
-                </span>
+                <div>
+                  <div className="text-[14px] font-semibold text-white sm:text-[15px]">
+                    {f.label}
+                  </div>
+                  <p className="mt-1 text-[13px] leading-relaxed text-white/60 sm:text-[14px]">
+                    {f.description}
+                  </p>
+                </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-9">
-            <Button href={SITE.loginUrl} external size="lg">
-              Open Your Investment Account
-            </Button>
           </div>
         </div>
       </Container>

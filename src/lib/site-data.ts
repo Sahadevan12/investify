@@ -3,10 +3,10 @@ export const SITE = {
   legalName: "Investify Prism Wealth Advisors Pvt. Ltd.",
   tagline: "See. Invest. Grow.",
   description:
-    "Investify Prism helps Non-Resident Indians open demat accounts, invest in equity, mutual funds, IPOs and NPS, and plan insurance, taxation and inheritance from anywhere in the world.",
+    "Explore wealth management, portfolio solutions, mutual funds, PMS, AIF, equities and diversified investment solutions with Investify Prism.",
   phone: ["+91 93611 53599"],
   phoneHref: "+919361153599",
-  email: "investifyprism12@gmail.com",
+  email: "contact@mail.investifyprism.com",
   address:
     "12th Floor, Prism Towers, Anna Salai, Chennai - 600002, Tamil Nadu, India",
   mapsUrl: "https://maps.google.com/?q=Anna+Salai+Chennai",

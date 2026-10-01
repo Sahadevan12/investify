@@ -15,7 +15,7 @@ const jost = Jost({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.investifyprism.in"),
   title: {
-    default: `${SITE.name} | NRI Investment & Wealth Management in India`,
+    default: `HNI Wealth Management & Investment Solutions | ${SITE.name}`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "NRI portfolio management",
   ],
   openGraph: {
-    title: `${SITE.name} | NRI Investment & Wealth Management in India`,
+    title: `HNI Wealth Management & Investment Solutions | ${SITE.name}`,
     description: SITE.description,
     siteName: SITE.name,
     type: "website",
