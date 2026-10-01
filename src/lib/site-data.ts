@@ -271,6 +271,133 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
+export type Solution = {
+  title: string;
+  description: string;
+  cta: string;
+  icon: string;
+};
+
+export const SOLUTION_ROW_LABELS = [
+  "HNI & Wealth Core",
+  "Diversification",
+  "Opportunities",
+];
+
+export const SOLUTIONS: Solution[] = [
+  {
+    title: "Equity & Stock Market",
+    description:
+      "Build long-term wealth through listed equities with a research-led approach to portfolio construction, diversification and market opportunities.",
+    cta: "Explore Equity",
+    icon: "TrendingUp",
+  },
+  {
+    title: "Mutual Funds & SIP",
+    description:
+      "Build disciplined wealth through professionally managed mutual fund solutions across equity, debt and hybrid categories, with SIP options for long-term goals.",
+    cta: "Explore Mutual Funds",
+    icon: "PieChart",
+  },
+  {
+    title: "PMS & AIF",
+    description:
+      "Explore professionally managed and alternative investment solutions designed for eligible HNI and affluent investors seeking differentiated portfolio opportunities.",
+    cta: "Explore PMS & AIF",
+    icon: "BarChart3",
+  },
+  {
+    title: "Bonds, NCDs & Fixed Income",
+    description:
+      "Diversify your portfolio with bonds, NCDs, fixed-income opportunities and other debt-oriented solutions aligned with your investment objectives.",
+    cta: "Explore Fixed Income",
+    icon: "ScrollText",
+  },
+  {
+    title: "SIF — Specialized Investment Funds",
+    description:
+      "Explore specialized investment strategies designed for investors seeking differentiated market-linked opportunities beyond conventional investment options.",
+    cta: "Explore SIF",
+    icon: "Target",
+  },
+  {
+    title: "Model Portfolios",
+    description:
+      "Explore professionally curated portfolio strategies built around defined investment approaches, asset allocation and periodic portfolio review.",
+    cta: "View Model Portfolios",
+    icon: "Route",
+  },
+  {
+    title: "IPO & New Opportunities",
+    description:
+      "Explore Initial Public Offerings and selected market opportunities as part of a diversified investment strategy.",
+    cta: "Explore IPOs",
+    icon: "Rocket",
+  },
+  {
+    title: "Global Investing",
+    description:
+      "Access opportunities beyond Indian markets through global equities, ETFs and international investment solutions, subject to applicable regulations.",
+    cta: "Explore Global Investing",
+    icon: "Globe2",
+  },
+  {
+    title: "Algo & Quantitative Trading",
+    description:
+      "Explore technology-driven and systematic market strategies designed for investors and traders seeking structured approaches to market participation.",
+    cta: "Explore Algo Solutions",
+    icon: "Calculator",
+  },
+];
+
+export const SECONDARY_SOLUTIONS: Omit<Solution, "cta">[] = [
+  {
+    title: "NPS & Retirement Planning",
+    description:
+      "Long-term retirement-focused investment solutions designed to help build a structured retirement corpus.",
+    icon: "ShieldCheck",
+  },
+  {
+    title: "Commodities & Currency",
+    description:
+      "Market access across commodities and currencies for investors seeking additional diversification or tactical exposure.",
+    icon: "ArrowUpRight",
+  },
+];
+
+export type LifePlanningCard = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
+export const WEALTH_LIFE_PLANNING: LifePlanningCard[] = [
+  {
+    title: "Retirement & Financial Planning",
+    description:
+      "Plan for the lifestyle you want tomorrow with a structured approach to retirement goals, investments, income needs and long-term financial requirements.",
+    icon: "Target",
+  },
+  {
+    title: "Estate & Succession Planning",
+    description:
+      "Plan how your wealth and investments can be transferred to the next generation through a structured succession approach, in coordination with appropriate legal and professional advisors.",
+    icon: "ScrollText",
+  },
+  {
+    title: "Insurance & Wealth Protection",
+    description:
+      "Explore life and health insurance solutions that can complement your broader financial plan and help protect your family, income and accumulated wealth.",
+    icon: "HeartPulse",
+  },
+  {
+    title: "Tax-Efficient Investment Planning",
+    description:
+      "Understand the tax considerations associated with different investment choices and structure your portfolio with appropriate professional guidance.",
+    icon: "Receipt",
+  },
+];
+
 export type Service = {
   slug: string;
   title: string;
