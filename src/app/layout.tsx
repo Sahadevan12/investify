@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import FloatingAsk from "@/components/layout/FloatingAsk";
+import FloatingCommunity from "@/components/layout/FloatingCommunity";
 import { SITE } from "@/lib/site-data";
 
 const jost = Jost({
@@ -41,7 +42,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <FloatingAsk />
+        <FloatingCommunity />
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6abec3ecb9739b9592bd95ad"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

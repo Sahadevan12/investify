@@ -7,10 +7,8 @@ import Container from "@/components/ui/Container";
 
 const socials = [
   ["Facebook", SITE.social.facebook],
-  ["Twitter", SITE.social.twitter],
   ["Instagram", SITE.social.instagram],
   ["Linkedin", SITE.social.linkedin],
-  ["Youtube", SITE.social.youtube],
   ["Whatsapp", SITE.social.whatsapp],
 ] as const;
 

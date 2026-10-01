@@ -8,15 +8,16 @@ export const SITE = {
   phoneHref: "+919361153599",
   email: "contact@mail.investifyprism.com",
   loginUrl: "https://iiflcs.in/IILLTD/b9H1w",
+  bookingUrl: "https://links.adzorex.com/widget/bookings/investify-prism-consultation",
+  communityUrl:
+    "https://portal.investifyprism.com/communities/groups/investify-wealth-circle/home?invite=6abec226f07181108cb1baf3",
   appPlayStoreUrl: "#",
   appAppStoreUrl: "#",
   social: {
-    facebook: "#",
-    twitter: "#",
-    instagram: "#",
-    linkedin: "#",
-    youtube: "#",
-    whatsapp: "#",
+    facebook: "https://www.facebook.com/profile.php?id=61593756685676",
+    instagram: "https://www.instagram.com/investifyprism12/",
+    linkedin: "https://www.linkedin.com/company/144666994/",
+    whatsapp: "https://wa.me/919361153599",
   },
 };
 

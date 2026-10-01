@@ -53,10 +53,9 @@ export default function Header() {
             {(
               [
                 ["Facebook", SITE.social.facebook],
-                ["Twitter", SITE.social.twitter],
                 ["Instagram", SITE.social.instagram],
                 ["Linkedin", SITE.social.linkedin],
-                ["Youtube", SITE.social.youtube],
+                ["Whatsapp", SITE.social.whatsapp],
               ] as const
             ).map(([name, href]) => (
               <a
@@ -64,7 +63,7 @@ export default function Header() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Follow us on ${name}`}
+                aria-label={name === "Whatsapp" ? "Chat with us on WhatsApp" : `Follow us on ${name}`}
                 className="flex size-7 items-center justify-center rounded-full bg-white text-navy transition-colors hover:bg-green hover:text-white"
               >
                 <SocialIcon name={name} className="size-3.5" />

@@ -123,7 +123,7 @@ export default function Hero() {
             <Button href={SITE.loginUrl} external size="lg">
               Explore Wealth Solutions
             </Button>
-            <Button href={`tel:${SITE.phoneHref}`} external variant="outlineLight" size="lg">
+            <Button href={SITE.bookingUrl} external variant="outlineLight" size="lg">
               Talk to Our Team
             </Button>
           </div>

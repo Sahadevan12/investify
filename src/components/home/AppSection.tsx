@@ -49,7 +49,7 @@ export default function AppSection() {
               <Button href={SITE.loginUrl} external size="lg">
                 Open Your Investment Account
               </Button>
-              <Button href={`tel:${SITE.phoneHref}`} external variant="outline" size="lg">
+              <Button href={SITE.bookingUrl} external variant="outline" size="lg">
                 Talk to Our Team
               </Button>
             </div>
