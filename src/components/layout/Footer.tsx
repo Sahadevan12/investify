@@ -114,7 +114,7 @@ export default function Footer() {
                   {SITE.email}
                 </a>
               </li>
-              {OFFICES.map((o) => (
+              {OFFICES.filter((o) => o.city === "Bengaluru").map((o) => (
                 <li key={o.city} className="flex gap-3">
                   <Icon name="MapPin" className="mt-0.5 size-4 shrink-0 text-green" />
                   <div>
