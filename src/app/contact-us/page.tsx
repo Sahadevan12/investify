@@ -66,31 +66,13 @@ export default function ContactUsPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-14">
+          <div className="mb-14 grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-14">
             <div className="lg:col-span-3">
               <h2 className="mb-6 text-[22px] font-semibold text-navy">Send Us a Message</h2>
               <ContactPageForm />
             </div>
             <div className="lg:col-span-2">
-              <h2 className="mb-6 text-[22px] font-semibold text-navy">Find Us</h2>
-              <div className="space-y-6">
-                {OFFICES.map((o) => (
-                  <div key={o.city}>
-                    <p className="mb-2 text-[15px] font-semibold text-navy">{o.city} Office</p>
-                    <div className="overflow-hidden rounded-3xl border border-border">
-                      <iframe
-                        title={`Investify Prism ${o.city} office location`}
-                        src={`https://maps.google.com/maps?q=${encodeURIComponent(o.address)}&output=embed`}
-                        width="100%"
-                        height="260"
-                        loading="lazy"
-                        className="border-0"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 rounded-3xl bg-surface p-6">
+              <div className="rounded-3xl bg-surface p-7 sm:p-9">
                 <h3 className="mb-3 text-[16px] font-semibold text-navy">Support Hours</h3>
                 <ul className="space-y-2 text-[14px] text-body">
                   <li className="flex justify-between">
@@ -112,6 +94,25 @@ export default function ContactUsPage() {
                 </p>
               </div>
             </div>
+          </div>
+
+          <h2 className="mb-6 text-[22px] font-semibold text-navy">Find Us</h2>
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+            {OFFICES.map((o) => (
+              <div key={o.city}>
+                <p className="mb-2 text-[15px] font-semibold text-navy">{o.city} Office</p>
+                <div className="overflow-hidden rounded-3xl border border-border">
+                  <iframe
+                    title={`Investify Prism ${o.city} office location`}
+                    src={`https://maps.google.com/maps?q=${encodeURIComponent(o.address)}&output=embed`}
+                    width="100%"
+                    height="260"
+                    loading="lazy"
+                    className="border-0"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
