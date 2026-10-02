@@ -74,6 +74,7 @@ export default function Newsletter() {
                   <input
                     required
                     type="text"
+                    name="name"
                     placeholder="Enter your full name"
                     className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-green"
                   />
@@ -85,12 +86,13 @@ export default function Newsletter() {
                   <input
                     required
                     type="email"
+                    name="email"
                     placeholder="Enter your email address"
                     className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none transition-colors focus:border-green"
                   />
                 </div>
                 <label className="flex items-start gap-2.5 text-[14px] text-body">
-                  <input required type="checkbox" className="mt-0.5 accent-green" />
+                  <input required type="checkbox" name="consent" className="mt-0.5 accent-green" />
                   I agree to the{" "}
                   <a href="/privacy-policy" className="text-green-dark underline">
                     privacy policy

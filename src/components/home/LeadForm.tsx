@@ -106,6 +106,7 @@ export default function LeadForm() {
                 <input
                   required
                   type="text"
+                  name="name"
                   placeholder="Enter your full name"
                   className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
@@ -117,6 +118,7 @@ export default function LeadForm() {
                 <input
                   required
                   type="email"
+                  name="email"
                   placeholder="Enter your email address"
                   className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
@@ -128,6 +130,7 @@ export default function LeadForm() {
                 <input
                   required
                   type="tel"
+                  name="phone"
                   placeholder="Enter your mobile number"
                   className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
@@ -139,6 +142,7 @@ export default function LeadForm() {
                 <input
                   required
                   type="text"
+                  name="city"
                   placeholder="Enter your city"
                   className="h-[50px] w-full rounded-xl border border-border px-4 text-[15px] outline-none focus:border-green"
                 />
@@ -147,7 +151,7 @@ export default function LeadForm() {
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
                   Investor Profile *
                 </label>
-                <select required defaultValue="" className={SELECT_CLS}>
+                <select required name="investor_profile" defaultValue="" className={SELECT_CLS}>
                   <option value="" disabled>
                     Select your profile
                   </option>
@@ -162,7 +166,7 @@ export default function LeadForm() {
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
                   Investment Interest *
                 </label>
-                <select required defaultValue="" className={SELECT_CLS}>
+                <select required name="investment_interest" defaultValue="" className={SELECT_CLS}>
                   <option value="" disabled>
                     Select your interest
                   </option>
@@ -177,7 +181,7 @@ export default function LeadForm() {
                 <label className="mb-1.5 block text-[14px] font-medium text-navy">
                   Approximate Investment Requirement
                 </label>
-                <select defaultValue="" className={SELECT_CLS}>
+                <select name="investment_requirement" defaultValue="" className={SELECT_CLS}>
                   <option value="" disabled>
                     Select a range
                   </option>

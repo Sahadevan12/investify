@@ -34,6 +34,7 @@ export default function ContactPageForm() {
         <input
           required
           type="text"
+          name="name"
           placeholder="Your full name"
           className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-green"
         />
@@ -43,6 +44,7 @@ export default function ContactPageForm() {
         <input
           required
           type="email"
+          name="email"
           placeholder="you@example.com"
           className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-green"
         />
@@ -51,13 +53,14 @@ export default function ContactPageForm() {
         <label className="mb-1.5 block text-[14px] font-medium text-navy">Phone Number</label>
         <input
           type="tel"
+          name="phone"
           placeholder="With country code"
           className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-green"
         />
       </div>
       <div>
         <label className="mb-1.5 block text-[14px] font-medium text-navy">I&rsquo;m Interested In</label>
-        <select className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-green">
+        <select name="interest" className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-green">
           <option>Demat & Trading Account</option>
           <option>Equity & Derivatives</option>
           <option>Mutual Funds</option>
@@ -72,6 +75,7 @@ export default function ContactPageForm() {
         <label className="mb-1.5 block text-[14px] font-medium text-navy">Message *</label>
         <textarea
           required
+          name="message"
           rows={4}
           placeholder="Tell us a little about what you're looking for"
           className="w-full resize-none rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-green"

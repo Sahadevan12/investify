@@ -49,6 +49,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           data-widget-id="6abec3ecb9739b9592bd95ad"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://links.adzorex.com/js/external-tracking.js"
+          data-tracking-id="tk_905cff8c05064c67a279fd2b269ff9a1"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
