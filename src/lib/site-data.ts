@@ -53,6 +53,7 @@ export const NAV: NavItem[] = [
       { label: "IPO", href: "/products/ipo", icon: "Rocket" },
       { label: "Mutual Funds", href: "/products/mutual-funds", icon: "PieChart" },
       { label: "NPS", href: "/products/nps", icon: "ShieldCheck" },
+      { label: "Bonds & NCDs", href: "/products/bonds-ncds-fixed-income", icon: "ScrollText" },
       { label: "Life & Health Insurance", href: "/products/life-health-insurance", icon: "HeartPulse" },
       { label: "Portfolio Management Services", href: "/products/portfolio-management-services", icon: "BarChart3" },
     ],
@@ -86,6 +87,7 @@ export type Product = {
   description: string;
   highlights: string[];
   faqs: { q: string; a: string }[];
+  extra?: "insurance" | "bonds";
 };
 
 export const PRODUCTS: Product[] = [
@@ -221,29 +223,61 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "life-health-insurance",
-    title: "Life & Health Insurance for NRIs",
+    title: "Life, Health & General Insurance",
     shortTitle: "Life & Health Insurance",
     icon: "HeartPulse",
     summary:
-      "Protection plans that insure you and your family against life events and medical costs, wherever you live.",
+      "Life, health and general insurance from leading insurers, to help protect your family, income, business and wealth.",
     description:
-      "Insurance is the safety net behind every wealth plan. We compare term life, endowment and health cover options from leading Indian insurers, structured specifically for NRI eligibility, premium payment and claims processes.",
+      "Insurance is the safety net behind every wealth plan. Through Investify Prism you can explore life insurance, health insurance and a wide range of general insurance covers from established insurers, and compare options with the help of a dedicated point of contact.",
     highlights: [
-      "Term life and health plans underwritten for NRI applicants",
-      "Premium payment accepted from NRE/NRO or foreign currency accounts",
-      "Claims assistance coordinated across time zones",
-      "Family floater options covering dependants living in India",
+      "Life insurance from HDFC Life, ICICI Prudential, Bajaj Allianz and Aditya Birla Sun Life",
+      "Health insurance from Care, Star Health, Manipal Cigna and Niva Bupa",
+      "General insurance from ICICI Lombard, Tata AIG, HDFC Ergo, Bajaj Allianz, Reliance, Kotak, Cholamandalam, Aditya Birla Health and PSU insurers",
+      "Retail and group health, accident, travel, motor, property and business covers",
     ],
     faqs: [
       {
-        q: "Can I buy term insurance in India while living abroad?",
-        a: "Yes, most insurers accept NRI applications, though premiums and medical requirements can vary by country of residence.",
+        q: "Which insurers can I choose from?",
+        a: "Life insurance is available from HDFC Life, ICICI Prudential, Bajaj Allianz and Aditya Birla Sun Life. Health insurance is available from Care, Star Health, Manipal Cigna and Niva Bupa, and general insurance from ICICI Lombard, Tata AIG, HDFC Ergo, Bajaj Allianz, Reliance, Kotak, Cholamandalam, Aditya Birla Health and PSU insurers.",
       },
       {
-        q: "How are claims handled if I'm not in India?",
-        a: "Our claims desk coordinates documentation and hospital liaison on your behalf, keeping you updated through email and WhatsApp.",
+        q: "What kinds of general insurance are available?",
+        a: "Covers include motor (private car and commercial vehicle), property and fire, travel, cyber liability, electronic equipment, machinery breakdown, marine, bank locker, shop and warehouse, workmen compensation and contractor all-risk policies, among others.",
       },
     ],
+    extra: "insurance",
+  },
+  {
+    slug: "bonds-ncds-fixed-income",
+    title: "Bonds, NCDs & Fixed Income",
+    shortTitle: "Bonds & NCDs",
+    icon: "ScrollText",
+    summary:
+      "Explore corporate bonds, NCDs and other debt-oriented opportunities to diversify your portfolio with regular income.",
+    description:
+      "Bonds and non-convertible debentures (NCDs) let you lend to corporates and institutions in return for periodic interest and repayment of principal at maturity. Below you will find our latest indicative bond quotes across rating categories, so you can see coupon, yield, maturity and payout frequency side by side before speaking with us about what may suit your objectives.",
+    highlights: [
+      "Indicative quotes across AAA, AA and A rated issuers",
+      "Secured, unsecured and sub-debt instruments with different payout frequencies",
+      "Maturities ranging from 2027 to 2036",
+      "Relationship-led guidance on suitability, ticket size and documentation",
+    ],
+    faqs: [
+      {
+        q: "What is the difference between coupon and yield?",
+        a: "The coupon is the interest rate paid on the face value of the bond. The yield is the effective return based on the price at which the bond is bought, so it can be higher or lower than the coupon.",
+      },
+      {
+        q: "What does the credit rating tell me?",
+        a: "Ratings from agencies such as CRISIL, ICRA, CARE and India Ratings indicate the assessed ability of the issuer to repay. Higher-rated bonds (such as AAA) generally carry lower credit risk than lower-rated bonds, which typically offer higher yields to compensate.",
+      },
+      {
+        q: "Are the quotes on this page final?",
+        a: "No. Quotes are indicative and may change with market conditions and availability. Please contact us for the latest pricing before making any decision.",
+      },
+    ],
+    extra: "bonds",
   },
   {
     slug: "portfolio-management-services",
@@ -292,6 +326,7 @@ export type Solution = {
   description: string;
   cta: string;
   icon: string;
+  href?: string;
 };
 
 export const SOLUTION_ROW_LABELS = [
@@ -328,6 +363,7 @@ export const SOLUTIONS: Solution[] = [
       "Diversify your portfolio with bonds, NCDs, fixed-income opportunities and other debt-oriented solutions aligned with your investment objectives.",
     cta: "Explore Fixed Income",
     icon: "ScrollText",
+    href: "/products/bonds-ncds-fixed-income",
   },
   {
     title: "SIF — Specialized Investment Funds",
@@ -385,6 +421,7 @@ export type LifePlanningCard = {
   title: string;
   description: string;
   icon: string;
+  href?: string;
 };
 
 export const WEALTH_LIFE_PLANNING: LifePlanningCard[] = [
@@ -405,6 +442,7 @@ export const WEALTH_LIFE_PLANNING: LifePlanningCard[] = [
     description:
       "Explore life and health insurance solutions that can complement your broader financial plan and help protect your family, income and accumulated wealth.",
     icon: "HeartPulse",
+    href: "/products/life-health-insurance",
   },
   {
     title: "Tax-Efficient Investment Planning",

@@ -53,7 +53,7 @@ export default function ProductCards() {
                       {s.description}
                     </p>
                     <Link
-                      href="/contact-us"
+                      href={s.href ?? "/contact-us"}
                       className="inline-flex items-center gap-2 text-[15px] font-semibold text-green-dark"
                     >
                       {s.cta}

@@ -8,6 +8,8 @@ import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import LeadForm from "@/components/home/LeadForm";
+import InsuranceDetails from "@/components/products/InsuranceDetails";
+import BondQuotes from "@/components/products/BondQuotes";
 
 export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slug }));
@@ -112,6 +114,9 @@ export default async function ProductPage({
           </div>
         </Container>
       </section>
+
+      {product.extra === "insurance" && <InsuranceDetails />}
+      {product.extra === "bonds" && <BondQuotes />}
 
       <LeadForm />
     </>

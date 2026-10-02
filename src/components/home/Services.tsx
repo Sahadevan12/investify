@@ -18,7 +18,7 @@ export default function Services() {
           {WEALTH_LIFE_PLANNING.map((s) => (
             <Link
               key={s.title}
-              href="/contact-us"
+              href={s.href ?? "/contact-us"}
               className="group flex flex-col rounded-3xl bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-hover"
             >
               <span className="mb-6 flex size-14 items-center justify-center rounded-2xl bg-navy text-white">

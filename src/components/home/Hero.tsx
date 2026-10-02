@@ -8,20 +8,56 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import { SITE } from "@/lib/site-data";
 
-const SLIDES = [
+type Slide =
+  | { kind: "image"; src: string; alt: string; width: number; height: number }
+  | { kind: "brand" };
+
+const SLIDES: Slide[] = [
   {
-    src: "/images/hero/hero-businessman-cityscape.jpg",
-    alt: "Confident NRI professional in a global financial hub",
+    kind: "image",
+    src: "/images/hero/hero-slide-1.png",
+    alt: "Bar chart showing growth milestones of ₹5,000 Cr, ₹15,000 Cr and ₹17,000 Cr+",
+    width: 1774,
+    height: 887,
   },
   {
-    src: "/images/hero/hero-nri-traveler-airport.jpg",
-    alt: "NRI traveller holding passport and boarding pass at the airport",
+    kind: "image",
+    src: "/images/hero/hero-slide-2.png",
+    alt: "Bar chart showing growth from ₹1 Cr in Sep-22 to ₹1.73 Cr in Jul-26",
+    width: 1701,
+    height: 925,
   },
-  {
-    src: "/images/hero/hero-confident-professional-laptop.jpg",
-    alt: "NRI professional managing investments on the go",
-  },
+  { kind: "brand" },
 ];
+
+const SOLUTION_CHIPS = ["Equities", "Mutual Funds", "PMS", "AIF", "Bonds & NCDs", "IPOs"];
+
+function BrandSlide() {
+  return (
+    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-black px-8 text-center">
+      <div className="pointer-events-none absolute -bottom-24 left-1/2 h-56 w-[70%] -translate-x-1/2 rounded-full bg-green/40 blur-3xl" />
+      <p className="relative text-[12px] font-semibold uppercase tracking-[0.2em] text-green">
+        Investify Prism
+      </p>
+      <h2 className="relative mt-3 text-[26px] font-bold leading-tight text-white sm:text-[32px]">
+        See. Invest. Grow.
+      </h2>
+      <p className="relative mt-3 max-w-sm text-[14px] leading-relaxed text-white/60 sm:text-[15px]">
+        Investment solutions and relationship-led support, all in one place.
+      </p>
+      <ul className="relative mt-6 flex flex-wrap justify-center gap-2">
+        {SOLUTION_CHIPS.map((c) => (
+          <li
+            key={c}
+            className="rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5 text-[13px] font-medium text-white"
+          >
+            {c}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 const FEATURES = [
   {
@@ -53,6 +89,7 @@ const FEATURES = [
 export default function Hero() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const slide = SLIDES[index];
 
   useEffect(() => {
     if (paused) return;
@@ -63,30 +100,20 @@ export default function Hero() {
   return (
     <section className="relative isolate flex min-h-[520px] items-center overflow-hidden bg-navy-dark text-white sm:min-h-[560px] lg:min-h-[620px]">
       <div className="absolute inset-0">
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.1 }}
-            className="absolute inset-0"
-          >
-            <Image
-              src={SLIDES[index].src}
-              alt={SLIDES[index].alt}
-              fill
-              priority={index === 0}
-              className="object-cover"
-              sizes="100vw"
-            />
-          </motion.div>
-        </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy-dark/85 to-navy-dark/40" />
+        <Image
+          src="/images/hero/hero-businessman-cityscape.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy-dark/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy-dark/85 to-navy-dark/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-transparent to-transparent" />
       </div>
 
-      <Container className="relative z-10 py-14 sm:py-16 lg:py-20">
+      <Container className="relative z-10 grid grid-cols-1 items-center gap-12 py-14 sm:py-16 lg:grid-cols-2 lg:gap-14 lg:py-20">
         <div className="max-w-[640px]">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide backdrop-blur">
             <span className="size-1.5 rounded-full bg-green" />
@@ -132,31 +159,64 @@ export default function Hero() {
             Investify Prism is led by Kishore Devaraj, Authorised Person associated with IIFL Capital Services Limited.
           </p>
         </div>
-      </Container>
 
-      <div className="absolute bottom-6 right-6 z-10 flex items-center sm:bottom-8 sm:right-8">
-        {SLIDES.map((_, i) => (
-          <button
-            key={i}
-            aria-label={`Go to slide ${i + 1}`}
-            onClick={() => setIndex(i)}
-            className="flex size-11 items-center justify-center"
+        <div className="w-full">
+          <div
+            className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-white/10 bg-black shadow-2xl"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
           >
-            <span
-              className={`h-2.5 rounded-full transition-all ${
-                i === index ? "w-7 bg-green" : "w-2.5 bg-white/50"
-              }`}
-            />
-          </button>
-        ))}
-        <button
-          aria-label={paused ? "Resume animation" : "Pause animation"}
-          onClick={() => setPaused((p) => !p)}
-          className="ml-2 flex size-7 items-center justify-center rounded-full border border-white/20 text-white"
-        >
-          <Icon name={paused ? "Play" : "Pause"} className="size-3.5" />
-        </button>
-      </div>
+            <AnimatePresence initial={false}>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+                className="absolute inset-0"
+              >
+                {slide.kind === "image" ? (
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    width={slide.width}
+                    height={slide.height}
+                    priority={index === 0}
+                    className="h-full w-full object-contain"
+                    sizes="(min-width: 1024px) 560px, 100vw"
+                  />
+                ) : (
+                  <BrandSlide />
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="mt-3 flex items-center justify-center">
+            {SLIDES.map((_, i) => (
+              <button
+                key={i}
+                aria-label={`Go to slide ${i + 1}`}
+                onClick={() => setIndex(i)}
+                className="flex size-11 items-center justify-center"
+              >
+                <span
+                  className={`h-2.5 rounded-full transition-all ${
+                    i === index ? "w-7 bg-green" : "w-2.5 bg-white/50"
+                  }`}
+                />
+              </button>
+            ))}
+            <button
+              aria-label={paused ? "Resume animation" : "Pause animation"}
+              onClick={() => setPaused((p) => !p)}
+              className="ml-2 flex size-7 items-center justify-center rounded-full border border-white/20 text-white"
+            >
+              <Icon name={paused ? "Play" : "Pause"} className="size-3.5" />
+            </button>
+          </div>
+        </div>
+      </Container>
     </section>
   );
 }
