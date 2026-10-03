@@ -86,7 +86,7 @@ export type Product = {
   description: string;
   highlights: string[];
   faqs: { q: string; a: string }[];
-  extra?: "insurance" | "bonds" | "demat" | "pms";
+  extra?: "insurance" | "bonds" | "demat" | "pms" | "mf";
 };
 
 export const PRODUCTS: Product[] = [
@@ -179,7 +179,24 @@ export const PRODUCTS: Product[] = [
         q: "Are mutual fund gains taxed differently for NRIs?",
         a: "TDS applies at source on redemption, at rates that vary by fund category and holding period, which our taxation desk can walk you through.",
       },
+      {
+        q: "What is a SIP and how does it work?",
+        a: "A Systematic Investment Plan (SIP) lets you invest a fixed amount in a mutual fund at regular intervals, such as every month. It builds a disciplined habit and spreads your purchase cost across different market levels.",
+      },
+      {
+        q: "Should I choose a SIP or a lump sum?",
+        a: "A SIP suits regular income and long-term goals, while a lump sum suits surplus money that is available today. Many investors use both. We help you decide based on your cash flow and goals.",
+      },
+      {
+        q: "How do I choose the right mutual fund?",
+        a: "Start with your goal, time horizon and risk comfort, then compare funds within the right category on cost, consistency and risk. We shortlist funds with you rather than relying on past returns alone.",
+      },
+      {
+        q: "Are mutual fund returns guaranteed?",
+        a: "No. Mutual fund investments are subject to market risks and the value of your investment can go down as well as up. Past performance is not an indicator of future results.",
+      },
     ],
+    extra: "mf",
   },
   {
     slug: "nps",

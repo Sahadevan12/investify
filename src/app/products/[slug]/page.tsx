@@ -13,6 +13,7 @@ import InsuranceDetails from "@/components/products/InsuranceDetails";
 import BondQuotes from "@/components/products/BondQuotes";
 import BondsInfo from "@/components/products/BondsInfo";
 import PmsInfo, { PmsStats } from "@/components/products/PmsDetails";
+import MfInfo, { MfStats } from "@/components/products/MfDetails";
 import AmcLogos from "@/components/home/AmcLogos";
 
 export function generateStaticParams() {
@@ -55,6 +56,7 @@ export default async function ProductPage({
       />
 
       {product.extra === "pms" && <PmsStats />}
+      {product.extra === "mf" && <MfStats />}
 
       <section className="section-pad bg-white">
         <Container>
@@ -123,6 +125,7 @@ export default async function ProductPage({
 
       {product.extra === "demat" && <DematDetails />}
       {product.extra === "pms" && <PmsInfo />}
+      {product.extra === "mf" && <MfInfo />}
       {product.extra === "insurance" && <InsuranceDetails />}
       {product.extra === "bonds" && (
         <>
