@@ -7,11 +7,13 @@ export default function PageHero({
   title,
   description,
   crumbs,
+  children,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   crumbs: { label: string; href?: string }[];
+  children?: React.ReactNode;
 }) {
   return (
     <section className="relative overflow-hidden bg-navy py-16 text-white sm:py-20 lg:py-24">
@@ -46,6 +48,7 @@ export default function PageHero({
             {description}
           </p>
         )}
+        {children && <div className="mt-8">{children}</div>}
       </Container>
     </section>
   );

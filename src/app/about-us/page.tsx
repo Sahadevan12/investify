@@ -1,23 +1,42 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
+import Button from "@/components/ui/Button";
 import LeadForm from "@/components/home/LeadForm";
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn how Investify Prism helps Non-Resident Indians manage investments, taxation, insurance and inheritance planning in India.",
+    "Learn how Investify Prism helps HNI, affluent, business and NRI investors build and manage long-term wealth through our association with IIFL Capital Services Limited.",
 };
 
-const STATS = [
-  { value: "15+", label: "Years serving NRI investors" },
-  { value: "28,000+", label: "NRI clients worldwide" },
-  { value: "45+", label: "Countries reached" },
-  { value: "₹4,200 Cr+", label: "Assets under advisory" },
+const POSITIONING = [
+  {
+    number: "01",
+    title: "HNI & Affluent Focus",
+    description: "Investment conversations designed around substantial and long-term wealth goals.",
+  },
+  {
+    number: "02",
+    title: "Multi-Product Access",
+    description:
+      "Explore equities, mutual funds, IPOs, bonds/NCDs, PMS, AIFs and other eligible solutions.",
+  },
+  {
+    number: "03",
+    title: "Personal Relationship",
+    description:
+      "A dedicated point of contact for investment discussions, onboarding and ongoing support.",
+  },
+  {
+    number: "04",
+    title: "IIFL Capital Association",
+    description:
+      "Investify Prism operates as an Authorised Person associated with IIFL Capital Services Limited.",
+  },
 ];
 
 const VALUES = [
@@ -46,57 +65,47 @@ export default function AboutUsPage() {
     <>
       <PageHero
         eyebrow="About Us"
-        title="Wealth Guidance Built Around the NRI Journey"
-        description="Investify Prism was founded to close the gap between talented Indians building lives abroad and the investment opportunities waiting for them back home."
+        title="Investment Solutions Built Around Your Wealth Goals"
+        description="Investify Prism works with HNI, affluent, business and individual investors who are looking beyond individual investments and thinking about long-term wealth creation, diversification and financial goals. We help clients explore suitable investment solutions through our association with IIFL Capital Services Limited."
         crumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
-      />
+      >
+        <Button href={SITE.bookingUrl} external size="lg">
+          Talk to an Investment Specialist
+        </Button>
+      </PageHero>
 
       <section className="section-pad bg-white">
         <Container>
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="relative">
-              <div className="overflow-hidden rounded-3xl shadow-card">
-                <Image
-                  src="/images/about/about-team-diverse-office.jpg"
-                  alt="Investify Prism advisory team"
-                  width={800}
-                  height={900}
-                  className="h-[420px] w-full object-cover sm:h-[480px]"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-white p-5 shadow-hover sm:block">
-                <p className="text-[28px] font-bold text-navy">15+</p>
-                <p className="text-[14px] text-body">Years of NRI-focused advisory</p>
-              </div>
-            </div>
-
             <div>
               <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-green/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-green-dark">
                 Our Story
               </span>
               <h2 className="text-[28px] font-semibold leading-[1.25] text-navy sm:text-[34px]">
-                Started by advisors who understood the NRI gap first-hand
+                Built Around Your Goals. Focused on Long-Term Wealth.
               </h2>
               <p className="mt-5 text-[17px] leading-relaxed text-body">
-                Many of our founding advisors began their careers serving resident Indian
-                investors, only to watch NRI clients struggle with paperwork, time-zone
-                mismatches and confusing FEMA rules that resident-focused firms weren&rsquo;t built
-                to handle.
+                {SITE.name} was created to make investing more structured, transparent and
+                relationship-driven for individuals, HNI investors, business owners and NRIs
+                looking to build and manage wealth over the long term.
               </p>
               <p className="mt-4 text-[17px] leading-relaxed text-body">
-                {SITE.name} was built specifically around that gap &mdash; a single relationship
-                that covers demat accounts, equity, mutual funds, insurance, taxation and
-                inheritance planning, with support structured around your time zone, not ours.
+                Our approach begins with understanding your financial goals, investment horizon,
+                risk preferences and existing portfolio. From there, we help you explore suitable
+                investment solutions across equities, mutual funds, IPOs, fixed-income products
+                and other eligible offerings available through our association with IIFL Capital
+                Services Limited.
               </p>
+            </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-6">
-                {STATS.map((s) => (
-                  <div key={s.label}>
-                    <p className="text-[28px] font-bold text-navy sm:text-[30px]">{s.value}</p>
-                    <p className="mt-1 text-[14px] text-body">{s.label}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              {POSITIONING.map((p) => (
+                <div key={p.number} className="rounded-3xl bg-surface p-6">
+                  <p className="text-[28px] font-bold text-green-dark">{p.number}</p>
+                  <h3 className="mb-2 mt-2 text-[18px] font-semibold text-navy">{p.title}</h3>
+                  <p className="text-[15px] leading-relaxed text-body">{p.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
