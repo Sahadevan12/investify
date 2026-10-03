@@ -76,7 +76,7 @@ export default function Header() {
       {/* Main header */}
       <div
         className={clsx(
-          "bg-white/95 backdrop-blur transition-shadow duration-300",
+          "bg-white transition-shadow duration-300",
           scrolled ? "shadow-[0_4px_20px_rgba(16,38,90,0.08)]" : ""
         )}
       >

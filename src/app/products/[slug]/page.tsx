@@ -10,6 +10,7 @@ import { Icon } from "@/components/ui/Icon";
 import LeadForm from "@/components/home/LeadForm";
 import InsuranceDetails from "@/components/products/InsuranceDetails";
 import BondQuotes from "@/components/products/BondQuotes";
+import AmcLogos from "@/components/home/AmcLogos";
 
 export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slug }));
@@ -116,7 +117,12 @@ export default async function ProductPage({
       </section>
 
       {product.extra === "insurance" && <InsuranceDetails />}
-      {product.extra === "bonds" && <BondQuotes />}
+      {product.extra === "bonds" && (
+        <>
+          <BondQuotes />
+          <AmcLogos showHeading={false} />
+        </>
+      )}
 
       <LeadForm />
     </>

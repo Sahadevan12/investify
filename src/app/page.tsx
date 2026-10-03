@@ -1,4 +1,5 @@
 import Hero from "@/components/home/Hero";
+import AmcLogos from "@/components/home/AmcLogos";
 import ProductCards from "@/components/home/ProductCards";
 import Services from "@/components/home/Services";
 import Process from "@/components/home/Process";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <AmcLogos />
       <ProductCards />
       <Services />
       <Process />
