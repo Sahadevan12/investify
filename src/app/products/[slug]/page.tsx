@@ -11,6 +11,8 @@ import LeadForm from "@/components/home/LeadForm";
 import DematDetails from "@/components/products/DematDetails";
 import InsuranceDetails from "@/components/products/InsuranceDetails";
 import BondQuotes from "@/components/products/BondQuotes";
+import BondsInfo from "@/components/products/BondsInfo";
+import PmsInfo, { PmsStats } from "@/components/products/PmsDetails";
 import AmcLogos from "@/components/home/AmcLogos";
 
 export function generateStaticParams() {
@@ -51,6 +53,8 @@ export default async function ProductPage({
           { label: product.shortTitle },
         ]}
       />
+
+      {product.extra === "pms" && <PmsStats />}
 
       <section className="section-pad bg-white">
         <Container>
@@ -118,11 +122,13 @@ export default async function ProductPage({
       </section>
 
       {product.extra === "demat" && <DematDetails />}
+      {product.extra === "pms" && <PmsInfo />}
       {product.extra === "insurance" && <InsuranceDetails />}
       {product.extra === "bonds" && (
         <>
           <BondQuotes />
           <AmcLogos showHeading={false} />
+          <BondsInfo />
         </>
       )}
 

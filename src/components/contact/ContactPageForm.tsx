@@ -62,7 +62,6 @@ export default function ContactPageForm() {
         <label className="mb-1.5 block text-[14px] font-medium text-navy">I&rsquo;m Interested In</label>
         <select name="interest" className="w-full rounded-xl border border-border bg-white px-4 py-3 text-[15px] outline-none focus:border-green">
           <option>Demat & Trading Account</option>
-          <option>Equity & Derivatives</option>
           <option>Mutual Funds</option>
           <option>NPS</option>
           <option>Life & Health Insurance</option>

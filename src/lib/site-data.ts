@@ -86,7 +86,7 @@ export type Product = {
   description: string;
   highlights: string[];
   faqs: { q: string; a: string }[];
-  extra?: "insurance" | "bonds" | "demat";
+  extra?: "insurance" | "bonds" | "demat" | "pms";
 };
 
 export const PRODUCTS: Product[] = [
@@ -262,6 +262,42 @@ export const PRODUCTS: Product[] = [
         q: "Are the quotes on this page final?",
         a: "No. Quotes are indicative and may change with market conditions and availability. Please contact us for the latest pricing before making any decision.",
       },
+      {
+        q: "Are bonds better than fixed deposits?",
+        a: "They are different products. A fixed deposit offers a set rate for a fixed term, while a bond has a coupon, a maturity date and, if listed, a market price that can move. Bonds and FDs also differ in liquidity, risk and taxation, so the right choice depends on your needs.",
+      },
+      {
+        q: "Are corporate bonds safe?",
+        a: "Corporate bonds carry credit risk, which is the chance that the issuer cannot pay interest or principal on time. The level of risk depends on the issuer's financial strength, its credit rating, whether the bond is secured and its other terms.",
+      },
+      {
+        q: "Are bonds tax-free in India?",
+        a: "Bonds are not tax-free by default. Tax treatment depends on the type of bond and the income or gains you earn, and a few specified bonds may offer exemptions. Please speak to a tax professional about your situation.",
+      },
+      {
+        q: "What happens if I sell a bond before maturity?",
+        a: "If you sell before maturity, you may make a capital gain or loss depending on the price, and it may be taxed based on the bond type, your holding period and prevailing tax rules.",
+      },
+      {
+        q: "What is the minimum amount needed to invest in bonds?",
+        a: "It varies by bond. Some bonds can be bought in smaller amounts, while others are offered in multiples of lakhs or crores. The Quantum column in the table above shows the ticket size for each bond.",
+      },
+      {
+        q: "Can I get monthly income from bonds?",
+        a: "Only some bonds pay monthly. Others pay quarterly, half-yearly or annually, depending on their terms. The Payout column in the table above shows how often each bond pays.",
+      },
+      {
+        q: "What is the difference between a bond issue (NCD) and a listed bond?",
+        a: "A bond issue or non-convertible debenture (NCD) is offered to investors in the primary market before it is listed, while a listed bond can be bought and sold on the exchange. They can differ in price, yield, liquidity, rating and other terms.",
+      },
+      {
+        q: "What happens to my bonds if the stock market falls?",
+        a: "A stock market fall does not by itself change what an issuer owes you. However, the market price of a listed bond can still move with interest rates, credit conditions and liquidity.",
+      },
+      {
+        q: "What types of bonds are available in India?",
+        a: "Common types include government securities, public sector (PSU) bonds, corporate bonds, floating-rate bonds, zero-coupon bonds, sovereign gold bonds and infrastructure bonds. Each has different features, risk, returns and tax treatment.",
+      },
     ],
     extra: "bonds",
   },
@@ -303,7 +339,24 @@ export const PRODUCTS: Product[] = [
         q: "How is the fee structured?",
         a: "We offer a flat annual fee plan or a hybrid plan with a lower fixed fee plus a performance share only above a return hurdle, so incentives stay aligned with your outcomes.",
       },
+      {
+        q: "How is PMS taxed?",
+        a: "Tax treatment depends on how the investments are structured. Gains on equity held in your demat account are generally taxed as capital gains, short-term or long-term depending on the holding period, while in some cases income may be treated as business income. Please speak to a tax professional about your situation.",
+      },
+      {
+        q: "Is PMS risky?",
+        a: "Yes. PMS is market-linked and usually has significant equity exposure, which can be volatile. Returns are not guaranteed and depend on market conditions and the decisions of the portfolio manager.",
+      },
+      {
+        q: "How is PMS performance reported?",
+        a: "Investors typically receive periodic portfolio statements, performance reports and detailed transaction records. Performance is usually shown against a relevant benchmark index and, in many cases, net of fees.",
+      },
+      {
+        q: "How do I choose the right PMS?",
+        a: "Look at the strategy's track record and consistency, its investment philosophy, the risk management approach, the fee structure, the quality of reporting and the manager's SEBI registration. We walk through these points with you before you decide.",
+      },
     ],
+    extra: "pms",
   },
 ];
 
