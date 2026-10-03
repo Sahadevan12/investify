@@ -8,6 +8,7 @@ import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import LeadForm from "@/components/home/LeadForm";
+import DematDetails from "@/components/products/DematDetails";
 import InsuranceDetails from "@/components/products/InsuranceDetails";
 import BondQuotes from "@/components/products/BondQuotes";
 import AmcLogos from "@/components/home/AmcLogos";
@@ -116,6 +117,7 @@ export default async function ProductPage({
         </Container>
       </section>
 
+      {product.extra === "demat" && <DematDetails />}
       {product.extra === "insurance" && <InsuranceDetails />}
       {product.extra === "bonds" && (
         <>

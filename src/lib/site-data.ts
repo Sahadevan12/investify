@@ -49,7 +49,6 @@ export const NAV: NavItem[] = [
     href: "#",
     children: [
       { label: "Demat Account", href: "/products/demat-account", icon: "Wallet" },
-      { label: "Equity & Derivatives", href: "/products/equity-derivatives", icon: "TrendingUp" },
       { label: "IPO", href: "/products/ipo", icon: "Rocket" },
       { label: "Mutual Funds", href: "/products/mutual-funds", icon: "PieChart" },
       { label: "NPS", href: "/products/nps", icon: "ShieldCheck" },
@@ -87,7 +86,7 @@ export type Product = {
   description: string;
   highlights: string[];
   faqs: { q: string; a: string }[];
-  extra?: "insurance" | "bonds";
+  extra?: "insurance" | "bonds" | "demat";
 };
 
 export const PRODUCTS: Product[] = [
@@ -97,14 +96,18 @@ export const PRODUCTS: Product[] = [
     shortTitle: "Demat Account",
     icon: "Wallet",
     summary:
-      "One digital account that holds every share, bond and fund you own in India, so paperwork never slows you down.",
+      "One digital account to hold your shares, bonds and funds in India and to trade equity and derivatives, with research-backed guidance and no paperwork delays.",
     description:
-      "Your NRI demat and trading account is the foundation of every investment you make in India. We handle the NRE/NRO linkage, RBI and FEMA formalities and PIS registration so you can start investing without chasing documents across time zones. Once it's live, buying, selling and tracking holdings takes just a few taps.",
+      "Your NRI demat and trading account is the foundation of every investment you make in India. We handle the NRE/NRO linkage, RBI and FEMA formalities and PIS registration so you can start investing without chasing documents across time zones. Once it's live, buying, selling and tracking holdings takes just a few taps. Direct equity gives you the fastest way to participate in India's growth story: our desk shares research notes, sector views and risk guardrails so you're never trading in the dark, and every order is routed through the correct PIS or non-PIS route automatically.",
     highlights: [
       "Fully digital account opening with e-KYC and video verification",
       "Linked seamlessly to your NRE or NRO bank account",
       "PIS and non-PIS options explained and set up correctly the first time",
       "Consolidated view of equity, mutual funds and bonds in one dashboard",
+      "Access to NSE and BSE listed equities and index derivatives",
+      "Weekly research notes and watchlists curated for NRI investors",
+      "Position and margin tracking available on web and mobile",
+      "Dedicated desk for time-zone-friendly order support",
     ],
     faqs: [
       {
@@ -115,24 +118,6 @@ export const PRODUCTS: Product[] = [
         q: "Do I need both an NRE and NRO account?",
         a: "It depends on whether you plan to repatriate your investment proceeds. We help you choose the right structure before you begin.",
       },
-    ],
-  },
-  {
-    slug: "equity-derivatives",
-    title: "Equity & Derivatives for NRIs",
-    shortTitle: "Equity & Derivatives",
-    icon: "TrendingUp",
-    summary:
-      "Trade and invest in Indian stocks with research-backed guidance, while staying compliant with RBI and FEMA rules.",
-    description:
-      "Direct equity gives you the fastest way to participate in India's growth story. Our desk shares research notes, sector views and risk guardrails so you're never trading in the dark, and every order is routed through the correct PIS or non-PIS route automatically.",
-    highlights: [
-      "Access to NSE and BSE listed equities and index derivatives",
-      "Weekly research notes and watchlists curated for NRI investors",
-      "Position and margin tracking available on web and mobile",
-      "Dedicated desk for time-zone-friendly order support",
-    ],
-    faqs: [
       {
         q: "Can NRIs trade in futures and options?",
         a: "NRIs can trade in exchange-traded derivatives on a non-repatriable basis, subject to RBI position limits, which we monitor for you.",
@@ -142,6 +127,7 @@ export const PRODUCTS: Product[] = [
         a: "It is routed through your PIS or non-PIS bank account so every trade stays compliant with FEMA reporting requirements.",
       },
     ],
+    extra: "demat",
   },
   {
     slug: "ipo",
