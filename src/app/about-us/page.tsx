@@ -41,22 +41,22 @@ const POSITIONING = [
 
 const VALUES = [
   {
-    icon: "ShieldCheck",
-    title: "Integrity First",
+    icon: "Target",
+    title: "Investor First",
     description:
-      "Every recommendation is made with your best interest at heart, never influenced by product commissions alone.",
+      "We begin by understanding your financial goals, investment horizon, risk preferences and existing portfolio before exploring suitable investment solutions.",
   },
   {
-    icon: "Globe2",
-    title: "Built for Distance",
+    icon: "ShieldCheck",
+    title: "Clarity & Transparency",
     description:
-      "Our processes are designed from the ground up to work smoothly across time zones, currencies and jurisdictions.",
+      "We keep investment conversations straightforward, helping you understand products, risks, costs and important terms before making decisions.",
   },
   {
     icon: "UserCheck",
-    title: "Genuinely Personal",
+    title: "Personal Relationship",
     description:
-      "You get a dedicated relationship manager who knows your goals, not a rotating call-centre queue.",
+      "From onboarding to ongoing support, you have a dedicated relationship point for your investment questions and service requirements.",
   },
 ];
 
@@ -115,7 +115,7 @@ export default function AboutUsPage() {
         <Container>
           <SectionHeading
             eyebrow="What We Stand For"
-            title="The Principles Behind Every Recommendation"
+            title="The Principles Behind How We Work With Investors"
           />
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {VALUES.map((v) => (
