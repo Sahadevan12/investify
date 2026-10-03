@@ -87,44 +87,106 @@ export type Product = {
   highlights: string[];
   faqs: { q: string; a: string }[];
   extra?: "insurance" | "bonds" | "demat" | "pms" | "mf";
+  eyebrow?: string;
+  featuresTitle?: string;
+  features?: { title: string; description: string }[];
 };
 
 export const PRODUCTS: Product[] = [
   {
     slug: "demat-account",
-    title: "NRI Demat & Trading Account",
+    title: "Demat & Trading Account for Your Investment Journey",
     shortTitle: "Demat Account",
+    eyebrow: "Demat Account",
     icon: "Wallet",
     summary:
-      "One digital account to hold your shares, bonds and funds in India and to trade equity and derivatives, with research-backed guidance and no paperwork delays.",
+      "Open a digital Demat and Trading Account to hold and transact in eligible securities across India's financial markets. Access equities, IPOs, mutual funds and other investment and trading opportunities through the IIFL Capital platform, with Investify Prism providing relationship and onboarding support.",
     description:
-      "Your NRI demat and trading account is the foundation of every investment you make in India. We handle the NRE/NRO linkage, RBI and FEMA formalities and PIS registration so you can start investing without chasing documents across time zones. Once it's live, buying, selling and tracking holdings takes just a few taps. Direct equity gives you the fastest way to participate in India's growth story: our desk shares research notes, sector views and risk guardrails so you're never trading in the dark, and every order is routed through the correct PIS or non-PIS route automatically.",
-    highlights: [
-      "Fully digital account opening with e-KYC and video verification",
-      "Linked seamlessly to your NRE or NRO bank account",
-      "PIS and non-PIS options explained and set up correctly the first time",
-      "Consolidated view of equity, mutual funds and bonds in one dashboard",
-      "Access to NSE and BSE listed equities and index derivatives",
-      "Weekly research notes and watchlists curated for NRI investors",
-      "Position and margin tracking available on web and mobile",
-      "Dedicated desk for time-zone-friendly order support",
+      "A Demat and Trading Account gives you a convenient way to hold and transact in eligible securities across India's financial markets. Through the IIFL Capital platform, eligible investors can access equities, IPOs, mutual funds, derivatives and other available market products. Investify Prism provides relationship and onboarding support to help you get started and navigate the account-opening process.",
+    featuresTitle: "Key Features",
+    features: [
+      {
+        title: "Digital Account Opening",
+        description:
+          "Complete the applicable account-opening and KYC process through a digital onboarding journey.",
+      },
+      {
+        title: "Equity Investment & Trading",
+        description:
+          "Access eligible NSE and BSE-listed securities through the IIFL Capital platform.",
+      },
+      {
+        title: "IPO Access",
+        description:
+          "Apply for eligible IPO opportunities through your investment account, subject to applicable requirements.",
+      },
+      {
+        title: "Mutual Fund Access",
+        description:
+          "Explore mutual fund investment options across different categories and investment objectives.",
+      },
+      {
+        title: "Market & Portfolio Access",
+        description:
+          "Track eligible holdings, transactions and portfolio information through the available digital platform.",
+      },
+      {
+        title: "Multiple Market Segments",
+        description:
+          "Access eligible products across equity, derivatives and other available segments, subject to eligibility and applicable regulations.",
+      },
+      {
+        title: "Dedicated Relationship Support",
+        description:
+          "Get assistance from Investify Prism with onboarding, account-related queries and service requirements.",
+      },
+      {
+        title: "Secure Digital Access",
+        description:
+          "Use the official IIFL Capital platform for account access, market information and transaction-related services.",
+      },
     ],
+    highlights: [],
     faqs: [
       {
-        q: "Can I open a demat account without visiting India?",
-        a: "Yes. The entire process, from document upload to video KYC, is completed online from wherever you live.",
+        q: "Can I open a Demat and Trading Account online?",
+        a: "Yes. Eligible investors can complete the applicable account-opening and KYC process through the available digital onboarding process, subject to verification and regulatory requirements.",
       },
       {
-        q: "Do I need both an NRE and NRO account?",
-        a: "It depends on whether you plan to repatriate your investment proceeds. We help you choose the right structure before you begin.",
+        q: "Who can open a Demat Account?",
+        a: "Eligible resident individuals, NRIs and other permitted investor categories can open accounts subject to applicable eligibility, KYC and regulatory requirements.",
       },
       {
-        q: "Can NRIs trade in futures and options?",
-        a: "NRIs can trade in exchange-traded derivatives on a non-repatriable basis, subject to RBI position limits, which we monitor for you.",
+        q: "What can I invest in through a Demat Account?",
+        a: "A Demat Account can be used to hold eligible securities such as equities, bonds and other securities. Through the associated investment platform, eligible investors may also access products such as mutual funds, IPOs and other market offerings.",
       },
       {
-        q: "How is my trading account different from a resident account?",
-        a: "It is routed through your PIS or non-PIS bank account so every trade stays compliant with FEMA reporting requirements.",
+        q: "What is the difference between a Demat Account and a Trading Account?",
+        a: "A Demat Account is used to hold securities electronically, while a Trading Account is used to place eligible buy and sell transactions in the market. They work together when investing or trading in securities.",
+      },
+      {
+        q: "Can I invest in IPOs through my account?",
+        a: "Yes. Eligible investors can apply for eligible IPOs through the applicable IIFL Capital platform and process, subject to the IPO terms and investor eligibility.",
+      },
+      {
+        q: "Can I invest in mutual funds through the same platform?",
+        a: "Yes. Eligible investors can access mutual fund investment options through the associated platform, subject to the applicable product and transaction processes.",
+      },
+      {
+        q: "Can NRIs open a Demat Account?",
+        a: "Yes. NRIs can open eligible investment accounts subject to applicable NRI, KYC, banking, repatriation and regulatory requirements. The account structure and permitted transactions can differ from resident accounts.",
+      },
+      {
+        q: "Is a Demat Account suitable for long-term investors?",
+        a: "Yes. A Demat Account can be used by investors who want to hold and manage eligible securities over the long term, as well as by investors who actively trade eligible market products.",
+      },
+      {
+        q: "How does Investify Prism help with the account?",
+        a: "Investify Prism provides relationship and onboarding support, helping you understand the account-opening process and assisting with applicable service requirements.",
+      },
+      {
+        q: "How can I open my Demat Account?",
+        a: "Click “Open Demat Account” to begin the account-opening process, or speak with our team if you would like assistance before starting.",
       },
     ],
     extra: "demat",

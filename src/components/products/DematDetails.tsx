@@ -18,15 +18,15 @@ const WHY = [
   },
   {
     icon: "ShieldCheck",
-    title: "Opened through IIFL Capital",
+    title: "IIFL Capital platform, Investify Prism support",
     description:
-      "Investify Prism is an Authorised Person associated with IIFL Capital Services Limited, and your account is opened through that association.",
+      "Your account runs on the IIFL Capital platform, while Investify Prism, an Authorised Person associated with IIFL Capital Services Limited, provides relationship and onboarding support.",
   },
   {
     icon: "BarChart3",
-    title: "Research and portfolio perspective",
+    title: "Portfolio perspective",
     description:
-      "Market insights, portfolio analysis and structured discussions help you review what you hold and what you plan to add.",
+      "Structured discussions help you review your holdings against your goals and decide what you may want to add.",
   },
 ];
 
@@ -39,12 +39,12 @@ const STEPS = [
   {
     title: "Complete your documents",
     description:
-      "We guide you on the KYC and account documents needed for your profile, including NRE/NRO bank linkage and PIS for NRI investors.",
+      "We help you understand the KYC and account documents needed for your profile and walk you through the account-opening process.",
   },
   {
     title: "Get your account activated",
     description:
-      "Once your details are verified, your demat and trading account is activated and linked to your bank account.",
+      "Once your application is verified and approved, your demat and trading account is activated.",
   },
   {
     title: "Invest and review",
@@ -59,6 +59,8 @@ const USES = [
   "Mutual funds & SIPs",
   "IPOs",
   "Bonds & NCDs",
+  "Fixed deposits",
+  "Commodities & currency",
   "PMS & AIF (subject to eligibility)",
 ];
 
@@ -114,7 +116,7 @@ export default function DematDetails() {
       <section className="section-pad bg-surface">
         <Container>
           <div className="rounded-3xl bg-navy p-8 text-white sm:p-12">
-            <h2 className="text-[26px] font-semibold leading-[1.25] sm:text-[32px]">
+            <h2 className="text-[26px] font-semibold leading-[1.25] text-white sm:text-[32px]">
               What You Can Do With Your Account
             </h2>
             <p className="mt-3 max-w-2xl text-[16px] leading-relaxed text-white/70">

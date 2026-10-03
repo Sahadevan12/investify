@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PRODUCTS } from "@/lib/site-data";
+import { PRODUCTS, SITE } from "@/lib/site-data";
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
 import Accordion from "@/components/ui/Accordion";
@@ -45,7 +45,7 @@ export default async function ProductPage({
   return (
     <>
       <PageHero
-        eyebrow="Product"
+        eyebrow={product.eyebrow ?? "Product"}
         title={product.title}
         description={product.summary}
         crumbs={[
@@ -53,7 +53,18 @@ export default async function ProductPage({
           { label: "Products", href: "/#products" },
           { label: product.shortTitle },
         ]}
-      />
+      >
+        {product.extra === "demat" && (
+          <div className="flex flex-wrap items-center gap-4">
+            <Button href={SITE.loginUrl} external size="lg">
+              Open Demat Account
+            </Button>
+            <Button href={SITE.bookingUrl} external variant="outlineLight" size="lg">
+              Talk to an Investment Specialist
+            </Button>
+          </div>
+        )}
+      </PageHero>
 
       {product.extra === "pms" && <PmsStats />}
       {product.extra === "mf" && (
@@ -69,17 +80,35 @@ export default async function ProductPage({
             <div className="lg:col-span-2">
               <p className="text-[17px] leading-relaxed text-body">{product.description}</p>
 
-              <h2 className="mb-5 mt-10 text-[22px] font-semibold text-navy">Key Highlights</h2>
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {product.highlights.map((h) => (
-                  <div key={h} className="flex items-start gap-3 rounded-2xl bg-surface p-4">
-                    <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-green/15 text-green-dark">
-                      <Icon name="Check" className="size-3.5" strokeWidth={3} />
-                    </span>
-                    <span className="text-[15px] leading-relaxed text-body">{h}</span>
-                  </div>
-                ))}
-              </div>
+              <h2 className="mb-5 mt-10 text-[22px] font-semibold text-navy">
+                {product.featuresTitle ?? "Key Highlights"}
+              </h2>
+              {product.features ? (
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {product.features.map((f) => (
+                    <div key={f.title} className="flex items-start gap-3 rounded-2xl bg-surface p-4">
+                      <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-green/15 text-green-dark">
+                        <Icon name="Check" className="size-3.5" strokeWidth={3} />
+                      </span>
+                      <div>
+                        <p className="text-[15px] font-semibold text-navy">{f.title}</p>
+                        <p className="mt-1 text-[14px] leading-relaxed text-body">{f.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {product.highlights.map((h) => (
+                    <div key={h} className="flex items-start gap-3 rounded-2xl bg-surface p-4">
+                      <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-green/15 text-green-dark">
+                        <Icon name="Check" className="size-3.5" strokeWidth={3} />
+                      </span>
+                      <span className="text-[15px] leading-relaxed text-body">{h}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {product.faqs.length > 0 && (
                 <>
@@ -98,7 +127,7 @@ export default async function ProductPage({
                   Ready to get started?
                 </h3>
                 <p className="mb-6 text-[14px] leading-relaxed text-body">
-                  Speak with an NRI wealth advisor and set up your {product.shortTitle.toLowerCase()} in a few simple steps.
+                  Speak with an Investify Prism specialist and get started with {product.shortTitle.toLowerCase()} in a few simple steps.
                 </p>
                 <Button href="/contact-us" className="w-full justify-center">
                   Talk to an Advisor
