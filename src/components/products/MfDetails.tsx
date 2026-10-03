@@ -1,9 +1,8 @@
 import { Icon } from "@/components/ui/Icon";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import FactStrip, { type Fact } from "@/components/products/FactStrip";
-import AmcLogos from "@/components/home/AmcLogos";
 import { SITE } from "@/lib/site-data";
+import FactStrip, { type Fact } from "@/components/products/FactStrip";
 
 const FACTS: Fact[] = [
   { icon: "PieChart", value: "60+ AMCs", label: "Fund houses on the platform" },
@@ -87,8 +86,6 @@ export function MfStats() {
 export default function MfInfo() {
   return (
     <>
-      <AmcLogos />
-
       <section className="section-pad bg-surface">
         <Container>
           <span className="mb-3 inline-flex items-center gap-2 rounded-full bg-green/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-green-dark">

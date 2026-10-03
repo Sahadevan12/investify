@@ -56,7 +56,12 @@ export default async function ProductPage({
       />
 
       {product.extra === "pms" && <PmsStats />}
-      {product.extra === "mf" && <MfStats />}
+      {product.extra === "mf" && (
+        <>
+          <MfStats />
+          <AmcLogos />
+        </>
+      )}
 
       <section className="section-pad bg-white">
         <Container>

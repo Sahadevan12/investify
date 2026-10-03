@@ -55,7 +55,10 @@ export default function AmcLogos({ showHeading = true }: { showHeading?: boolean
           WebkitMaskImage: "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)",
         }}
       >
-        <ul className="flex w-max animate-marquee items-center gap-6 hover:[animation-play-state:paused] motion-reduce:animate-none">
+        <ul
+          className="flex w-max animate-marquee items-center gap-6 hover:[animation-play-state:paused] motion-reduce:animate-none"
+          style={{ animationDuration: "80s" }}
+        >
           {loop.map((a, i) => (
             <li
               key={`${a.file}-${i}`}
@@ -67,6 +70,7 @@ export default function AmcLogos({ showHeading = true }: { showHeading?: boolean
                 alt={i < AMCS.length ? a.name : ""}
                 width={120}
                 height={120}
+                loading="eager"
                 className="size-full object-cover"
               />
             </li>
