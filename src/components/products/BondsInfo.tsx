@@ -1,5 +1,18 @@
 import { Icon } from "@/components/ui/Icon";
 import Container from "@/components/ui/Container";
+import FactStrip, { type Fact } from "@/components/products/FactStrip";
+import { BOND_QUOTES, BOND_QUOTES_DATE } from "@/lib/bonds-data";
+
+const FACTS: Fact[] = [
+  {
+    icon: "ScrollText",
+    value: `${BOND_QUOTES.length} bonds`,
+    label: `Indicative quotes as of ${BOND_QUOTES_DATE}`,
+  },
+  { icon: "ShieldCheck", value: "AAA to A-", label: "Credit ratings across issuers" },
+  { icon: "Receipt", value: "Monthly to annual", label: "Interest payout options" },
+  { icon: "Target", value: "2027–2036", label: "Range of maturities" },
+];
 
 const WHY = [
   {
@@ -73,6 +86,16 @@ const COMPARE = [
       "Each bond has its own minimum or multiple of investment, so check the quantum before you plan your allocation.",
   },
 ];
+
+export function BondsStats() {
+  return (
+    <FactStrip
+      intro="Explore, compare, analyse and invest in bonds and NCDs"
+      headline="All in one place"
+      facts={FACTS}
+    />
+  );
+}
 
 export default function BondsInfo() {
   return (

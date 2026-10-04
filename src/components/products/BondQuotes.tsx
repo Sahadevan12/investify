@@ -10,7 +10,7 @@ export default function BondQuotes() {
   return (
     <section className="section-pad bg-surface">
       <Container>
-        <div className="rounded-3xl bg-white p-6 shadow-card sm:p-9">
+        <div className="rounded-3xl bg-white p-4 shadow-card sm:p-9">
           <div className="mb-6 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="text-[22px] font-semibold text-navy">Bond Quotes</h2>
@@ -30,7 +30,7 @@ export default function BondQuotes() {
                       key={h}
                       className={`px-3 pb-3 text-[13px] font-medium uppercase tracking-wide text-body/70 ${
                         i === 2 || i === 3 ? "text-right" : ""
-                      }`}
+                      } ${i === 0 ? "sticky left-0 z-10 bg-white" : ""}`}
                     >
                       {h}
                     </th>
@@ -40,8 +40,8 @@ export default function BondQuotes() {
               <tbody>
                 {BOND_QUOTES.map((b) => (
                   <tr key={b.isin} className="border-b border-border align-top last:border-0">
-                    <td className="max-w-[300px] px-3 py-4">
-                      <p className="text-[15px] font-semibold leading-snug text-navy">
+                    <td className="sticky left-0 z-10 w-[150px] min-w-[150px] max-w-[300px] bg-white px-3 py-4 shadow-[6px_0_8px_-6px_rgba(16,38,90,0.12)] sm:w-auto sm:min-w-0 sm:shadow-none">
+                      <p className="text-[14px] font-semibold leading-snug text-navy sm:text-[15px]">
                         {b.security}
                       </p>
                       <p className="mt-1 text-[12px] text-body">

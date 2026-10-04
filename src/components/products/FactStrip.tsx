@@ -24,22 +24,22 @@ export default function FactStrip({
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 border-t border-border pt-8 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 border-t border-border pt-4 sm:mt-8 sm:pt-8 lg:grid-cols-4">
           {facts.map((f, i) => (
             <div
               key={f.label}
-              className={`flex items-center gap-4 px-3 py-4 sm:px-6 ${
+              className={`flex flex-col items-start gap-2.5 px-3 py-4 sm:flex-row sm:items-center sm:gap-4 sm:px-6 ${
                 i > 0 ? "lg:border-l lg:border-border" : ""
               } ${i % 2 === 1 ? "border-l border-border lg:border-l" : ""}`}
             >
-              <span className="flex size-14 shrink-0 items-center justify-center rounded-full border border-green/20 bg-green/10 text-green-dark">
-                <Icon name={f.icon} className="size-6" strokeWidth={1.6} />
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-full border border-green/20 bg-green/10 text-green-dark sm:size-14">
+                <Icon name={f.icon} className="size-5 sm:size-6" strokeWidth={1.6} />
               </span>
               <div>
-                <p className="text-[20px] font-bold leading-tight text-navy sm:text-[22px]">
+                <p className="text-[17px] font-bold leading-tight text-navy sm:text-[22px]">
                   {f.value}
                 </p>
-                <p className="mt-0.5 text-[13px] font-medium leading-snug text-body sm:text-[14px]">
+                <p className="mt-1 text-[12px] font-medium leading-snug text-body sm:mt-0.5 sm:text-[14px]">
                   {f.label}
                 </p>
               </div>

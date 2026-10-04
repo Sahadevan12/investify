@@ -86,8 +86,9 @@ export type Product = {
   description: string;
   highlights: string[];
   faqs: { q: string; a: string }[];
-  extra?: "insurance" | "bonds" | "demat" | "pms" | "mf";
+  extra?: "insurance" | "bonds" | "demat" | "pms" | "mf" | "ipo" | "nps";
   eyebrow?: string;
+  ctas?: { label: string; href: string; external?: boolean }[];
   featuresTitle?: string;
   features?: { title: string; description: string }[];
 };
@@ -98,6 +99,10 @@ export const PRODUCTS: Product[] = [
     title: "Demat & Trading Account for Your Investment Journey",
     shortTitle: "Demat Account",
     eyebrow: "Demat Account",
+    ctas: [
+      { label: "Open Demat Account", href: SITE.loginUrl, external: true },
+      { label: "Talk to an Investment Specialist", href: SITE.bookingUrl, external: true },
+    ],
     icon: "Wallet",
     summary:
       "Open a digital Demat and Trading Account to hold and transact in eligible securities across India's financial markets. Access equities, IPOs, mutual funds and other investment and trading opportunities through the IIFL Capital platform, with Investify Prism providing relationship and onboarding support.",
@@ -193,29 +198,81 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "ipo",
-    title: "IPO Investment for NRIs",
+    title: "IPO Investment: Explore New Public Issues",
     shortTitle: "IPO",
+    eyebrow: "IPO",
+    ctas: [
+      { label: "Open Demat Account", href: SITE.loginUrl, external: true },
+      { label: "Talk to an Investment Specialist", href: SITE.bookingUrl, external: true },
+    ],
     icon: "Rocket",
     summary:
-      "Apply to Indian public issues from anywhere in the world and get in at the ground floor of new growth stories.",
+      "Explore eligible IPOs and new public issues through your investment account on the IIFL Capital platform, with Investify Prism providing relationship and onboarding support.",
     description:
-      "IPO allotments move fast and paperwork delays cost opportunities. We keep you informed on upcoming issues, help you apply through the NRI-eligible route (UPI or ASBA via your NRE/NRO account) and track allotment status until shares land in your demat account.",
-    highlights: [
-      "Curated alerts for IPOs open to NRI investors",
-      "Application support through ASBA and UPI-linked NRE accounts",
-      "Real time allotment and listing day tracking",
-      "Guidance on lock-in and repatriation rules for listed shares",
+      "An Initial Public Offering (IPO) lets you invest in a company when it offers its shares to the public for the first time. Through the IIFL Capital platform, eligible investors can apply for IPOs from their investment account, subject to the terms of each issue. Investify Prism helps you understand how IPOs work, what to review before applying, and how to get your account ready.",
+    featuresTitle: "Key Features",
+    features: [
+      {
+        title: "Access to Eligible IPOs",
+        description: "Explore eligible initial public offerings through your investment account on the IIFL Capital platform, subject to the terms of each issue.",
+      },
+      {
+        title: "Apply Through Your Account",
+        description: "Place your application through the applicable platform and process, subject to investor eligibility and the issue's requirements.",
+      },
+      {
+        title: "Mainboard & Other Public Issues",
+        description: "Learn about mainboard IPOs, SME IPOs and other public offers such as NCD and bond issues, subject to availability and eligibility.",
+      },
+      {
+        title: "Understand Before You Apply",
+        description: "Review the price band, lot size, objects of the issue and risk factors with your relationship contact before deciding.",
+      },
+      {
+        title: "Shares Credited to Your Demat",
+        description: "Where shares are allotted, they are credited to your demat account and can be held or traded after listing.",
+      },
+      {
+        title: "Dedicated Relationship Support",
+        description: "Get assistance from Investify Prism with onboarding, account-related queries and service requirements.",
+      },
     ],
+    highlights: [],
     faqs: [
       {
-        q: "Can NRIs apply to every IPO in India?",
-        a: "Most mainboard IPOs are open to NRIs on a non-repatriable basis; a few issues carry specific restrictions, which we flag before you apply.",
+        q: "What is an IPO?",
+        a: "An Initial Public Offering (IPO) is when a company offers its shares to the public for the first time so that it can raise capital and list on the stock exchanges. Investors who are allotted shares become part-owners of the company.",
       },
       {
-        q: "How quickly will I know if I got an allotment?",
-        a: "Allotment status is usually available within a week of the issue closing, and we notify you as soon as it's out.",
+        q: "Do I need a demat account to apply for an IPO?",
+        a: "Yes. Shares allotted in an IPO are credited to your demat account, so you need a demat and trading account to apply. Investify Prism provides relationship and onboarding support to help you open one through the IIFL Capital platform.",
+      },
+      {
+        q: "Is allotment guaranteed if I apply?",
+        a: "No. Allotment depends on how much demand there is for the issue and on the allotment rules for your investor category. In a heavily subscribed issue you may receive fewer shares than you applied for, or none.",
+      },
+      {
+        q: "What is a price band and a lot size?",
+        a: "The price band is the range within which you can bid for the shares. The lot size is the minimum number of shares you can apply for, and you apply in multiples of it. Both are announced in the offer document.",
+      },
+      {
+        q: "What happens if I am not allotted shares?",
+        a: "If you are not allotted shares, or are allotted fewer than you applied for, the amount blocked or paid for the unallotted portion is released as per the process of the issue.",
+      },
+      {
+        q: "Can NRIs apply for IPOs?",
+        a: "NRIs can apply for eligible IPOs subject to applicable regulations, the terms of the issue and the type of account they hold. The process and permitted routes can differ from those for resident investors.",
+      },
+      {
+        q: "Do IPOs always list at a profit?",
+        a: "No. Listing prices can be higher or lower than the issue price, and share prices can fall after listing. Listing gains are never assured, so it is important to read the offer document and consider the company's fundamentals.",
+      },
+      {
+        q: "What is the difference between an IPO and an NCD issue?",
+        a: "An IPO offers shares, which make you a part-owner of the company. An NCD (non-convertible debenture) issue offers a debt instrument that pays interest and repays principal on maturity, subject to the issuer's ability to pay.",
       },
     ],
+    extra: "ipo",
   },
   {
     slug: "mutual-funds",
@@ -262,29 +319,89 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "nps",
-    title: "National Pension Scheme for NRIs",
+    title: "National Pension System (NPS) for NRIs & Long-Term Retirement Planning",
     shortTitle: "NPS",
+    eyebrow: "National Pension System (NPS)",
+    ctas: [
+      { label: "Explore NPS for NRIs", href: "#details" },
+      { label: "Talk to an Investment Specialist", href: SITE.bookingUrl, external: true },
+    ],
     icon: "ShieldCheck",
     summary:
-      "A retirement-focused investment that blends market growth with long-term stability and tax efficiency.",
+      "Build a structured retirement corpus through NPS while planning for your long-term financial goals in India. NRIs can subscribe to NPS subject to applicable eligibility, KYC, banking and regulatory requirements.",
     description:
-      "NPS is a low-cost way to build a dedicated retirement corpus in India while you're working abroad. We help you choose the right asset allocation between equity, corporate debt and government securities, and manage the annual contribution and compliance calendar for you.",
-    highlights: [
-      "Choice of active or auto asset-allocation across equity and debt",
-      "Tax benefits under Section 80CCD for contributions from India-sourced income",
-      "Digital contribution reminders so you never miss a cycle",
-      "Guidance on annuity selection at the time of retirement",
+      "The National Pension System (NPS) is a voluntary, market-linked retirement scheme regulated by PFRDA. It lets you invest regularly over your working life and build a corpus for retirement, with a choice of asset classes and investment styles. NRIs can subscribe subject to applicable eligibility, KYC, banking and regulatory requirements. Investify Prism helps you understand how NPS works and supports you through the onboarding process.",
+    featuresTitle: "Key Features",
+    features: [
+      {
+        title: "Retirement-Focused Investing",
+        description: "NPS is a long-term, market-linked pension scheme regulated by PFRDA, designed to help you build a retirement corpus.",
+      },
+      {
+        title: "Choice of Asset Classes",
+        description: "Allocate across equity, corporate debt, government securities and alternative assets, within the limits set by the regulator.",
+      },
+      {
+        title: "Active or Auto Choice",
+        description: "Pick your own allocation under Active Choice, or let an Auto Choice life-cycle option shift the mix as you age.",
+      },
+      {
+        title: "Professional Fund Management",
+        description: "Your contributions are managed by pension fund managers registered with PFRDA, under a defined investment framework.",
+      },
+      {
+        title: "Cost-Conscious Structure",
+        description: "NPS is known for its relatively low fund management charges, subject to the applicable fee structure.",
+      },
+      {
+        title: "Flexible Contributions",
+        description: "Contribute at your own pace, subject to the minimum contribution requirements that apply to your account.",
+      },
+      {
+        title: "Possible Tax Benefits",
+        description: "Contributions may be eligible for tax benefits under applicable income tax provisions. Please consult a tax professional.",
+      },
+      {
+        title: "Dedicated Relationship Support",
+        description: "Get assistance from Investify Prism with onboarding, account-related queries and service requirements.",
+      },
     ],
+    highlights: [],
     faqs: [
       {
-        q: "Can NRIs open an NPS account?",
-        a: "Yes, NRIs can open a Tier I NPS account using their NRE or NRO bank account, subject to PAN and KYC documentation.",
+        q: "What is the National Pension System (NPS)?",
+        a: "NPS is a voluntary, long-term retirement savings scheme regulated by the Pension Fund Regulatory and Development Authority (PFRDA). You contribute regularly during your working years, your money is invested in a mix of asset classes, and the accumulated corpus supports your retirement.",
       },
       {
-        q: "What happens to my NPS account if I change my residency status?",
-        a: "Your account continues to operate normally; only the contribution source account may need to be updated.",
+        q: "What is the difference between Tier I and Tier II accounts?",
+        a: "A Tier I account is the main retirement account and has withdrawal restrictions linked to retirement. A Tier II account is an optional, more flexible savings account that can only be opened alongside a Tier I account, and its tax treatment differs.",
+      },
+      {
+        q: "Can NRIs open an NPS account?",
+        a: "NRIs can subscribe to NPS subject to applicable eligibility, KYC, banking and regulatory requirements. The account structure and the rules for contributions and withdrawals can differ from those for resident investors.",
+      },
+      {
+        q: "What is the difference between Active Choice and Auto Choice?",
+        a: "Under Active Choice you decide how your contributions are split across asset classes within the permitted limits. Under Auto Choice, a life-cycle option automatically moves your allocation towards safer assets as you get older.",
+      },
+      {
+        q: "Are NPS returns guaranteed?",
+        a: "No. NPS is a market-linked scheme, so returns depend on the performance of the underlying investments and are not guaranteed. The value of your corpus can go up as well as down.",
+      },
+      {
+        q: "What happens when I reach retirement?",
+        a: "On exit, a portion of the corpus must be used to buy an annuity that provides a regular pension, and the rest can be taken as a lump sum, in line with the rules prescribed by PFRDA at the time. The exact proportions and conditions can change.",
+      },
+      {
+        q: "Can I withdraw money from NPS before retirement?",
+        a: "Tier I accounts allow partial withdrawals for specified purposes and premature exit only under the conditions laid down by PFRDA, usually with limits on the amount. Please check the current rules before relying on early access.",
+      },
+      {
+        q: "Does NPS offer tax benefits?",
+        a: "Contributions to NPS may qualify for deductions under applicable income tax provisions, and the tax treatment of the corpus at exit depends on prevailing rules. Tax laws change and depend on your individual situation, so please consult a tax professional.",
       },
     ],
+    extra: "nps",
   },
   {
     slug: "life-health-insurance",

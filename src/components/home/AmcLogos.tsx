@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Container from "@/components/ui/Container";
+import LogoMarquee from "@/components/home/LogoMarquee";
 
 const AMCS = [
   { file: "asset360one", name: "360 ONE Asset" },
@@ -35,48 +34,15 @@ const AMCS = [
   { file: "samcomf", name: "Samco Mutual Fund" },
 ];
 
+const AMC_LOGOS = AMCS.map((a) => ({ name: a.name, src: `/images/amc/${a.file}.jpg` }));
+
 export default function AmcLogos({ showHeading = true }: { showHeading?: boolean }) {
-  const loop = [...AMCS, ...AMCS];
-
   return (
-    <section className="bg-white py-12 sm:py-14">
-      {showHeading && (
-        <Container>
-          <h2 className="mx-auto max-w-3xl text-center text-[22px] font-semibold leading-snug text-navy sm:text-[26px]">
-            60+ AMCs available on the Investify Prism platform
-          </h2>
-        </Container>
-      )}
-
-      <div
-        className={`${showHeading ? "mt-8 " : ""}overflow-hidden`}
-        style={{
-          maskImage: "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)",
-          WebkitMaskImage: "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)",
-        }}
-      >
-        <ul
-          className="flex w-max animate-marquee items-center gap-6 hover:[animation-play-state:paused] motion-reduce:animate-none"
-          style={{ animationDuration: "80s" }}
-        >
-          {loop.map((a, i) => (
-            <li
-              key={`${a.file}-${i}`}
-              aria-hidden={i >= AMCS.length}
-              className="size-16 shrink-0 overflow-hidden rounded-full border border-border bg-white shadow-soft sm:size-[72px]"
-            >
-              <Image
-                src={`/images/amc/${a.file}.jpg`}
-                alt={i < AMCS.length ? a.name : ""}
-                width={120}
-                height={120}
-                loading="eager"
-                className="size-full object-cover"
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    <LogoMarquee
+      heading={showHeading ? "60+ AMCs available on the Investify Prism platform" : undefined}
+      logos={AMC_LOGOS}
+      shape="circle"
+      duration="80s"
+    />
   );
 }

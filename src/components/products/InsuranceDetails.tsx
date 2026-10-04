@@ -9,6 +9,39 @@ import {
 } from "@/lib/insurance-data";
 import { Icon } from "@/components/ui/Icon";
 import Container from "@/components/ui/Container";
+import FactStrip, { type Fact } from "@/components/products/FactStrip";
+import LogoMarquee from "@/components/home/LogoMarquee";
+
+const ALL_PARTNERS = [...LIFE_PARTNERS, ...HEALTH_PARTNERS, ...GENERAL_PARTNERS];
+const COVER_COUNT = PRODUCT_OFFERING.reduce((n, c) => n + c.items.length, 0);
+
+const FACTS: Fact[] = [
+  { icon: "HeartPulse", value: `${LIFE_PARTNERS.length} life insurers`, label: "Life insurance partners" },
+  { icon: "ShieldCheck", value: `${HEALTH_PARTNERS.length} health insurers`, label: "Health insurance partners" },
+  { icon: "Globe2", value: `${GENERAL_PARTNERS.length}+ general insurers`, label: "Including PSU insurers" },
+  { icon: "ScrollText", value: `${COVER_COUNT} covers`, label: "Health, motor, property and business" },
+];
+
+export function InsuranceStats() {
+  return (
+    <FactStrip
+      intro="Explore, compare and choose life, health and general insurance"
+      headline="All in one place"
+      facts={FACTS}
+    />
+  );
+}
+
+export function InsuranceLogos() {
+  return (
+    <LogoMarquee
+      heading="Insurance partners available through Investify Prism"
+      logos={ALL_PARTNERS.map((p) => ({ name: p.name, src: p.logo, crop: p.crop, scale: p.scale }))}
+      shape="card"
+      duration="72s"
+    />
+  );
+}
 
 function PartnerGrid({
   title,
@@ -58,7 +91,7 @@ export default function InsuranceDetails() {
             Life Insurance
           </span>
           <h2 className="mb-10 text-[28px] font-semibold leading-[1.25] text-navy sm:text-[34px]">
-            Life Insurance Partners &amp; Focus Products
+            Life Insurance Partners
           </h2>
 
           <PartnerGrid title="Our life insurance partners" partners={LIFE_PARTNERS} />

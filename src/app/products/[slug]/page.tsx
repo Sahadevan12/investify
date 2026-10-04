@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PRODUCTS, SITE } from "@/lib/site-data";
+import { PRODUCTS } from "@/lib/site-data";
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
 import Accordion from "@/components/ui/Accordion";
@@ -9,11 +9,13 @@ import Button from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import LeadForm from "@/components/home/LeadForm";
 import DematDetails from "@/components/products/DematDetails";
-import InsuranceDetails from "@/components/products/InsuranceDetails";
+import InsuranceDetails, { InsuranceStats, InsuranceLogos } from "@/components/products/InsuranceDetails";
 import BondQuotes from "@/components/products/BondQuotes";
-import BondsInfo from "@/components/products/BondsInfo";
+import BondsInfo, { BondsStats } from "@/components/products/BondsInfo";
 import PmsInfo, { PmsStats } from "@/components/products/PmsDetails";
 import MfInfo, { MfStats } from "@/components/products/MfDetails";
+import IpoInfo, { IpoStats } from "@/components/products/IpoDetails";
+import NpsInfo, { NpsStats } from "@/components/products/NpsDetails";
 import AmcLogos from "@/components/home/AmcLogos";
 
 export function generateStaticParams() {
@@ -54,18 +56,38 @@ export default async function ProductPage({
           { label: product.shortTitle },
         ]}
       >
-        {product.extra === "demat" && (
+        {product.ctas && (
           <div className="flex flex-wrap items-center gap-4">
-            <Button href={SITE.loginUrl} external size="lg">
-              Open Demat Account
-            </Button>
-            <Button href={SITE.bookingUrl} external variant="outlineLight" size="lg">
-              Talk to an Investment Specialist
-            </Button>
+            {product.ctas.map((c, i) => (
+              <Button
+                key={c.label}
+                href={c.href}
+                external={c.external}
+                variant={i === 0 ? "primary" : "outlineLight"}
+                size="lg"
+              >
+                {c.label}
+              </Button>
+            ))}
           </div>
         )}
       </PageHero>
 
+      {product.extra === "bonds" && (
+        <>
+          <BondsStats />
+          <AmcLogos />
+          <BondQuotes />
+        </>
+      )}
+      {product.extra === "insurance" && (
+        <>
+          <InsuranceStats />
+          <InsuranceLogos />
+        </>
+      )}
+      {product.extra === "ipo" && <IpoStats />}
+      {product.extra === "nps" && <NpsStats />}
       {product.extra === "pms" && <PmsStats />}
       {product.extra === "mf" && (
         <>
@@ -74,7 +96,7 @@ export default async function ProductPage({
         </>
       )}
 
-      <section className="section-pad bg-white">
+      <section id="details" className="section-pad scroll-mt-24 bg-white">
         <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-14">
             <div className="lg:col-span-2">
@@ -127,7 +149,7 @@ export default async function ProductPage({
                   Ready to get started?
                 </h3>
                 <p className="mb-6 text-[14px] leading-relaxed text-body">
-                  Speak with an Investify Prism specialist and get started with {product.shortTitle.toLowerCase()} in a few simple steps.
+                  Speak with an Investify Prism specialist and get started with {product.shortTitle} in a few simple steps.
                 </p>
                 <Button href="/contact-us" className="w-full justify-center">
                   Talk to an Advisor
@@ -158,16 +180,12 @@ export default async function ProductPage({
       </section>
 
       {product.extra === "demat" && <DematDetails />}
+      {product.extra === "ipo" && <IpoInfo />}
+      {product.extra === "nps" && <NpsInfo />}
       {product.extra === "pms" && <PmsInfo />}
       {product.extra === "mf" && <MfInfo />}
       {product.extra === "insurance" && <InsuranceDetails />}
-      {product.extra === "bonds" && (
-        <>
-          <BondQuotes />
-          <AmcLogos showHeading={false} />
-          <BondsInfo />
-        </>
-      )}
+      {product.extra === "bonds" && <BondsInfo />}
 
       <LeadForm />
     </>

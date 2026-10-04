@@ -71,6 +71,14 @@ export default function Button(props: ButtonProps) {
     );
   }
 
+  if (props.href.startsWith("#")) {
+    return (
+      <a href={props.href} className={cls}>
+        {content}
+      </a>
+    );
+  }
+
   return (
     <Link href={props.href} className={cls}>
       {content}

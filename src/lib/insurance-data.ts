@@ -4,6 +4,7 @@ export type InsurancePartner = {
   name: string;
   logo: string;
   crop?: boolean;
+  scale?: number;
 };
 
 export const LIFE_PARTNERS: InsurancePartner[] = [
@@ -16,7 +17,7 @@ export const LIFE_PARTNERS: InsurancePartner[] = [
 export const HEALTH_PARTNERS: InsurancePartner[] = [
   { name: "Care Health Insurance", logo: "/images/insurance/care-health.png" },
   { name: "Star Health Insurance", logo: "/images/insurance/star-health.png" },
-  { name: "Manipal Cigna Health Insurance", logo: "/images/insurance/manipal-cigna.png" },
+  { name: "Manipal Cigna Health Insurance", logo: "/images/insurance/manipal-cigna.png", scale: 1.9 },
   { name: "Niva Bupa Health Insurance", logo: "/images/insurance/niva-bupa.png" },
 ];
 
@@ -24,9 +25,9 @@ export const GENERAL_PARTNERS: InsurancePartner[] = [
   { name: "ICICI Lombard General Insurance", logo: "/images/insurance/icici-lombard.png" },
   { name: "Tata AIG General Insurance", logo: "/images/insurance/tata-aig.png" },
   { name: "HDFC Ergo General Insurance", logo: "/images/insurance/hdfc-ergo.png" },
-  { name: "Bajaj Allianz General Insurance", logo: "/images/insurance/bajaj-allianz-general.png" },
+  { name: "Bajaj Allianz General Insurance", logo: "/images/insurance/bajaj-allianz-general.png", scale: 1.5 },
   { name: "Reliance General Insurance", logo: "/images/insurance/reliance-general.png" },
-  { name: "Kotak General Insurance", logo: "/images/insurance/zurich-kotak.png", crop: true },
+  { name: "Kotak General Insurance", logo: "/images/insurance/zurich-kotak.png", crop: true, scale: 1.4 },
   { name: "Cholamandalam General Insurance", logo: "/images/insurance/chola-ms.png" },
   { name: "Aditya Birla Health Insurance", logo: "/images/insurance/aditya-birla-health.png" },
 ];
