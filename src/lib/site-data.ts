@@ -54,7 +54,7 @@ export const NAV: NavItem[] = [
       { label: "NPS", href: "/products/nps", icon: "ShieldCheck" },
       { label: "Bonds & NCDs", href: "/products/bonds-ncds-fixed-income", icon: "ScrollText" },
       { label: "Life & Health Insurance", href: "/products/life-health-insurance", icon: "HeartPulse" },
-      { label: "Portfolio Management Services", href: "/products/portfolio-management-services", icon: "BarChart3" },
+      { label: "PMS & AIF", href: "/products/portfolio-management-services", icon: "BarChart3" },
     ],
   },
   {
@@ -499,20 +499,23 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "portfolio-management-services",
-    title: "Portfolio Management Services (PMS)",
-    shortTitle: "Portfolio Management",
+    title: "PMS & AIF: Portfolio Management and Alternative Investments",
+    shortTitle: "PMS & AIF",
+    eyebrow: "PMS & AIF",
     icon: "BarChart3",
     summary:
-      "A professionally managed, directly-held equity portfolio built around your goals, with a dedicated relationship manager watching it daily.",
+      "Explore professionally managed Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) designed for eligible HNI and affluent investors, with Investify Prism providing relationship and onboarding support.",
     description:
-      "Portfolio Management Services are built for investors who want more than a fund fact sheet — they want a portfolio built around their own goals, risk appetite and tax situation, with stocks held directly in their own name rather than pooled units. As per SEBI regulation, PMS requires a minimum investment of ₹50 lakh, making it best suited to HNI and Ultra-HNI NRIs, senior professionals and those who have recently liquidated ESOPs, business proceeds or inherited wealth. Every PMS client at Investify Prism is paired with a dedicated relationship manager who tracks the portfolio daily, evaluates it against its benchmark, and keeps you updated wherever you are in the world.",
+      "Portfolio Management Services (PMS) are built for investors who want a portfolio designed around their own goals, risk appetite and tax situation, with stocks held directly in their own demat account rather than as pooled units. As per SEBI regulation, PMS requires a minimum investment of ₹50 lakh. Alternative Investment Funds (AIFs) are privately pooled vehicles that invest in strategies beyond conventional mutual funds, such as private equity, venture capital, debt and hedge-style approaches, and they generally need a higher minimum investment from eligible investors. Both suit HNI and affluent investors with a long-term horizon. Investify Prism helps you understand the options and supports you with relationship and onboarding assistance.",
     highlights: [
-      "Direct ownership of stocks in your own demat account, not pooled fund units",
-      "Personalised asset allocation built around your goals and risk appetite, not a one-size-fits-all model",
-      "Dedicated relationship manager tracking your portfolio and sharing regular performance updates",
-      "Transparent fee structure — choose a flat fee plan or a hybrid plan with a performance component",
-      "Minimum investment of ₹50 lakh as mandated by SEBI for all PMS providers",
-      "Full visibility into every transaction, holding and corporate action in your portfolio",
+      "PMS: direct ownership of stocks in your own demat account, not pooled fund units",
+      "PMS: personalised allocation built around your goals and risk appetite",
+      "PMS: minimum investment of ₹50 lakh as mandated by SEBI",
+      "PMS: holding-level visibility into transactions and corporate actions",
+      "AIF: access to Category I, II and III funds for eligible investors",
+      "AIF: typical SEBI minimum investment of ₹1 crore per investor",
+      "Fee structures vary by provider and are disclosed upfront in the documents",
+      "Relationship and onboarding support from Investify Prism",
     ],
     faqs: [
       {
@@ -529,11 +532,11 @@ export const PRODUCTS: Product[] = [
       },
       {
         q: "Can NRIs invest in PMS?",
-        a: "Yes. NRIs with completed KYC and an NRE or NRO-linked demat account can invest in PMS in India, and we handle the account linkage and compliance for you.",
+        a: "NRIs can invest in PMS subject to applicable FEMA regulations, KYC and account requirements. The documentation and account structure can differ from those for resident investors.",
       },
       {
         q: "How is the fee structured?",
-        a: "We offer a flat annual fee plan or a hybrid plan with a lower fixed fee plus a performance share only above a return hurdle, so incentives stay aligned with your outcomes.",
+        a: "PMS providers generally charge a fixed management fee, a performance-linked fee, or a mix of both. Fee structures vary by provider and strategy, and all charges are disclosed upfront in the documents.",
       },
       {
         q: "How is PMS taxed?",
@@ -550,6 +553,26 @@ export const PRODUCTS: Product[] = [
       {
         q: "How do I choose the right PMS?",
         a: "Look at the strategy's track record and consistency, its investment philosophy, the risk management approach, the fee structure, the quality of reporting and the manager's SEBI registration. We walk through these points with you before you decide.",
+      },
+      {
+        q: "What is an AIF?",
+        a: "An Alternative Investment Fund (AIF) is a privately pooled investment vehicle registered with SEBI. It collects money from eligible investors and invests it under a defined strategy, such as private equity, venture capital, debt or hedge-style approaches.",
+      },
+      {
+        q: "What are the categories of AIFs?",
+        a: "SEBI classifies AIFs into three categories. Category I invests in start-ups, SMEs, infrastructure and similar sectors, Category II covers private equity and debt funds, and Category III follows complex or trading strategies and may use leverage within limits.",
+      },
+      {
+        q: "What is the minimum investment in an AIF?",
+        a: "SEBI generally prescribes a minimum investment of ₹1 crore per investor in an AIF, with limited exceptions. The fund's offer document confirms the exact requirement.",
+      },
+      {
+        q: "What is the difference between a PMS and an AIF?",
+        a: "In a PMS, a portfolio manager invests on your behalf and the securities are held in your own demat account. An AIF is a pooled fund in which you hold units, often with a fixed tenure and different eligibility rules and risks.",
+      },
+      {
+        q: "Are AIFs risky and can I exit early?",
+        a: "AIFs carry the risk of loss of capital and can be concentrated in a few investments. Many are closed-ended with a lock-in or fixed tenure, so exit before the end of the term may not be possible or may be limited. Please read the placement memorandum carefully.",
       },
     ],
     extra: "pms",
